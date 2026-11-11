@@ -1,19 +1,31 @@
 <script setup lang="ts">
 import { Menu, Phone } from '@lucide/vue'
-import { nav } from '~/data/site'
+import { hotlines, nav } from '~/data/site'
 
 const open = ref(false)
+const barHotlines = hotlines.filter(h => h.short && h.numbers.length)
 const route = useRoute()
 watch(() => route.fullPath, () => (open.value = false))
 </script>
 
 <template>
+  <!-- Hotline bar: one label, four numbers, tap to call. Scrolls sideways on narrow screens. -->
   <div class="bg-primary text-primary-foreground">
-    <div class="container-page flex h-9 items-center justify-between text-xs sm:text-sm">
-      <span class="truncate">Community guide to Catarman, Northern Samar</span>
-      <a href="tel:911" class="flex shrink-0 items-center gap-1.5 font-semibold underline-offset-4 hover:underline">
-        <Phone class="size-3.5" aria-hidden="true" /> Emergency: 911
-      </a>
+    <div class="container-page flex h-9 items-center gap-5 text-[13px]">
+      <span class="flex shrink-0 items-center gap-2 font-semibold">
+        <Phone class="size-3.5" aria-hidden="true" /> Hotlines
+      </span>
+      <ul class="flex flex-1 items-center divide-x divide-white/25 overflow-x-auto whitespace-nowrap [scrollbar-width:none]" aria-label="Emergency hotlines">
+        <li v-for="h in barHotlines" :key="h.name" class="px-4 first:pl-0">
+          <a :href="`tel:${h.numbers[0]!.replace(/[^\d+]/g, '')}`" class="group flex items-baseline gap-2" :aria-label="`Call ${h.name}: ${h.numbers[0]}`">
+            <span class="text-primary-foreground/70">{{ h.short }}</span>
+            <span class="font-medium tabular-nums underline-offset-4 group-hover:underline">{{ h.numbers[0] }}</span>
+          </a>
+        </li>
+      </ul>
+      <NuxtLink to="/contact" class="hidden shrink-0 text-primary-foreground/80 underline-offset-4 hover:text-primary-foreground hover:underline lg:block">
+        All hotlines
+      </NuxtLink>
     </div>
   </div>
 

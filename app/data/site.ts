@@ -129,11 +129,12 @@ export const officials = [
  * Northern Samar's website and public directories. Re-check these regularly: a wrong
  * emergency number is worse than none.
  */
-export const hotlines: { name: string; numbers: string[]; note: string }[] = [
-  { name: 'National Emergency Hotline', numbers: ['911'], note: 'Police, fire, and medical emergencies' },
-  { name: 'Catarman MDRRMO', numbers: ['0949-151-3810', '0906-357-0985'], note: 'Disaster and rescue, 24 hours · Radio 147.740' },
-  { name: 'Catarman Police Station', numbers: ['0915-961-2215'], note: 'Police assistance' },
-  { name: 'BFP Catarman Fire Station', numbers: ['0929-709-4511', '0917-885-5053'], note: 'Fire emergencies' },
+/** Entries with a `short` label also appear in the blue bar at the top of every page (first number only). */
+export const hotlines: { name: string; short?: string; numbers: string[]; note: string }[] = [
+  { name: 'National Emergency Hotline', short: 'National', numbers: ['911'], note: 'Police, fire, and medical emergencies' },
+  { name: 'Catarman MDRRMO', short: 'MDRRMO', numbers: ['0949-151-3810', '0906-357-0985'], note: 'Disaster and rescue, 24 hours · Radio 147.740' },
+  { name: 'Catarman Police Station', short: 'Police', numbers: ['0915-961-2215'], note: 'Police assistance' },
+  { name: 'BFP Catarman Fire Station', short: 'Fire', numbers: ['0929-709-4511', '0917-885-5053'], note: 'Fire emergencies' },
   { name: 'Northern Samar Provincial Hospital', numbers: ['(055) 500-9770', '(055) 500-1314'], note: 'Hospital trunklines, Catarman' },
   { name: 'Northern Samar PDRRMO', numbers: ['0967-339-5807', '(055) 500-9812'], note: 'Provincial disaster office' },
   { name: 'Philippine Red Cross', numbers: ['143'], note: 'Ambulance and rescue, national line' },
