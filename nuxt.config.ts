@@ -8,6 +8,10 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  routeRules: {
+    // Old address of the About the Data page.
+    '/sources': { redirect: '/about' },
+  },
   runtimeConfig: {
     public: {
       // Set with NUXT_PUBLIC_GOOGLE_MAPS_KEY in .env (see .env.example).

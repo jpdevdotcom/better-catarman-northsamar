@@ -26,6 +26,7 @@ export const nav = [
   { label: 'Government', to: '/government' },
   { label: 'Statistics', to: '/statistics' },
   { label: 'Transparency', to: '/transparency' },
+  { label: 'About the Data', to: '/about' },
   { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' },
 ]
@@ -155,6 +156,10 @@ export const faqs = [
   {
     q: 'Is BetterCatarman the official website of the municipal government?',
     a: 'No. BetterCatarman is a community-run guide that makes public information about Catarman easier to find. For official transactions and announcements, contact the Municipal Hall or visit the official LGU website.',
+  },
+  {
+    q: 'Where does the information on this site come from?',
+    a: 'Office contacts and many service requirements come from the municipal government’s own site, catarman.gov.ph. Population figures come from the Philippine Statistics Authority. Where Catarman has not published its own checklist, we use national laws and agency guidelines and say so on the page. The About the Data page lists every source.',
   },
   {
     q: 'What are the Municipal Hall’s office hours?',

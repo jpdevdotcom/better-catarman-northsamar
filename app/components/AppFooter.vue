@@ -44,6 +44,7 @@ import { categories, nav, site, transparencyLinks } from '~/data/site'
     <div class="border-t">
       <div class="container-page py-5 text-xs text-muted-foreground">
         © {{ new Date().getFullYear() }} BetterCatarman. Information is provided for public reference; always confirm with the office concerned.
+        <NuxtLink to="/about" class="font-semibold text-primary hover:underline">See where our information comes from</NuxtLink>
       </div>
     </div>
   </footer>
