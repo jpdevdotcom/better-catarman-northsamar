@@ -47,12 +47,14 @@ export const sources: Source[] = [
   // --- About Catarman
   { scope: 'catarman-data', name: 'Census of Population, 2015, 2020, and 2024', publisher: 'Philippine Statistics Authority', url: 'https://psa.gov.ph', usedFor: 'Catarman’s population, households, and census history. Figures were read from the Wikipedia and PhilAtlas pages below, which tabulate PSA data.' },
   { scope: 'catarman-data', name: 'Catarman, Northern Samar: barangay population table', publisher: 'PhilAtlas', url: 'https://www.philatlas.com/visayas/r08/northern-samar/catarman.html', usedFor: 'Population of each of the 55 barangays in 2020 and 2015.' },
-  { scope: 'catarman-data', name: 'Catarman, Northern Samar', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Catarman,_Northern_Samar', usedFor: 'Land area, income class, poverty incidence, 2024 finance figures, list of barangays, history, and the Sangguniang Bayan members (citing the DILG masterlist of officials).' },
+  { scope: 'catarman-data', name: 'Catarman, Northern Samar', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Catarman,_Northern_Samar', usedFor: 'Land area, income class, poverty incidence, list of barangays, history, and the Sangguniang Bayan members (citing the DILG masterlist of officials).' },
   { scope: 'catarman-data', name: 'Catarman 2025 local election results', publisher: 'Rappler', url: 'https://ph.rappler.com/elections/2025/local-race/northern-samar/catarman', usedFor: 'Cross-check of the Mayor, Vice Mayor, and the eight elected councilors, and their order by votes.' },
 
   { scope: 'catarman-data', name: 'Provincial emergency hotlines', publisher: 'Province of Northern Samar', url: 'https://northernsamar.gov.ph/', usedFor: 'Northern Samar PDRRMO hotline. The provincial hospital trunklines were cross-checked against public directories and the hospital’s Facebook page.' },
 
   { scope: 'catarman-data', name: 'Barangay Officials Directory', publisher: 'Department of the Interior and Local Government (DILG)', url: 'https://dilg.gov.ph/barangay-officials-directory', usedFor: 'Names and positions of the officials of each of Catarman’s 55 barangays, and the barangay contact number where one is listed.' },
+
+  { scope: 'catarman-data', name: '2024 Annual Audit Report, Municipality of Catarman', publisher: 'Commission on Audit', url: 'https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/', usedFor: 'Revenue, expenditure, assets, and liabilities on the Transparency page. The figures were read from Wikidata, which cites this report; they have not been checked against the report itself.' },
 
   // --- National rules
   { scope: 'national', name: 'Crisis assistance requirements', publisher: 'DSWD Field Office VIII (Eastern Visayas)', url: 'https://fo8.dswd.gov.ph/cis-assistance-requirements/', usedFor: 'Assistance to Individuals in Crisis.' },
@@ -75,6 +77,7 @@ export const sources: Source[] = [
 
 /** Things this site does not yet have a source for, stated plainly. */
 export const gaps = [
+  'A direct check of the 2024 finance figures against the Commission on Audit report. They currently come through Wikidata.',
   'Barangay officials elected on 2 November 2026. The DILG directory may still list the outgoing officials.',
   'A working contact number for most barangay halls. The DILG directory has a usable number for only 13 of 55.',
   'Mobile numbers for the provincial hospital’s emergency room, and local Red Cross and Coast Guard numbers. Numbers circulating online could not be traced to an official post.',

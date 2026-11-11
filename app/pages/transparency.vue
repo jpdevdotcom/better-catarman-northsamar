@@ -16,14 +16,26 @@ const peso = (m: number) => (m >= 1000 ? `₱${(m / 1000).toFixed(2)}B` : `₱${
       <SectionHeading :title="`Municipal finances, ${finances.year}`" />
       <dl class="grid grid-cols-2 gap-px overflow-hidden rounded-lg border bg-border lg:grid-cols-4">
         <div v-for="i in finances.items" :key="i.label" class="flex flex-col-reverse gap-1 bg-background p-6">
-          <dt class="font-medium">{{ i.label }}</dt>
+          <dt>
+            <span class="block font-medium">{{ i.label }}</span>
+            <span class="block text-xs tabular-nums text-muted-foreground">{{ i.exact }}</span>
+          </dt>
           <dd class="text-3xl font-bold tabular-nums text-primary">{{ peso(i.value) }}</dd>
         </div>
       </dl>
-      <p class="mt-4 flex items-start gap-3 rounded-lg bg-muted p-4 text-sm text-muted-foreground">
+      <div class="mt-4 flex items-start gap-3 bg-muted p-4 text-sm text-muted-foreground">
         <Info class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-        Figures are as publicly cited for fiscal year {{ finances.year }} and are shown for reference only. For audited statements, see the Commission on Audit and BLGF links below.
-      </p>
+        <div class="space-y-2">
+          <p>
+            These are the figures recorded for Catarman from the
+            <a :href="finances.source.url" target="_blank" rel="noopener" class="font-medium text-primary hover:underline">Commission on Audit’s {{ finances.year }} Annual Audit Report</a>.
+            We read them from the
+            <a :href="finances.via.url" target="_blank" rel="noopener" class="font-medium text-primary hover:underline">{{ finances.via.label }}</a>,
+            which cites that report, and have not yet checked them against the report itself.
+          </p>
+          <p>They are year-end totals from the audited financial statements, not the approved budget. For anything official, use the COA report.</p>
+        </div>
+      </div>
     </section>
 
     <section>
