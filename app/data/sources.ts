@@ -54,7 +54,8 @@ export const sources: Source[] = [
 
   { scope: 'catarman-data', name: 'Barangay Officials Directory', publisher: 'Department of the Interior and Local Government (DILG)', url: 'https://dilg.gov.ph/barangay-officials-directory', usedFor: 'Names and positions of the officials of each of Catarman’s 55 barangays, and the barangay contact number where one is listed.' },
 
-  { scope: 'catarman-data', name: '2024 Annual Audit Report, Municipality of Catarman', publisher: 'Commission on Audit', url: 'https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/', usedFor: 'Revenue, expenditure, assets, and liabilities on the Transparency page. The figures were read from Wikidata, which cites this report; they have not been checked against the report itself.' },
+  { scope: 'catarman-official', name: 'Catarman Executive Summaries, 2014 to 2025, and Annual Audit Reports for 2018 and 2025', publisher: 'Commission on Audit', url: 'https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/', usedFor: 'Income, expenses, assets, and liabilities for 2013 to 2025; the 2025 audit opinion and appropriations; and the 2025 audit observations, recommendations, and the municipal government’s responses. Read directly from the reports; observations and responses are quoted word for word.' },
+  { scope: 'catarman-data', name: 'Annual Audit Reports for 2011 and 2012, as recorded on Wikidata', publisher: 'Commission on Audit, via Wikidata', url: 'https://www.wikidata.org/wiki/Q174886', usedFor: 'Finance figures for 2011 and 2012 only. Not checked against the reports themselves.' },
 
   // --- National rules
   { scope: 'national', name: 'Crisis assistance requirements', publisher: 'DSWD Field Office VIII (Eastern Visayas)', url: 'https://fo8.dswd.gov.ph/cis-assistance-requirements/', usedFor: 'Assistance to Individuals in Crisis.' },
@@ -77,7 +78,7 @@ export const sources: Source[] = [
 
 /** Things this site does not yet have a source for, stated plainly. */
 export const gaps = [
-  'A direct check of the 2024 finance figures against the Commission on Audit report. They currently come through Wikidata.',
+  'A direct check of the 2011 and 2012 finance figures against the Commission on Audit reports. Every later year has been checked.',
   'Barangay officials elected on 2 November 2026. The DILG directory may still list the outgoing officials.',
   'A working contact number for most barangay halls. The DILG directory has a usable number for only 13 of 55.',
   'Mobile numbers for the provincial hospital’s emergency room, and local Red Cross and Coast Guard numbers. Numbers circulating online could not be traced to an official post.',
@@ -125,6 +126,8 @@ export const selectionRules = [
 
 /** Every place where the published source was adjusted by hand, and why. */
 export const handEdits = [
+  { what: 'Finance figures that differed from Wikidata', why: 'Checking against the COA reports changed three years. 2023: Wikidata had equity recorded as income and income recorded as expenses. 2021 and 2015: Wikidata used figures restated in the following year’s report; this site shows each year’s own report and notes the restatement.' },
+  { what: 'COA audit observations for 2025', why: 'Each observation and each response is quoted word for word. The short headings were written for this site, the recommendations are shortened, and the responses are excerpts from a longer discussion in the report. No names of persons are shown.' },
   { what: 'Barangay officials’ contact details', why: 'The DILG directory also lists personal email addresses, which are not shown here. A barangay contact number is shown only when the directory holds a well-formed phone number; entries such as “0000” or “None” are dropped.' },
   { what: 'Catarman MDRRMO mobile number', why: 'The municipal website lists 0949-141-3810, but the MDRRMO’s own hotline poster says 0949-151-3810. The poster’s number is used.' },
   { what: 'Local Economic Enterprise Office phone number', why: 'The official governance page shows “-50%” in place of a number. The mobile number from the official contact page is used instead.' },
