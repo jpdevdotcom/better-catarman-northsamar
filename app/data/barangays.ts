@@ -424,7 +424,10 @@ export const barangays: Barangay[] = [
     "poblacion": false,
     "pop2020": 1255,
     "pop2015": 1319,
-    "location": null
+    "location": {
+      "lat": 12.4,
+      "lng": 124.6167
+    }
   },
   {
     "slug": "polangi",

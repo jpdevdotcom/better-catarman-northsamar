@@ -8,6 +8,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  runtimeConfig: {
+    public: {
+      // Set with NUXT_PUBLIC_GOOGLE_MAPS_KEY in .env (see .env.example).
+      googleMapsKey: '',
+    },
+  },
   shadcn: {
     prefix: '',
     componentDir: '@/components/ui',

@@ -101,3 +101,33 @@
 @utility container-page {
   @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
 }
+
+/* Google Maps info window: keep it flat and square like the rest of the site. */
+.gm-style .gm-style-iw-c {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1px solid var(--border);
+  padding: 8px 12px !important;
+}
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+.gm-style .gm-style-iw-chr,
+.gm-style .gm-style-iw-tc {
+  display: none;
+}
+.gm-style .gm-style-iw-c:focus-visible,
+.gm-style .gm-style-iw-d:focus-visible {
+  outline: none;
+}
+
+/* Pin name labels: a white outline keeps them readable over any map colour. */
+.map-pin-label {
+  -webkit-text-stroke: 3px #ffffff;
+  paint-order: stroke fill;
+  white-space: nowrap;
+}

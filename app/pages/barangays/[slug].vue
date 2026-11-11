@@ -27,6 +27,10 @@ const stats = [
 ]
 
 const loc = b.location
+const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
+const points = barangays
+  .filter(x => x.location)
+  .map(x => ({ slug: x.slug, name: x.name, lat: x.location!.lat, lng: x.location!.lng }))
 const d = 0.012
 const mapSrc = loc && `https://www.openstreetmap.org/export/embed.html?bbox=${loc.lng - d},${loc.lat - d},${loc.lng + d},${loc.lat + d}&layer=mapnik&marker=${loc.lat},${loc.lng}`
 const mapLink = loc && `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#map=15/${loc.lat}/${loc.lng}`
@@ -53,13 +57,18 @@ const mapLink = loc && `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${lo
     <section>
       <SectionHeading title="Location" :description="loc ? 'Where the barangay sits within Catarman.' : undefined" />
 
-      <div v-if="loc" class="grid gap-6 lg:grid-cols-[300px_1fr]">
-        <div class="border p-3">
-          <BarangayMap :active="b.slug" />
+      <div v-if="loc" class="grid gap-6 lg:grid-cols-[320px_1fr]">
+        <div class="border" :class="hasLiveMap ? 'h-64 lg:h-[352px]' : 'p-3'">
+          <!-- Overview: the whole municipality, with this barangay highlighted -->
+          <SiteMap :points="points" :active="b.slug" labels="active" :label="`Map of Catarman showing where ${b.name} is`">
+            <BarangayMap :active="b.slug" />
+          </SiteMap>
         </div>
         <div>
-          <div class="overflow-hidden border">
-            <iframe :src="mapSrc!" :title="`Street map of Barangay ${b.name}`" class="block h-80 w-full lg:h-[352px]" loading="lazy" />
+          <div class="h-80 overflow-hidden border lg:h-[352px]">
+            <SiteMap :points="points" :active="b.slug" :center="loc" :zoom="13" :label="`Map of Barangay ${b.name}`">
+              <iframe :src="mapSrc!" :title="`Street map of Barangay ${b.name}`" class="block size-full" loading="lazy" />
+            </SiteMap>
           </div>
           <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-sm">
             <span class="tabular-nums text-muted-foreground">{{ loc.lat.toFixed(4) }}° N, {{ loc.lng.toFixed(4) }}° E</span>

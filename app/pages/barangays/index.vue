@@ -16,6 +16,11 @@ const list = computed(() => {
 
 const maxPop = Math.max(...barangays.map(b => b.pop2020))
 const fmt = (n: number) => n.toLocaleString('en-PH')
+
+const points = barangays
+  .filter(b => b.location)
+  .map(b => ({ slug: b.slug, name: b.name, lat: b.location!.lat, lng: b.location!.lng }))
+const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
 </script>
 
 <template>
@@ -24,7 +29,7 @@ const fmt = (n: number) => n.toLocaleString('en-PH')
     :description="`Catarman has ${barangays.length} barangays, home to ${fmt(totalPop2020)} people (2020 Census). Select one to see its profile.`"
   />
 
-  <div class="container-page grid gap-12 py-12 lg:grid-cols-[1fr_320px]">
+  <div class="container-page grid gap-12 py-12 lg:grid-cols-[1fr_380px]">
     <section>
       <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center">
         <div class="relative flex-1">
@@ -67,8 +72,10 @@ const fmt = (n: number) => n.toLocaleString('en-PH')
 
     <aside class="lg:sticky lg:top-24 lg:self-start">
       <h2 class="mb-3 text-sm font-semibold">Map of Catarman</h2>
-      <div class="border p-3">
-        <BarangayMap />
+      <div class="border" :class="hasLiveMap ? 'h-[420px]' : 'p-3'">
+        <SiteMap :points="points" label="Map of Catarman showing its barangays">
+          <BarangayMap />
+        </SiteMap>
       </div>
       <p class="mt-3 text-sm text-muted-foreground">
         Each dot is a barangay — select one to open its profile. The cluster on the north coast is the poblacion (town proper).
