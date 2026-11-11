@@ -33,13 +33,13 @@ watch(() => route.fullPath, () => (open.value = false))
     <div class="container-page flex h-16 items-center justify-between gap-4">
       <AppLogo />
 
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <nav class="hidden items-stretch gap-1 self-stretch lg:flex" aria-label="Main">
         <NuxtLink
           v-for="item in nav"
           :key="item.to"
           :to="item.to"
-          class="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-          active-class="!text-primary bg-accent"
+          class="-mb-px flex items-center border-b-2 border-transparent px-3 text-sm font-medium text-muted-foreground transition-colors hover:border-border hover:text-foreground"
+          active-class="!border-primary !text-primary"
         >
           {{ item.label }}
         </NuxtLink>
