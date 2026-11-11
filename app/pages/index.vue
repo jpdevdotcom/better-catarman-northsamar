@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ArrowRight, Clock, ExternalLink, MapPin } from '@lucide/vue'
+import { ArrowRight, ChartColumn, Clock, ExternalLink, Landmark, MapPin, Scale } from '@lucide/vue'
+import { financeYears } from '~/data/finances'
 import { categories, glance, history, officials, popularSearches, popularSlugs, site } from '~/data/site'
 
 useHead({ title: 'Government services for Catarman, Northern Samar', titleTemplate: '%s · BetterCatarman' })
@@ -7,21 +8,29 @@ useSeoMeta({
   description: 'Find government services, requirements, offices, and public information for Catarman, Northern Samar.',
 })
 
+const explore = [
+  { to: '/barangays', icon: MapPin, title: 'Barangays', text: `All ${glance.find(g => g.label === 'Barangays')!.value}, with officials and population` },
+  { to: '/government', icon: Landmark, title: 'Government', text: 'Mayor, council, and municipal offices' },
+  { to: '/statistics', icon: ChartColumn, title: 'Statistics', text: 'Population, census history, land area' },
+  { to: '/transparency', icon: Scale, title: 'Transparency', text: `Audited finances, ${financeYears[financeYears.length - 1]!.year} to ${financeYears[0]!.year}` },
+]
+
 const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
 </script>
 
 <template>
   <!-- Hero -->
   <section class="border-b">
-    <div class="container-page py-14 sm:py-20">
+    <div class="container-page grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-12">
+      <div class="lg:col-span-7">
       <p class="mb-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
         <MapPin class="size-4" aria-hidden="true" /> {{ site.municipality }}, {{ site.province }}
       </p>
       <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-        Government services in Catarman, <span class="text-primary">easier to find.</span>
+        Welcome to <span class="text-primary">BetterCatarman.org</span>
       </h1>
       <p class="mt-5 max-w-2xl text-lg text-muted-foreground">
-        Requirements, offices, and public information for every Catarmananon — in one simple place.
+        Requirements, offices, barangays, and public records for every Catarmananon, gathered in one simple place.
       </p>
 
       <div class="mt-8 max-w-2xl">
@@ -38,6 +47,25 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
           </NuxtLink>
         </div>
       </div>
+      </div>
+
+      <nav aria-labelledby="explore-heading" class="lg:col-span-5">
+        <h2 id="explore-heading" class="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">More than services</h2>
+        <ul class="divide-y border">
+          <li v-for="e in explore" :key="e.to">
+            <NuxtLink :to="e.to" class="group flex items-center gap-3 px-4 py-2.5 transition-colors hover:bg-accent">
+              <span class="grid size-9 shrink-0 place-items-center bg-secondary text-primary group-hover:bg-background">
+                <component :is="e.icon" class="size-4" aria-hidden="true" />
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="block text-sm font-semibold leading-snug">{{ e.title }}</span>
+                <span class="block text-sm leading-snug text-muted-foreground">{{ e.text }}</span>
+              </span>
+              <ArrowRight class="size-4 shrink-0 text-primary transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
     </div>
   </section>
 
