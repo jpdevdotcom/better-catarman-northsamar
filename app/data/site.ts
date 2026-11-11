@@ -145,26 +145,6 @@ export const hotlineSource = {
   url: 'https://www.facebook.com/catarman.mdrrmo.9/posts/1801811050625139/',
 }
 
-/**
- * Source: Commission on Audit, 2024 Annual Audit Report for Catarman, as recorded on
- * Wikidata (item Q174886) and shown in Wikipedia's infobox. Read from Wikidata, not from
- * the COA report itself, so check against the report before quoting.
- */
-export const finances = {
-  year: 2024,
-  items: [
-    { label: 'Revenue', value: 514.1, exact: '₱514,092,276.94' },
-    { label: 'Expenditure', value: 471.9, exact: '₱471,856,912.98' },
-    { label: 'Liabilities', value: 514.9, exact: '₱514,940,665.43' },
-    { label: 'Assets', value: 1661, exact: '₱1,661,145,321.67' },
-  ],
-  source: {
-    label: 'Commission on Audit: 2024 Annual Audit Reports, Northern Samar municipalities',
-    url: 'https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/#167-8294-northern-samar-municipalities-region-viii-eastern-visayas-2024-aar-lgu',
-  },
-  via: { label: 'Wikidata record for Catarman', url: 'https://www.wikidata.org/wiki/Q174886' },
-}
-
 export const transparencyLinks = [
   { label: 'Official LGU Catarman website', href: 'https://catarman.gov.ph', note: 'Announcements, bids, and full disclosure documents' },
   { label: 'Freedom of Information (eFOI)', href: 'https://www.foi.gov.ph/', note: 'Request government records' },
