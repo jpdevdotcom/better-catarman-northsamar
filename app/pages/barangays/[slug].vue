@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ArrowLeft, ArrowRight, ExternalLink, Info, MapPinOff } from '@lucide/vue'
+import { ArrowLeft, ArrowRight, ExternalLink, Info, MapPinOff, Phone, UserRound } from '@lucide/vue'
+import { barangayOfficials, officialsRetrieved, officialsSource } from '~/data/barangayOfficials'
 import { barangays, totalPop2020 } from '~/data/barangays'
 
 const route = useRoute()
@@ -25,6 +26,11 @@ const stats = [
   { label: 'Change', note: '2015 to 2020', value: `${change > 0 ? '+' : ''}${change.toFixed(1)}%` },
   { label: 'Share of Catarman', note: `Ranked ${rank} of ${barangays.length} by population`, value: `${share.toFixed(1)}%` },
 ]
+
+const brgy = barangayOfficials[b.slug]
+const captain = brgy?.officials.find(o => o.position === 'Punong Barangay')
+const council = brgy?.officials.filter(o => o.position === 'Sangguniang Barangay Member') ?? []
+const others = brgy?.officials.filter(o => o.position !== 'Punong Barangay' && o.position !== 'Sangguniang Barangay Member') ?? []
 
 const loc = b.location
 const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
@@ -92,6 +98,60 @@ const mapLink = loc && `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${lo
       <p class="mt-6 flex items-start gap-3 bg-muted p-4 text-sm text-muted-foreground">
         <Info class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
         Population figures are from the Philippine Statistics Authority (Census of Population). Map points are approximate and come from © OpenStreetMap contributors; they are not official boundaries.
+      </p>
+    </section>
+
+    <section v-if="brgy?.officials.length" id="officials" class="scroll-mt-24">
+      <SectionHeading title="Barangay officials" description="The elected and appointed officials of the barangay, as listed by the DILG." />
+
+      <div class="grid gap-4 lg:grid-cols-[320px_1fr]">
+        <div class="space-y-4">
+          <div v-if="captain" class="border">
+            <div class="flex items-start gap-4 bg-muted p-5">
+              
+              <div class="min-w-0">
+                <p class="text-xs font-bold uppercase tracking-wider text-primary">Punong Barangay</p>
+                <p class="mt-1 text-lg font-bold leading-tight">{{ captain.name }}</p>
+                <p class="mt-0.5 text-sm text-muted-foreground">Barangay captain</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5 border-t px-5 py-3.5 text-sm">
+              <Phone class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+              <div>
+                <p class="text-muted-foreground">Barangay contact</p>
+                <PhoneList :phones="brgy.contact ? [brgy.contact] : []" />
+              </div>
+            </div>
+          </div>
+
+          <ul v-if="others.length" class="divide-y border">
+            <li v-for="o in others" :key="o.position + o.name" class="px-5 py-3.5">
+              <p class="text-sm text-muted-foreground">{{ o.position }}</p>
+              <p class="font-semibold">{{ o.name }}</p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-3 text-sm font-semibold text-muted-foreground">Sangguniang Barangay members ({{ council.length }})</h3>
+          <ul class="grid border-l border-t sm:grid-cols-2">
+            <li v-for="o in council" :key="o.name" class="flex items-center gap-3 border-b border-r p-4">
+              <span class="grid size-9 shrink-0 place-items-center bg-secondary text-primary">
+                <UserRound class="size-4" aria-hidden="true" />
+              </span>
+              <span class="font-medium">{{ o.name }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-4 flex items-start gap-3 bg-muted p-4 text-sm text-muted-foreground">
+        <Info class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+        <span>
+          From the
+          <a :href="officialsSource" target="_blank" rel="noopener" class="font-medium text-primary hover:underline">DILG Barangay Officials Directory</a>,
+          read on {{ officialsRetrieved }}. Barangay and SK elections were held on 2 November 2026, so this list may still show the outgoing officials until the DILG updates it.
+        </span>
       </p>
     </section>
 

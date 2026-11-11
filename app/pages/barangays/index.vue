@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowRight, Search, SearchX } from '@lucide/vue'
+import { barangayOfficials } from '~/data/barangayOfficials'
 import { barangays, totalPop2020 } from '~/data/barangays'
 
 useHead({ title: 'Barangays' })
@@ -16,6 +17,7 @@ const list = computed(() => {
 
 const maxPop = Math.max(...barangays.map(b => b.pop2020))
 const fmt = (n: number) => n.toLocaleString('en-PH')
+const captainOf = (slug: string) => barangayOfficials[slug]?.officials.find(o => o.position === 'Punong Barangay')?.name
 
 const points = barangays
   .filter(b => b.location)
@@ -51,6 +53,7 @@ const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
                 {{ b.name }}
                 <Badge v-if="b.poblacion" variant="secondary">Poblacion</Badge>
               </span>
+              <span v-if="captainOf(b.slug)" class="block text-sm text-muted-foreground">Punong Barangay: {{ captainOf(b.slug) }}</span>
               <span class="mt-1.5 block h-1.5 bg-secondary" aria-hidden="true">
                 <span class="block h-full bg-primary" :style="{ width: `${(b.pop2020 / maxPop) * 100}%` }" />
               </span>

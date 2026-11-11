@@ -52,6 +52,8 @@ export const sources: Source[] = [
 
   { scope: 'catarman-data', name: 'Provincial emergency hotlines', publisher: 'Province of Northern Samar', url: 'https://northernsamar.gov.ph/', usedFor: 'Northern Samar PDRRMO hotline. The provincial hospital trunklines were cross-checked against public directories and the hospital’s Facebook page.' },
 
+  { scope: 'catarman-data', name: 'Barangay Officials Directory', publisher: 'Department of the Interior and Local Government (DILG)', url: 'https://dilg.gov.ph/barangay-officials-directory', usedFor: 'Names and positions of the officials of each of Catarman’s 55 barangays, and the barangay contact number where one is listed.' },
+
   // --- National rules
   { scope: 'national', name: 'Crisis assistance requirements', publisher: 'DSWD Field Office VIII (Eastern Visayas)', url: 'https://fo8.dswd.gov.ph/cis-assistance-requirements/', usedFor: 'Assistance to Individuals in Crisis.' },
   { scope: 'national', name: 'Revised implementing rules of the Solo Parents Welfare Act (RA 8972, as amended by RA 11861)', publisher: 'Department of Social Welfare and Development', url: 'https://lawyerly.ph/laws/view/l17768', usedFor: 'Solo Parent ID.' },
@@ -73,6 +75,8 @@ export const sources: Source[] = [
 
 /** Things this site does not yet have a source for, stated plainly. */
 export const gaps = [
+  'Barangay officials elected on 2 November 2026. The DILG directory may still list the outgoing officials.',
+  'A working contact number for most barangay halls. The DILG directory has a usable number for only 13 of 55.',
   'Mobile numbers for the provincial hospital’s emergency room, and local Red Cross and Coast Guard numbers. Numbers circulating online could not be traced to an official post.',
   'A landline for the Catarman fire station. Two different numbers are in circulation.',
   'Committee assignments of Sangguniang Bayan members, and the Liga ng mga Barangay and SK Federation presidents.',
@@ -118,6 +122,7 @@ export const selectionRules = [
 
 /** Every place where the published source was adjusted by hand, and why. */
 export const handEdits = [
+  { what: 'Barangay officials’ contact details', why: 'The DILG directory also lists personal email addresses, which are not shown here. A barangay contact number is shown only when the directory holds a well-formed phone number; entries such as “0000” or “None” are dropped.' },
   { what: 'Catarman MDRRMO mobile number', why: 'The municipal website lists 0949-141-3810, but the MDRRMO’s own hotline poster says 0949-151-3810. The poster’s number is used.' },
   { what: 'Local Economic Enterprise Office phone number', why: 'The official governance page shows “-50%” in place of a number. The mobile number from the official contact page is used instead.' },
   { what: 'Business permit renewal checklist', why: 'The official list names the Fire Safety Inspection Certificate twice. It is shown once.' },
