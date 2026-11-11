@@ -145,6 +145,13 @@ export const hotlineSource = {
   url: 'https://www.facebook.com/catarman.mdrrmo.9/posts/1801811050625139/',
 }
 
+/** Sister site by the same maintainer. Covers the whole province, not only Catarman. */
+export const budgetPortal = {
+  label: 'Northern Samar 2027 budget projects',
+  url: 'https://northsamar-transparency-portal.pages.dev/',
+  note: 'A separate site listing projects for the whole province in the proposed 2027 national budget.',
+}
+
 export const transparencyLinks = [
   { label: 'Official LGU Catarman website', href: 'https://catarman.gov.ph', note: 'Announcements, bids, and full disclosure documents' },
   { label: 'Freedom of Information (eFOI)', href: 'https://www.foi.gov.ph/', note: 'Request government records' },

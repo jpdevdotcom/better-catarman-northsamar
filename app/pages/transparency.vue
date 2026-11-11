@@ -3,7 +3,7 @@ import { BadgeCheck, CircleDashed, ExternalLink, Info, Scale } from '@lucide/vue
 import { auditObservations, auditOverview, auditSource, auditTerms } from '~/data/audit'
 import { auditReplies } from '~/data/auditReplies'
 import { audit2025, coaReportsUrl, financeVia, financeYears } from '~/data/finances'
-import { transparencyLinks } from '~/data/site'
+import { budgetPortal, transparencyLinks } from '~/data/site'
 
 useHead({ title: 'Transparency' })
 useSeoMeta({ description: 'Municipal finances from 2011 to 2025, audit observations, and open government resources for Catarman, Northern Samar.' })
@@ -35,7 +35,19 @@ const exact = (n: number) => `₱${n.toLocaleString('en-PH', { minimumFractionDi
 </script>
 
 <template>
-  <PageHeader title="Transparency" description="How public money is raised and spent, and where to find official records." />
+  <PageHeader title="Transparency" description="How public money is raised and spent, and where to find official records.">
+    <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+      <a
+        :href="budgetPortal.url"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 bg-primary px-5 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        {{ budgetPortal.label }} <ExternalLink class="size-4" aria-hidden="true" />
+      </a>
+      <p class="text-sm text-muted-foreground">{{ budgetPortal.note }}</p>
+    </div>
+  </PageHeader>
 
   <div class="container-page space-y-14 py-12">
     <section>
