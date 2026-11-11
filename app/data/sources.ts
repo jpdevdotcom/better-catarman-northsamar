@@ -38,15 +38,19 @@ export const lastChecked = 'November 2026'
 export const sources: Source[] = [
   // --- Catarman official
   { scope: 'catarman-official', name: 'Governance: departments and office heads', publisher: 'Municipality of Catarman E-Services', url: 'https://catarman.gov.ph/governance', usedFor: 'Names of the Mayor, Vice Mayor, and the heads of 22 offices, with their phone numbers and emails.' },
-  { scope: 'catarman-official', name: 'Contact Us', publisher: 'Municipality of Catarman E-Services', url: 'https://catarman.gov.ph/contact', usedFor: 'Mobile numbers of municipal offices and the MDRRMO hotline.' },
+  { scope: 'catarman-official', name: 'Contact Us', publisher: 'Municipality of Catarman E-Services', url: 'https://catarman.gov.ph/contact', usedFor: 'Mobile numbers of municipal offices, and the second MDRRMO number.' },
   { scope: 'catarman-official', name: 'Service requirement checklists', publisher: 'Municipality of Catarman E-Services', url: 'https://catarman.gov.ph', usedFor: 'Requirements for civil registry certificates, business permits, cedula, building and electrical permits, zoning, and real property assessment, including the official PDF checklists and Assessor’s Office fees.' },
   { scope: 'catarman-official', name: 'About the Municipality of Catarman', publisher: 'Municipality of Catarman E-Services', url: 'https://catarman.gov.ph/about', usedFor: 'Number of barangays and general description of the municipality.' },
+
+  { scope: 'catarman-official', name: 'Catarman Emergency Hotline Numbers (poster, 15 November 2024)', publisher: 'Catarman MDRRMO, official Facebook page', url: 'https://www.facebook.com/catarman.mdrrmo.9/posts/1801811050625139/', usedFor: 'Emergency hotlines of the Catarman MDRRMO, police station, and fire station.' },
 
   // --- About Catarman
   { scope: 'catarman-data', name: 'Census of Population, 2015, 2020, and 2024', publisher: 'Philippine Statistics Authority', url: 'https://psa.gov.ph', usedFor: 'Catarman’s population, households, and census history. Figures were read from the Wikipedia and PhilAtlas pages below, which tabulate PSA data.' },
   { scope: 'catarman-data', name: 'Catarman, Northern Samar: barangay population table', publisher: 'PhilAtlas', url: 'https://www.philatlas.com/visayas/r08/northern-samar/catarman.html', usedFor: 'Population of each of the 55 barangays in 2020 and 2015.' },
   { scope: 'catarman-data', name: 'Catarman, Northern Samar', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Catarman,_Northern_Samar', usedFor: 'Land area, income class, poverty incidence, 2024 finance figures, list of barangays, history, and the Sangguniang Bayan members (citing the DILG masterlist of officials).' },
   { scope: 'catarman-data', name: 'Catarman 2025 local election results', publisher: 'Rappler', url: 'https://ph.rappler.com/elections/2025/local-race/northern-samar/catarman', usedFor: 'Cross-check of the Mayor, Vice Mayor, and the eight elected councilors, and their order by votes.' },
+
+  { scope: 'catarman-data', name: 'Provincial emergency hotlines', publisher: 'Province of Northern Samar', url: 'https://northernsamar.gov.ph/', usedFor: 'Northern Samar PDRRMO hotline. The provincial hospital trunklines were cross-checked against public directories and the hospital’s Facebook page.' },
 
   // --- National rules
   { scope: 'national', name: 'Crisis assistance requirements', publisher: 'DSWD Field Office VIII (Eastern Visayas)', url: 'https://fo8.dswd.gov.ph/cis-assistance-requirements/', usedFor: 'Assistance to Individuals in Crisis.' },
@@ -69,7 +73,8 @@ export const sources: Source[] = [
 
 /** Things this site does not yet have a source for, stated plainly. */
 export const gaps = [
-  'Police and fire station hotlines for Catarman.',
+  'Mobile numbers for the provincial hospital’s emergency room, and local Red Cross and Coast Guard numbers. Numbers circulating online could not be traced to an official post.',
+  'A landline for the Catarman fire station. Two different numbers are in circulation.',
   'Committee assignments of Sangguniang Bayan members, and the Liga ng mga Barangay and SK Federation presidents.',
   'Map locations of five barangays: Acacia, Casoy, Daganas, Jose P. Rizal, and Santol.',
   'Barangay population from the 2024 census. The 2020 figures are shown instead.',
@@ -113,6 +118,7 @@ export const selectionRules = [
 
 /** Every place where the published source was adjusted by hand, and why. */
 export const handEdits = [
+  { what: 'Catarman MDRRMO mobile number', why: 'The municipal website lists 0949-141-3810, but the MDRRMO’s own hotline poster says 0949-151-3810. The poster’s number is used.' },
   { what: 'Local Economic Enterprise Office phone number', why: 'The official governance page shows “-50%” in place of a number. The mobile number from the official contact page is used instead.' },
   { what: 'Business permit renewal checklist', why: 'The official list names the Fire Safety Inspection Certificate twice. It is shown once.' },
   { what: 'Cedula checklist headings', why: 'The official headings read “Corporation… Sole Propriety”. They are shown as “Sole proprietorship”.' },

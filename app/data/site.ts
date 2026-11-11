@@ -121,16 +121,28 @@ export const officials = [
 ]
 
 /**
- * MDRRMO number is from catarman.gov.ph. Police and fire numbers are not published
- * there and must be supplied and verified before they are shown.
+ * Emergency hotlines.
+ *
+ * Catarman MDRRMO, police, and fire numbers are from the Catarman MDRRMO's own
+ * "Catarman Emergency Hotline Numbers" poster (Facebook, 15 Nov 2024). The second
+ * MDRRMO number is from catarman.gov.ph. Provincial numbers are from the Province of
+ * Northern Samar's website and public directories. Re-check these regularly: a wrong
+ * emergency number is worse than none.
  */
 export const hotlines: { name: string; numbers: string[]; note: string }[] = [
   { name: 'National Emergency Hotline', numbers: ['911'], note: 'Police, fire, and medical emergencies' },
-  { name: 'Philippine Red Cross', numbers: ['143'], note: 'Ambulance and rescue' },
-  { name: 'Catarman MDRRMO', numbers: ['0906-357-0985', '0949-141-3810'], note: 'Disaster and rescue' },
-  { name: 'Catarman Police Station', numbers: [], note: 'Police assistance' },
-  { name: 'BFP Catarman', numbers: [], note: 'Fire emergencies' },
+  { name: 'Catarman MDRRMO', numbers: ['0949-151-3810', '0906-357-0985'], note: 'Disaster and rescue, 24 hours · Radio 147.740' },
+  { name: 'Catarman Police Station', numbers: ['0915-961-2215'], note: 'Police assistance' },
+  { name: 'BFP Catarman Fire Station', numbers: ['0929-709-4511', '0917-885-5053'], note: 'Fire emergencies' },
+  { name: 'Northern Samar Provincial Hospital', numbers: ['(055) 500-9770', '(055) 500-1314'], note: 'Hospital trunklines, Catarman' },
+  { name: 'Northern Samar PDRRMO', numbers: ['0967-339-5807', '(055) 500-9812'], note: 'Provincial disaster office' },
+  { name: 'Philippine Red Cross', numbers: ['143'], note: 'Ambulance and rescue, national line' },
 ]
+
+export const hotlineSource = {
+  label: 'Catarman MDRRMO hotline poster',
+  url: 'https://www.facebook.com/catarman.mdrrmo.9/posts/1801811050625139/',
+}
 
 /** Source: figures for fiscal year 2024 as cited on Wikipedia. Confirm with COA / BLGF. */
 export const finances = {
