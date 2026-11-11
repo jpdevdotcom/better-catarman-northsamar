@@ -32,10 +32,12 @@ export const site = {
   province: 'Northern Samar',
   region: 'Eastern Visayas (Region VIII)',
   zip: '6400',
-  officialWebsite: 'https://www.catarman-nsamar.gov.ph',
+  officialWebsite: 'https://catarman.gov.ph',
   coordinates: { lat: 12.4994, lng: 124.6328 },
   officeHours: 'Monday to Friday, 8:00 AM – 5:00 PM',
   address: 'Municipal Hall, Catarman, Northern Samar 6400',
+  phones: ['(055) 500-0712', '0915-836-8555'],
+  email: 'lgu.catarman@gmail.com',
 }
 
 export const nav = [
@@ -436,32 +438,16 @@ export const officials = [
   { role: 'Representative, 1st District', name: 'Hon. Niko Raul S. Daza' },
 ]
 
-export const offices: { name: string; handles: string; icon: Component }[] = [
-  { name: 'Office of the Municipal Mayor', handles: 'Executive direction, permits, public assistance', icon: Landmark },
-  { name: 'Sangguniang Bayan', handles: 'Ordinances, resolutions, and public hearings', icon: Users },
-  { name: 'Municipal Civil Registrar', handles: 'Birth, marriage, and death records', icon: FileText },
-  { name: 'Business Permits and Licensing Office', handles: 'Mayor’s permits and renewals', icon: Store },
-  { name: 'Municipal Treasurer’s Office', handles: 'Tax payments, cedula, and clearances', icon: Receipt },
-  { name: 'Municipal Assessor’s Office', handles: 'Property assessment and tax declarations', icon: Building2 },
-  { name: 'Municipal Social Welfare and Development Office', handles: 'PWD, solo parent, and crisis assistance', icon: HandHeart },
-  { name: 'Municipal Health Office', handles: 'Check-ups, immunization, health certificates', icon: HeartPulse },
-  { name: 'Municipal Agriculture Office', handles: 'Farmer and fisherfolk programs', icon: Sprout },
-  { name: 'Municipal Engineering Office', handles: 'Building permits and public works', icon: HardHat },
-  { name: 'Municipal Planning and Development Office', handles: 'Zoning and development planning', icon: Briefcase },
-  { name: 'MDRRMO', handles: 'Disaster preparedness and emergency response', icon: ShieldAlert },
-  { name: 'MENRO', handles: 'Waste management and environment', icon: Leaf },
-]
-
 /**
- * Only nationwide numbers are listed. Local numbers (MDRRMO, police, fire,
- * hospital) must be supplied and verified by the LGU before they are shown.
+ * MDRRMO number is from catarman.gov.ph. Police and fire numbers are not published
+ * there and must be supplied and verified before they are shown.
  */
-export const hotlines: { name: string; number: string | null; note: string }[] = [
-  { name: 'National Emergency Hotline', number: '911', note: 'Police, fire, and medical emergencies' },
-  { name: 'Philippine Red Cross', number: '143', note: 'Ambulance and rescue' },
-  { name: 'Catarman MDRRMO', number: null, note: 'Disaster and rescue' },
-  { name: 'Catarman Police Station', number: null, note: 'Police assistance' },
-  { name: 'BFP Catarman', number: null, note: 'Fire emergencies' },
+export const hotlines: { name: string; numbers: string[]; note: string }[] = [
+  { name: 'National Emergency Hotline', numbers: ['911'], note: 'Police, fire, and medical emergencies' },
+  { name: 'Philippine Red Cross', numbers: ['143'], note: 'Ambulance and rescue' },
+  { name: 'Catarman MDRRMO', numbers: ['0906-357-0985', '0949-141-3810'], note: 'Disaster and rescue' },
+  { name: 'Catarman Police Station', numbers: [], note: 'Police assistance' },
+  { name: 'BFP Catarman', numbers: [], note: 'Fire emergencies' },
 ]
 
 /** Source: figures for fiscal year 2024 as cited on Wikipedia. Confirm with COA / BLGF. */
@@ -476,7 +462,7 @@ export const finances = {
 }
 
 export const transparencyLinks = [
-  { label: 'Official LGU Catarman website', href: 'https://www.catarman-nsamar.gov.ph', note: 'Announcements, bids, and full disclosure documents' },
+  { label: 'Official LGU Catarman website', href: 'https://catarman.gov.ph', note: 'Announcements, bids, and full disclosure documents' },
   { label: 'Freedom of Information (eFOI)', href: 'https://www.foi.gov.ph/', note: 'Request government records' },
   { label: 'BLGF Portal', href: 'https://blgf.gov.ph/', note: 'Local government financial data' },
   { label: 'Commission on Audit', href: 'https://www.coa.gov.ph/', note: 'Annual audit reports' },

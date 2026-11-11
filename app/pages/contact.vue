@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { Clock, ExternalLink, Globe, MapPin } from '@lucide/vue'
+import { Clock, ExternalLink, Globe, Mail, MapPin, Phone } from '@lucide/vue'
 import { site } from '~/data/site'
 
 useHead({ title: 'Contact' })
 useSeoMeta({ description: 'Address, office hours, and emergency hotlines for Catarman, Northern Samar.' })
 
 const { lat, lng } = site.coordinates
-const hallPoint = [{ name: 'Catarman Municipal Hall (town proper)', lat, lng }]
+const hallPoint = [{ name: 'Catarman town proper', lat, lng }]
 const d = 0.02
 const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - d},${lat - d},${lng + d},${lat + d}&layer=mapnik&marker=${lat},${lng}`
 const mapLink = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/${lat}/${lng}`
@@ -25,6 +25,14 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/$
             <div><p class="text-sm text-muted-foreground">Address</p><p class="font-medium">{{ site.address }}</p></div>
           </li>
           <li class="flex items-start gap-4 px-5 py-4">
+            <Phone class="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+            <div><p class="text-sm text-muted-foreground">Office of the Municipal Mayor</p><PhoneList :phones="site.phones" /></div>
+          </li>
+          <li class="flex items-start gap-4 px-5 py-4">
+            <Mail class="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+            <div><p class="text-sm text-muted-foreground">Email</p><a :href="`mailto:${site.email}`" class="break-all font-medium text-primary hover:underline">{{ site.email }}</a></div>
+          </li>
+          <li class="flex items-start gap-4 px-5 py-4">
             <Clock class="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
             <div><p class="text-sm text-muted-foreground">Office hours</p><p class="font-medium">{{ site.officeHours }}</p></div>
           </li>
@@ -33,7 +41,7 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/$
             <div>
               <p class="text-sm text-muted-foreground">Official website</p>
               <a :href="site.officialWebsite" target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-medium text-primary hover:underline">
-                catarman-nsamar.gov.ph <ExternalLink class="size-3.5" aria-hidden="true" />
+                catarman.gov.ph <ExternalLink class="size-3.5" aria-hidden="true" />
               </a>
             </div>
           </li>
@@ -52,6 +60,11 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/$
         </a>
       </div>
     </section>
+
+    <p class="-mt-6 text-sm text-muted-foreground">
+      Looking for a specific office?
+      <NuxtLink to="/government#offices" class="font-semibold text-primary hover:underline">See all department contacts</NuxtLink>
+    </p>
 
     <section>
       <SectionHeading title="Emergency hotlines" description="For life-threatening emergencies, call 911." />
