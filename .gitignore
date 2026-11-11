@@ -9,3 +9,7 @@ dist
 .env.*
 !.env.example
 .DS_Store
+
+# Source documents downloaded for fact-checking
+*.pdf
+*.zip
