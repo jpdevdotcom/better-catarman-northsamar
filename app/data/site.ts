@@ -1,29 +1,9 @@
 import type { Component } from 'vue'
-import {
-  Baby,
-  Briefcase,
-  Building2,
-  FileText,
-  GraduationCap,
-  HandHeart,
-  HardHat,
-  HeartPulse,
-  Landmark,
-  Leaf,
-  Receipt,
-  ShieldAlert,
-  Sprout,
-  Store,
-  Users,
-  Accessibility,
-  Heart,
-  Home,
-} from '@lucide/vue'
+import { Accessibility, Baby, Briefcase, Building2, HandHeart, Heart, Home, Users } from '@lucide/vue'
 
 /**
- * All site content lives in this file so it is easy to review and correct.
- * Anything marked `verified: false` (or left as `null`) still needs to be
- * confirmed with the Municipal Government of Catarman before going live.
+ * General site content. Services live in ./services, officials and offices in
+ * ./government, and barangays in ./barangays.
  */
 
 export const site = {
@@ -50,306 +30,7 @@ export const nav = [
   { label: 'Contact', to: '/contact' },
 ]
 
-export interface Service {
-  name: string
-  description: string
-  office: string
-  requirements: string[]
-}
-
-export interface Category {
-  slug: string
-  title: string
-  short: string
-  description: string
-  icon: Component
-  services: Service[]
-}
-
-export const categories: Category[] = [
-  {
-    slug: 'certificates',
-    title: 'Certificates & Vital Records',
-    short: 'Certificates',
-    description: 'Birth, marriage, and death certificates, and other civil registry documents.',
-    icon: FileText,
-    services: [
-      {
-        name: 'Birth Certificate',
-        description: 'Request a certified copy of a birth record registered in Catarman, or register a newborn.',
-        office: 'Municipal Civil Registrar',
-        requirements: ['Valid ID of the requester', 'Full name, date and place of birth, and parents’ names', 'Authorization letter if requesting for someone else'],
-      },
-      {
-        name: 'Marriage License & Certificate',
-        description: 'Apply for a marriage license or request a certified copy of a marriage record.',
-        office: 'Municipal Civil Registrar',
-        requirements: ['PSA birth certificates of both applicants', 'Certificate of No Marriage (CENOMAR)', 'Valid IDs', 'Pre-marriage counseling certificate', 'Parental consent or advice, if applicable by age'],
-      },
-      {
-        name: 'Death Certificate',
-        description: 'Register a death or request a certified copy of a death record.',
-        office: 'Municipal Civil Registrar',
-        requirements: ['Valid ID of the requester', 'Name of the deceased, and date and place of death', 'Medical certificate of death (for registration)'],
-      },
-      {
-        name: 'Correction of Clerical Error',
-        description: 'File a petition to correct a typographical error or change a first name in a civil registry record (RA 9048 / RA 10172).',
-        office: 'Municipal Civil Registrar',
-        requirements: ['Certified copy of the record to be corrected', 'At least two supporting public or private documents', 'Valid ID of the petitioner'],
-      },
-    ],
-  },
-  {
-    slug: 'business',
-    title: 'Business, Trade & Investment',
-    short: 'Business Permits',
-    description: 'New business permits, renewals, and registration requirements.',
-    icon: Store,
-    services: [
-      {
-        name: 'New Business Permit',
-        description: 'Apply for a Mayor’s Permit to legally operate a new business in Catarman.',
-        office: 'Business Permits and Licensing Office (BPLO)',
-        requirements: ['DTI, SEC, or CDA registration', 'Barangay business clearance', 'Contract of lease or proof of ownership of the business location', 'Community Tax Certificate (cedula)', 'Occupancy permit and fire safety inspection certificate'],
-      },
-      {
-        name: 'Business Permit Renewal',
-        description: 'Renew your Mayor’s Permit. Renewals are due every January.',
-        office: 'Business Permits and Licensing Office (BPLO)',
-        requirements: ['Previous year’s Mayor’s Permit', 'Barangay business clearance', 'Declaration of gross sales or receipts for the previous year', 'Community Tax Certificate (cedula)'],
-      },
-      {
-        name: 'Business Closure / Retirement',
-        description: 'Formally close a business so that taxes and fees stop accruing.',
-        office: 'Business Permits and Licensing Office (BPLO)',
-        requirements: ['Letter of request for retirement of business', 'Original Mayor’s Permit', 'Barangay certification of closure', 'Proof of payment of taxes due'],
-      },
-    ],
-  },
-  {
-    slug: 'tax-payments',
-    title: 'Taxation & Payments',
-    short: 'Tax Payments',
-    description: 'Real property tax, business tax, cedula, and tax clearances.',
-    icon: Receipt,
-    services: [
-      {
-        name: 'Real Property Tax (Amilyar)',
-        description: 'Pay the annual tax on land, buildings, and machinery.',
-        office: 'Municipal Treasurer’s Office',
-        requirements: ['Latest tax declaration or previous official receipt', 'Valid ID'],
-      },
-      {
-        name: 'Community Tax Certificate (Cedula)',
-        description: 'Get a cedula, commonly required for permits, notarized documents, and other transactions.',
-        office: 'Municipal Treasurer’s Office',
-        requirements: ['Valid ID', 'Declaration of income or proof of earnings'],
-      },
-      {
-        name: 'Tax Clearance',
-        description: 'Certification that you have no unpaid real property or business taxes.',
-        office: 'Municipal Treasurer’s Office',
-        requirements: ['Official receipts of taxes paid for the current year', 'Valid ID'],
-      },
-      {
-        name: 'Tax Declaration & Assessment',
-        description: 'Request a certified copy of a tax declaration, or have a property assessed or transferred.',
-        office: 'Municipal Assessor’s Office',
-        requirements: ['Title or deed of the property', 'Tax clearance', 'Valid ID of the owner or authorized representative'],
-      },
-    ],
-  },
-  {
-    slug: 'social-services',
-    title: 'Social Services & Assistance',
-    short: 'Social Services',
-    description: 'Support for senior citizens, persons with disability, solo parents, and families in crisis.',
-    icon: HandHeart,
-    services: [
-      {
-        name: 'Senior Citizen ID',
-        description: 'ID for residents aged 60 and above, used for discounts and benefits.',
-        office: 'Office for Senior Citizens Affairs (OSCA)',
-        requirements: ['Birth certificate or any valid ID showing date of birth', 'Barangay certificate of residency', '1x1 ID photos'],
-      },
-      {
-        name: 'PWD ID',
-        description: 'ID for persons with disability, used for discounts and benefits.',
-        office: 'Municipal Social Welfare and Development Office (MSWDO)',
-        requirements: ['Medical certificate or certificate of disability', 'Barangay certificate of residency', '1x1 ID photos'],
-      },
-      {
-        name: 'Solo Parent ID',
-        description: 'ID and benefits for solo parents under the Expanded Solo Parents Welfare Act.',
-        office: 'Municipal Social Welfare and Development Office (MSWDO)',
-        requirements: ['Barangay certificate of residency and solo-parent status', 'Birth certificates of children', 'Proof of income', '1x1 ID photos'],
-      },
-      {
-        name: 'Assistance to Individuals in Crisis',
-        description: 'Medical, burial, and emergency assistance for residents in difficult situations.',
-        office: 'Municipal Social Welfare and Development Office (MSWDO)',
-        requirements: ['Barangay certificate of indigency', 'Valid ID', 'Supporting documents (medical abstract, hospital bill, or death certificate)'],
-      },
-    ],
-  },
-  {
-    slug: 'health',
-    title: 'Health & Wellness',
-    short: 'Health Services',
-    description: 'Check-ups, immunization, health certificates, and medical programs.',
-    icon: HeartPulse,
-    services: [
-      {
-        name: 'Medical Consultation',
-        description: 'Free primary care check-ups at the Rural Health Unit and barangay health stations.',
-        office: 'Municipal Health Office',
-        requirements: ['Any ID or individual treatment record, if available'],
-      },
-      {
-        name: 'Immunization',
-        description: 'Routine vaccines for infants and children, and other vaccination programs.',
-        office: 'Municipal Health Office',
-        requirements: ['Child’s immunization card or mother-and-baby booklet'],
-      },
-      {
-        name: 'Health Certificate',
-        description: 'Required for food handlers and workers in certain establishments.',
-        office: 'Municipal Health Office',
-        requirements: ['Laboratory results as required (e.g. stool exam, chest X-ray)', 'Community Tax Certificate (cedula)', '1x1 ID photo'],
-      },
-      {
-        name: 'Maternal & Child Care',
-        description: 'Prenatal check-ups, family planning, and nutrition services.',
-        office: 'Municipal Health Office',
-        requirements: ['Mother-and-baby booklet, if available'],
-      },
-    ],
-  },
-  {
-    slug: 'agriculture',
-    title: 'Agriculture & Fisheries',
-    short: 'Agriculture',
-    description: 'Farmer and fisherfolk registration, seeds, and technical assistance.',
-    icon: Sprout,
-    services: [
-      {
-        name: 'Farmer Registration (RSBSA)',
-        description: 'Register in the Registry System for Basic Sectors in Agriculture to qualify for government programs.',
-        office: 'Municipal Agriculture Office',
-        requirements: ['Valid ID', 'Proof of land ownership or tenancy', '2x2 ID photo'],
-      },
-      {
-        name: 'Fisherfolk Registration (FishR)',
-        description: 'Register as a municipal fisherfolk and register fishing boats and gear.',
-        office: 'Municipal Agriculture Office',
-        requirements: ['Valid ID', 'Barangay certificate of residency', '2x2 ID photo'],
-      },
-      {
-        name: 'Seeds, Seedlings & Farm Inputs',
-        description: 'Request available seeds, seedlings, fertilizer, and technical advice.',
-        office: 'Municipal Agriculture Office',
-        requirements: ['RSBSA registration', 'Letter of request'],
-      },
-    ],
-  },
-  {
-    slug: 'infrastructure',
-    title: 'Infrastructure & Building',
-    short: 'Building Permits',
-    description: 'Building, occupancy, and zoning permits and public works requests.',
-    icon: HardHat,
-    services: [
-      {
-        name: 'Building Permit',
-        description: 'Required before constructing, renovating, or demolishing a structure.',
-        office: 'Municipal Engineering Office / Office of the Building Official',
-        requirements: ['Proof of lot ownership or consent of the owner', 'Signed and sealed building plans', 'Bill of materials and specifications', 'Zoning / locational clearance', 'Barangay clearance'],
-      },
-      {
-        name: 'Occupancy Permit',
-        description: 'Required before a newly built structure can be used.',
-        office: 'Municipal Engineering Office / Office of the Building Official',
-        requirements: ['Approved building permit and plans', 'Certificate of completion', 'Fire safety inspection certificate'],
-      },
-      {
-        name: 'Zoning / Locational Clearance',
-        description: 'Confirms that a planned land use is allowed in its location.',
-        office: 'Municipal Planning and Development Office',
-        requirements: ['Proof of lot ownership', 'Vicinity map and site plan', 'Barangay clearance'],
-      },
-    ],
-  },
-  {
-    slug: 'education',
-    title: 'Education & Scholarship',
-    short: 'Education',
-    description: 'Scholarships, student assistance, and local schools.',
-    icon: GraduationCap,
-    services: [
-      {
-        name: 'Scholarship & Educational Assistance',
-        description: 'Financial support for qualified students residing in Catarman, subject to program availability.',
-        office: 'Office of the Municipal Mayor',
-        requirements: ['Certificate of enrollment or registration', 'Latest grades', 'Barangay certificate of residency and indigency'],
-      },
-      {
-        name: 'Schools in Catarman',
-        description: 'Catarman is home to the University of Eastern Philippines, Catarman National High School, and many other public and private schools.',
-        office: 'DepEd Northern Samar Division / respective schools',
-        requirements: ['Contact the school directly for admission requirements'],
-      },
-    ],
-  },
-  {
-    slug: 'public-safety',
-    title: 'Public Safety & Disaster Response',
-    short: 'Public Safety',
-    description: 'Emergency response, disaster preparedness, and clearances.',
-    icon: ShieldAlert,
-    services: [
-      {
-        name: 'Emergency Response',
-        description: 'Rescue and response during typhoons, floods, fires, and accidents. For life-threatening emergencies, call 911.',
-        office: 'Municipal Disaster Risk Reduction and Management Office (MDRRMO)',
-        requirements: ['None — call for help right away'],
-      },
-      {
-        name: 'Police Clearance',
-        description: 'Clearance for employment, travel, and other legal purposes.',
-        office: 'Catarman Municipal Police Station',
-        requirements: ['Two valid IDs', 'Barangay clearance', 'Online appointment via the National Police Clearance System'],
-      },
-      {
-        name: 'Fire Safety Inspection Certificate',
-        description: 'Required for business permits and occupancy permits.',
-        office: 'Bureau of Fire Protection – Catarman',
-        requirements: ['Application form', 'Business or building permit documents', 'Fire insurance policy, if any'],
-      },
-    ],
-  },
-  {
-    slug: 'environment',
-    title: 'Environment & Natural Resources',
-    short: 'Environment',
-    description: 'Waste collection, tree-cutting permits, and environmental programs.',
-    icon: Leaf,
-    services: [
-      {
-        name: 'Solid Waste Collection',
-        description: 'Garbage collection schedules and segregation rules for households and businesses.',
-        office: 'Municipal Environment and Natural Resources Office (MENRO)',
-        requirements: ['Segregate waste at source (biodegradable, recyclable, residual)'],
-      },
-      {
-        name: 'Tree-Cutting Endorsement',
-        description: 'Local endorsement needed before applying for a DENR tree-cutting permit.',
-        office: 'Municipal Environment and Natural Resources Office (MENRO)',
-        requirements: ['Letter of request', 'Proof of land ownership', 'Barangay certification', 'Photos of the trees concerned'],
-      },
-    ],
-  },
-]
+export * from './services'
 
 export const popularSlugs = ['certificates', 'business', 'tax-payments', 'social-services', 'health', 'public-safety']
 
@@ -363,7 +44,7 @@ export const lifeEvents: { label: string; icon: Component; to: string }[] = [
   { label: 'Need financial help', icon: HandHeart, to: '/services/social-services' },
   { label: 'Turning 60', icon: Users, to: '/services/social-services' },
   { label: 'Living with a disability', icon: Accessibility, to: '/services/social-services' },
-  { label: 'Paying property tax', icon: Building2, to: '/services/tax-payments' },
+  { label: 'Buying or inheriting land', icon: Building2, to: '/services/property' },
 ]
 
 /** Source: Philippine Statistics Authority, via Wikipedia (retrieved Nov 2026). */
@@ -481,7 +162,7 @@ export const faqs = [
   },
   {
     q: 'How do I get a copy of my birth certificate?',
-    a: 'If your birth was registered in Catarman, go to the Municipal Civil Registrar with a valid ID and your birth details. You can also request a PSA copy at any PSA outlet or online.',
+    a: 'If your birth was registered in Catarman, request it from the Local Civil Registry Office, in person or through the municipal e-services site, with your name and date of birth. You can also request a PSA copy at any PSA outlet or online.',
   },
   {
     q: 'When should I renew my business permit?',
@@ -493,7 +174,7 @@ export const faqs = [
   },
   {
     q: 'How much are the fees?',
-    a: 'Fees are set by local ordinance and can change. This site does not list amounts — please confirm the current fee with the office handling your request.',
+    a: 'Fees are set by local ordinance and can change. Where the municipal government publishes a fee, such as for Assessor’s Office requests, it is shown on the service page. For everything else, please confirm the current fee with the office handling your request.',
   },
   {
     q: 'Something on this site is wrong or outdated. What should I do?',

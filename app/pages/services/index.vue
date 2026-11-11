@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowRight, SearchX } from '@lucide/vue'
-import { categories, lifeEvents } from '~/data/site'
+import { allServices, categories, lifeEvents, requirementText } from '~/data/site'
 
 useHead({ title: 'Services' })
 useSeoMeta({ description: 'Browse all municipal services in Catarman, Northern Samar, with requirements and the office to visit.' })
@@ -11,14 +11,10 @@ const query = computed(() => String(route.query.q ?? '').trim())
 const results = computed(() => {
   const terms = query.value.toLowerCase().split(/\s+/).filter(Boolean)
   if (!terms.length) return []
-  return categories.flatMap(c =>
-    c.services
-      .filter((s) => {
-        const hay = `${s.name} ${s.description} ${s.office} ${c.title}`.toLowerCase()
-        return terms.every(t => hay.includes(t))
-      })
-      .map(s => ({ ...s, category: c })),
-  )
+  return allServices.filter((s) => {
+    const hay = `${s.name} ${s.description} ${s.office} ${s.category.title} ${requirementText(s)}`.toLowerCase()
+    return terms.every(t => hay.includes(t))
+  })
 })
 </script>
 
@@ -40,9 +36,9 @@ const results = computed(() => {
       </div>
 
       <ul v-if="results.length" class="divide-y rounded-lg border">
-        <li v-for="r in results" :key="r.category.slug + r.name">
+        <li v-for="r in results" :key="r.category.slug + r.slug">
           <NuxtLink
-            :to="{ path: `/services/${r.category.slug}`, hash: `#${slugify(r.name)}` }"
+            :to="`/services/${r.category.slug}/${r.slug}`"
             class="group flex items-center justify-between gap-4 px-5 py-4 hover:bg-accent"
           >
             <span>
