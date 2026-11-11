@@ -21,7 +21,7 @@ watch(() => route.fullPath, () => (open.value = false))
     <div class="container-page flex h-16 items-center justify-between gap-4">
       <AppLogo />
 
-      <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
         <NuxtLink
           v-for="item in nav"
           :key="item.to"
@@ -35,7 +35,7 @@ watch(() => route.fullPath, () => (open.value = false))
 
       <Sheet v-model:open="open">
         <SheetTrigger as-child>
-          <Button variant="outline" size="icon" class="md:hidden" aria-label="Open menu">
+          <Button variant="outline" size="icon" class="lg:hidden" aria-label="Open menu">
             <Menu class="size-5" />
           </Button>
         </SheetTrigger>

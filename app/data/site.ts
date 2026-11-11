@@ -40,6 +40,7 @@ export const site = {
 
 export const nav = [
   { label: 'Services', to: '/services' },
+  { label: 'Barangays', to: '/barangays' },
   { label: 'Government', to: '/government' },
   { label: 'Statistics', to: '/statistics' },
   { label: 'Transparency', to: '/transparency' },
@@ -403,17 +404,6 @@ export const census = [
   { year: 2015, population: 94037 },
   { year: 2020, population: 97879 },
   { year: 2024, population: 97738 },
-]
-
-export const barangays = [
-  'Acacia (Pob.)', 'Aguinaldo', 'Airport Village (Pob.)', 'Bangkerohan', 'Baybay (Pob.)', 'Bocsol', 'Cabayhan',
-  'Cag-abaca', 'Cal-igang', 'Calachuchi (Pob.)', 'Casoy (Pob.)', 'Cawayan', 'Cervantes', 'Cularima', 'Daganas',
-  'Dalakit', 'Doña Pulqueria', 'Galutan', 'Gebalagnan', 'Gibulwangan', 'Guba', 'Hinatad', 'Imelda',
-  'Ipil-ipil (Pob.)', 'Jose Abad Santos (Pob.)', 'Jose P. Rizal (Pob.)', 'Lapu-lapu (Pob.)', 'Liberty', 'Libjo',
-  'Mabini', 'Mabolo (Pob.)', 'Macagtas', 'Malvar', 'McKinley', 'Molave (Pob.)', 'Narra (Pob.)', 'New Rizal',
-  'Old Rizal', 'Paticua', 'Polangi', 'Quezon', 'Salvacion', 'Sampaguita (Pob.)', 'San Julian', 'San Pascual',
-  'Santol (Pob.)', 'Somoge', 'Talisay (Pob.)', 'Tinowaran', 'Trangue', 'UEP Zone I', 'UEP Zone II', 'UEP Zone III',
-  'Washington', 'Yakal (Pob.)',
 ]
 
 export const history = [

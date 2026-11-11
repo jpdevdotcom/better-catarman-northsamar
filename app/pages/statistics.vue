@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { barangays, census, glance, quickFacts } from '~/data/site'
+import { barangays } from '~/data/barangays'
+import { census, glance, quickFacts } from '~/data/site'
 
 useHead({ title: 'Statistics' })
 useSeoMeta({ description: 'Population, land area, barangays, and key figures for Catarman, Northern Samar.' })
@@ -48,9 +49,16 @@ const fmt = (n: number) => n.toLocaleString('en-PH')
     </section>
 
     <section>
-      <SectionHeading :title="`${barangays.length} barangays`" description="“Pob.” marks barangays in the poblacion (town proper)." />
+      <SectionHeading
+        :title="`${barangays.length} barangays`"
+        description="Select a barangay to see its population and location."
+        link-to="/barangays"
+        link-label="Barangay directory"
+      />
       <ul class="columns-2 gap-8 text-sm sm:columns-3 lg:columns-5">
-        <li v-for="b in barangays" :key="b" class="border-b py-2">{{ b }}</li>
+        <li v-for="b in barangays" :key="b.slug" class="border-b">
+          <NuxtLink :to="`/barangays/${b.slug}`" class="block py-2 hover:text-primary">{{ b.name }}</NuxtLink>
+        </li>
       </ul>
     </section>
 
