@@ -92,8 +92,8 @@ const fmtDate = (iso: string) => {
         title="Get ready before the storm"
         description="General preparedness advice. Follow instructions from the MDRRMO and your barangay officials."
       />
-      <ul class="grid gap-px overflow-hidden border bg-border sm:grid-cols-2">
-        <li v-for="p in preparedness" :key="p" class="flex items-start gap-3 bg-background p-4">
+      <ul class="grid border-l border-t sm:grid-cols-2">
+        <li v-for="p in preparedness" :key="p" class="flex items-start gap-3 border-b border-r bg-background p-4">
           <Check class="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" /> {{ t(p) }}
         </li>
       </ul>
