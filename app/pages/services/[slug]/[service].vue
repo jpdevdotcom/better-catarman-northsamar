@@ -41,7 +41,7 @@ const key = (g: number, i: number) => `${g}-${i}`
       </span>
     </p>
     <div class="mt-5">
-      <ShareBar :title="`${service!.name} · BetterCatarman.org`" :path="`/services/${category!.slug}/${service!.slug}`" />
+      <ShareBar :title="`${service!.name} · BetterCatarman.org Northern Samar`" :path="`/services/${category!.slug}/${service!.slug}`" />
     </div>
   </PageHeader>
 

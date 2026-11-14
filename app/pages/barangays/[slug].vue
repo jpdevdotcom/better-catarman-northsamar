@@ -54,7 +54,7 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#
     :crumbs="[{ label: 'Barangays', to: '/barangays' }, { label: b.name }]"
   >
     <div class="mt-5">
-      <ShareBar :title="`Barangay ${b.name} · BetterCatarman.org`" :path="`/barangays/${b.slug}`" />
+      <ShareBar :title="`Barangay ${b.name} · BetterCatarman.org Northern Samar`" :path="`/barangays/${b.slug}`" />
     </div>
   </PageHeader>
 

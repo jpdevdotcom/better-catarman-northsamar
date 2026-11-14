@@ -48,11 +48,11 @@ style = ("<style>@font-face{font-family:'Public Sans Logo';font-weight:100 900;"
          "text{font-family:'Public Sans Logo','Public Sans','Helvetica Neue',Arial,sans-serif;font-weight:700}</style>")
 
 def lockup(ink):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 160" role="img" aria-label="BetterCatarman.org">{style}'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" role="img" aria-label="BetterCatarman.org Northern Samar">{style}'
             f'<g transform="translate(0 4)">{MARK}</g>'
-            f'<g fill="{ink}"><text x="166" y="76" font-size="42" letter-spacing="-1">Better</text>'
-            f'<text x="166" y="118" font-size="42" letter-spacing="-1">Catarman</text>'
-            f'<text x="356" y="142" font-size="18" font-weight="600" text-anchor="end">.org</text></g></svg>')
+            f'<g fill="{ink}"><text x="166" y="72" font-size="42" letter-spacing="-1">Better</text>'
+            f'<text x="166" y="112" font-size="42" letter-spacing="-1">Catarman<tspan font-size="20" font-weight="600" letter-spacing="0">.org</tspan></text>'
+            f'<text x="168" y="140" font-size="15" font-weight="600" letter-spacing="2.6">NORTHERN SAMAR</text></g></svg>')
 
 (ROOT / "public/logo.svg").write_text(lockup(INK))
 (ROOT / "public/logo-mark.svg").write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" role="img" aria-label="BetterCatarman">{MARK}</svg>')

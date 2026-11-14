@@ -52,7 +52,10 @@ onMounted(async () => {
       <article class="mx-auto flex max-w-[680px] flex-col items-center border-4 border-primary p-10 text-center print:max-w-none print:border-[6px]">
         <div class="flex items-center gap-3">
           <LogoMark class="size-14" />
-          <p class="text-2xl font-bold">Better<span class="text-primary">Catarman</span><span class="text-base font-semibold text-muted-foreground">.org</span></p>
+          <p class="flex flex-col items-start leading-none">
+            <span class="text-2xl font-bold">Better<span class="text-primary">Catarman</span><span class="text-base font-semibold text-muted-foreground">.org</span></span>
+            <span class="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Northern Samar</span>
+          </p>
         </div>
         <h1 class="mt-8 text-4xl font-bold leading-tight sm:text-5xl">{{ target.title }}</h1>
         <ul class="mt-5 space-y-1 text-lg text-muted-foreground">

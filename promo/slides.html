@@ -40,7 +40,10 @@ body:not(.single) .slide { margin: 24px auto; }
 .top { position: absolute; left: 60px; right: 60px; top: 48px; display: flex; align-items: center; justify-content: space-between; z-index: 5; }
 .brand { display: flex; align-items: center; gap: 14px; font-size: 25px; font-weight: 700; letter-spacing: -.01em; }
 .brand img { width: 46px; height: 46px; background: #fff; padding: 5px; }
-.brand small { font-size: 17px; font-weight: 600; opacity: .8; }
+.brand span { display: flex; flex-direction: column; line-height: 1; }
+.brand b { font-weight: 700; }
+.brand i { font-style: normal; font-size: 17px; font-weight: 600; opacity: .8; }
+.brand small { margin-top: 6px; font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; opacity: .8; }
 .place { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 600; opacity: .9; }
 .place svg { width: 18px; height: 18px; }
 
@@ -161,7 +164,7 @@ const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 const pin = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12s-8-7-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>'
 
 const header = `<div class="top">
-  <div class="brand"><img src="../public/logo-mark.svg" alt=""><span>BetterCatarman<small>.org</small></span></div>
+  <div class="brand"><img src="../public/logo-mark.svg" alt=""><span><b>BetterCatarman<i>.org</i></b><small>Northern Samar</small></span></div>
   <div class="place">${pin} Catarman, Northern Samar</div>
 </div>`
 

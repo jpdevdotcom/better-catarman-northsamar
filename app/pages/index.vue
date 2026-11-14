@@ -4,7 +4,7 @@ import { financeYears } from '~/data/finances'
 import { notices } from '~/data/notices'
 import { categories, glance, history, officials, popularSearches, popularSlugs, site } from '~/data/site'
 
-useHead({ title: 'Welcome to BetterCatarman.org', titleTemplate: '%s · Catarman, Northern Samar' })
+useHead({ title: 'BetterCatarman.org Northern Samar · Government services in Catarman', titleTemplate: '%s' })
 useSeoMeta({
   description: 'Requirements, offices, barangays, and public records for Catarman, Northern Samar, gathered in one simple place.',
 })
@@ -32,7 +32,7 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
         <MapPin class="size-4" aria-hidden="true" /> {{ site.municipality }}, {{ site.province }}
       </p>
       <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-        {{ t('Welcome to') }} <span class="text-primary">BetterCatarman.org</span>
+        {{ t('Welcome to') }} <span class="text-primary">BetterCatarman<span class="sm:text-3xl text-2xl">.org</span></span>
       </h1>
       <p class="mt-5 max-w-2xl text-lg text-muted-foreground">
         {{ t('Requirements, offices, barangays, and public records for every Catarmananon, gathered in one simple place.') }}

@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      titleTemplate: '%s · BetterCatarman',
+      titleTemplate: '%s · BetterCatarman.org Northern Samar',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#1d4ed8' },
