@@ -40,6 +40,9 @@ const key = (g: number, i: number) => `${g}-${i}`
         <Scale class="size-4" aria-hidden="true" /> Based on national rules
       </span>
     </p>
+    <div class="mt-5">
+      <ShareBar :title="`${service!.name} · BetterCatarman.org`" :path="`/services/${category!.slug}/${service!.slug}`" />
+    </div>
   </PageHeader>
 
   <div class="container-page grid gap-12 py-12 lg:grid-cols-[1fr_320px]">

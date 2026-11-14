@@ -6,7 +6,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <footer class="mt-20 border-t bg-muted">
+  <footer class="mt-20 border-t bg-muted print:hidden">
     <div class="container-page grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-3">
         <AppLogo />

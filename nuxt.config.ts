@@ -19,6 +19,8 @@ export default defineNuxtConfig({
       // Where "Report a correction" sends reports. Set either or both in .env:
       // NUXT_PUBLIC_REPORT_EMAIL (an email address) and NUXT_PUBLIC_REPORT_FORM_URL (e.g. a Google Form).
       reportEmail: '',
+      // Public address of the site, used in share links and QR codes. Set NUXT_PUBLIC_SITE_URL in production.
+      siteUrl: '',
       reportFormUrl: '',
     },
   },

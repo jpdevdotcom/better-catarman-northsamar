@@ -277,7 +277,7 @@ export const fil: Record<string, string> = {
   'Not checked': 'Hindi pa nasuri',
   'Use the arrow keys to read each year.': 'Gamitin ang mga arrow key para basahin ang bawat taon.',
 
-  // Privacy and terms
+  // Privacy, terms, sharing, QR codes
   'Privacy notice': 'Abiso sa privacy',
   'Terms of use': 'Mga tuntunin sa paggamit',
   'How we handle your report': 'Paano namin pinangangasiwaan ang iyong ulat',
@@ -286,4 +286,16 @@ export const fil: Record<string, string> = {
   'Last updated': 'Huling na-update',
   'This notice is in English, the language it is maintained in.': 'Nasa Ingles ang abisong ito, ang wikang ginagamit sa pag-update nito.',
   'These terms are in English, the language they are maintained in.': 'Nasa Ingles ang mga tuntuning ito, ang wikang ginagamit sa pag-update nito.',
+  'Share': 'Ibahagi',
+  'Share this page': 'Ibahagi ang pahinang ito',
+  'Copy link': 'Kopyahin ang link',
+  'Link copied': 'Nakopya ang link',
+  'QR code': 'QR code',
+  'QR code for this page': 'QR code para sa pahinang ito',
+  'Scan with a phone camera to open this page. Print it for a notice board or barangay hall.': 'I-scan gamit ang camera ng cellphone para mabuksan ang pahinang ito. I-print para sa bulletin board o barangay hall.',
+  'Print poster': 'I-print ang poster',
+  'Download': 'I-download',
+  'Print': 'I-print',
+  'There is no poster for this page.': 'Walang poster para sa pahinang ito.',
+  'Print on A4 or Letter paper. The header, footer, and this bar are left out of the printout.': 'I-print sa A4 o Letter na papel. Hindi kasama sa print ang header, footer, at ang bar na ito.',
 }

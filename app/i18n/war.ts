@@ -280,7 +280,7 @@ export const war: Record<string, string> = {
   'Not checked': 'Diri pa nasusi',
   'Use the arrow keys to read each year.': 'Gamita an mga arrow key para basahon an kada tuig.',
 
-  // Privacy and terms
+  // Privacy, terms, sharing, QR codes
   'Privacy notice': 'Pahibaro mahitungod han privacy',
   'Terms of use': 'Mga kondisyon ha paggamit',
   'How we handle your report': 'Paonan-o namon gin-aatiman an imo report',
@@ -289,4 +289,16 @@ export const war: Record<string, string> = {
   'Last updated': 'Katapusan nga pag-update',
   'This notice is in English, the language it is maintained in.': 'Aada ha Ingles ini nga pahibaro, an pinulongan nga gingagamit ha pag-update hini.',
   'These terms are in English, the language they are maintained in.': 'Aada ha Ingles ini nga mga kondisyon, an pinulongan nga gingagamit ha pag-update hini.',
+  'Share': 'Ipaambit',
+  'Share this page': 'Ipaambit ini nga pahina',
+  'Copy link': 'Kopyaha an link',
+  'Link copied': 'Nakopya na an link',
+  'QR code': 'QR code',
+  'QR code for this page': 'QR code para hini nga pahina',
+  'Scan with a phone camera to open this page. Print it for a notice board or barangay hall.': 'I-scan gamit an camera han cellphone para maabrihan ini nga pahina. I-print para ha bulletin board o barangay hall.',
+  'Print poster': 'I-print an poster',
+  'Download': 'I-download',
+  'Print': 'I-print',
+  'There is no poster for this page.': 'Waray poster para hini nga pahina.',
+  'Print on A4 or Letter paper. The header, footer, and this bar are left out of the printout.': 'I-print ha A4 o Letter nga papel. Diri upod ha print an header, footer, ngan ini nga bar.',
 }

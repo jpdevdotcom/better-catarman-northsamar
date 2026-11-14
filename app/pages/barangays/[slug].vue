@@ -52,7 +52,11 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#
     :title="`Barangay ${b.name}`"
     :description="b.poblacion ? 'A poblacion barangay in the town proper of Catarman, Northern Samar.' : 'A barangay of Catarman, Northern Samar.'"
     :crumbs="[{ label: 'Barangays', to: '/barangays' }, { label: b.name }]"
-  />
+  >
+    <div class="mt-5">
+      <ShareBar :title="`Barangay ${b.name} · BetterCatarman.org`" :path="`/barangays/${b.slug}`" />
+    </div>
+  </PageHeader>
 
   <div class="container-page space-y-12 py-12">
     <dl class="grid grid-cols-2 gap-px overflow-hidden border bg-border lg:grid-cols-4">

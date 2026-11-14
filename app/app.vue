@@ -19,7 +19,7 @@ useHead({ htmlAttrs: { lang: () => locales.find(l => l.code === locale.value)!.h
       {{ t('Skip to main content') }}
     </a>
     <AppHeader />
-    <p v-if="locale !== 'en'" class="border-b bg-secondary text-secondary-foreground">
+    <p v-if="locale !== 'en'" class="border-b bg-secondary text-secondary-foreground print:hidden">
       <span class="container-page flex items-start gap-2.5 py-2.5 text-sm">
         <Languages class="mt-0.5 size-4 shrink-0" aria-hidden="true" />
         <span>

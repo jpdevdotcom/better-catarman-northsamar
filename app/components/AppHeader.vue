@@ -11,7 +11,7 @@ watch(() => route.fullPath, () => (open.value = false))
 
 <template>
   <!-- Hotline bar: one label, four numbers, tap to call. Scrolls sideways on narrow screens. -->
-  <div class="bg-primary text-primary-foreground">
+  <div class="bg-primary text-primary-foreground print:hidden">
     <div class="container-page flex h-9 items-center gap-5 text-[13px]">
       <span class="flex shrink-0 items-center gap-2 font-semibold">
         <Phone class="size-3.5" aria-hidden="true" /> {{ t('Hotlines') }}
@@ -31,7 +31,7 @@ watch(() => route.fullPath, () => (open.value = false))
     </div>
   </div>
 
-  <header class="sticky top-0 z-40 border-b bg-background">
+  <header class="sticky top-0 z-40 border-b bg-background print:hidden">
     <div class="container-page flex h-16 items-center justify-between gap-4">
       <AppLogo />
 
