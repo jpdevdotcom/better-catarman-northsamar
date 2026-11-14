@@ -23,6 +23,7 @@ export const site = {
 export const nav = [
   { label: 'Services', to: '/services' },
   { label: 'Barangays', to: '/barangays' },
+  { label: 'Advisories', to: '/advisories' },
   { label: 'Government', to: '/government' },
   { label: 'Statistics', to: '/statistics' },
   { label: 'Transparency', to: '/transparency' },

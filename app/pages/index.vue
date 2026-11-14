@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ArrowRight, ChartColumn, Clock, ExternalLink, Landmark, MapPin, Scale } from '@lucide/vue'
 import { financeYears } from '~/data/finances'
+import { notices } from '~/data/notices'
 import { categories, glance, history, officials, popularSearches, popularSlugs, site } from '~/data/site'
 
 useHead({ title: 'Welcome to BetterCatarman.org', titleTemplate: '%s · Catarman, Northern Samar' })
@@ -17,6 +18,7 @@ const explore = [
   { to: '/transparency', icon: Scale, title: 'Transparency', text: `Audited finances, ${financeYears[financeYears.length - 1]!.year} to ${financeYears[0]!.year}` },
 ]
 
+const latestNotices = notices.filter(n => n.kind === 'reminder').concat(notices.filter(n => n.kind === 'site')).slice(0, 3)
 const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
 </script>
 
@@ -81,6 +83,28 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
     />
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <CategoryCard v-for="c in popular" :key="c.slug" :category="c" />
+    </div>
+  </section>
+
+  <!-- Weather and notices -->
+  <section class="container-page pb-14">
+    <SectionHeading
+      title="Weather and advisories"
+      description="Today’s weather in Catarman, and notices worth knowing."
+      link-to="/advisories"
+      link-label="All advisories"
+    />
+    <div class="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+      <WeatherPanel compact />
+      <ul class="divide-y border">
+        <li v-for="n in latestNotices" :key="n.title">
+          <NuxtLink :to="n.to ?? '/advisories#notices'" class="block px-5 py-3.5 hover:bg-accent">
+            <span class="block text-xs font-bold uppercase tracking-wider text-primary">{{ t(n.kind === 'reminder' ? 'Reminder' : 'Site update') }}</span>
+            <span class="mt-0.5 block font-semibold leading-snug">{{ n.title }}</span>
+            <span v-if="n.due" class="block text-sm text-muted-foreground">{{ n.due }}</span>
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
   </section>
 
