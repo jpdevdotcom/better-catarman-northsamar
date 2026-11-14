@@ -31,6 +31,7 @@ const route = useRoute()
           <li v-for="item in nav" :key="item.to">
             <NuxtLink :to="item.to" class="text-muted-foreground hover:text-primary">{{ t(item.label) }}</NuxtLink>
           </li>
+          <li><NuxtLink to="/facilities" class="text-muted-foreground hover:text-primary">{{ t('Schools and health facilities') }}</NuxtLink></li>
         </ul>
       </div>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowRight, ChartColumn, Clock, ExternalLink, Landmark, MapPin, Scale } from '@lucide/vue'
+import { ArrowRight, ChartColumn, Clock, ExternalLink, GraduationCap, Landmark, MapPin, Scale } from '@lucide/vue'
 import { financeYears } from '~/data/finances'
 import { notices } from '~/data/notices'
 import { categories, glance, history, officials, popularSearches, popularSlugs, site } from '~/data/site'
@@ -13,6 +13,7 @@ const { t } = useT()
 
 const explore = [
   { to: '/barangays', icon: MapPin, title: 'Barangays', text: `All ${glance.find(g => g.label === 'Barangays')!.value}, with officials and population` },
+  { to: '/facilities', icon: GraduationCap, title: 'Schools and health facilities', text: 'Hospitals, health centers, and schools on a map' },
   { to: '/government', icon: Landmark, title: 'Government', text: 'Mayor, council, and municipal offices' },
   { to: '/statistics', icon: ChartColumn, title: 'Statistics', text: 'Population, census history, land area' },
   { to: '/transparency', icon: Scale, title: 'Transparency', text: `Audited finances, ${financeYears[financeYears.length - 1]!.year} to ${financeYears[0]!.year}` },

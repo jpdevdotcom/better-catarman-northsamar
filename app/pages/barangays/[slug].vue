@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ArrowLeft, ArrowRight, ExternalLink, Info, Phone, UserRound } from '@lucide/vue'
+import { ArrowLeft, ArrowRight, ExternalLink, GraduationCap, HeartPulse, Info, Phone, UserRound } from '@lucide/vue'
 import { barangayOfficials, officialsRetrieved, officialsSource } from '~/data/barangayOfficials'
 import { barangays, totalPop2020 } from '~/data/barangays'
 import { boundarySource } from '~/data/boundaries'
+import { facilities } from '~/data/facilities'
 
 const route = useRoute()
 const index = barangays.findIndex(b => b.slug === route.params.slug)
@@ -28,7 +29,7 @@ const stats = [
   { label: 'Share of Catarman', note: `Ranked ${rank} of ${barangays.length} by population`, value: `${share.toFixed(1)}%` },
 ]
 
-
+const here = facilities.filter(f => f.barangay === b.slug)
 
 const brgy = barangayOfficials[b.slug]
 const captain = brgy?.officials.find(o => o.position === 'Punong Barangay')
@@ -38,6 +39,8 @@ const others = brgy?.officials.filter(o => o.position !== 'Punong Barangay' && o
 const loc = b.location
 const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
 const points = barangays.map(x => ({ slug: x.slug, name: x.name, lat: x.location.lat, lng: x.location.lng }))
+// Schools and health facilities in this barangay, as green and red dots on the street map.
+const placePoints = here.map(f => ({ name: f.name, lat: f.lat, lng: f.lng, color: f.kind === 'health' ? '#b91c1c' : '#047857' }))
 const d = 0.012
 const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${loc.lng - d},${loc.lat - d},${loc.lng + d},${loc.lat + d}&layer=mapnik&marker=${loc.lat},${loc.lng}`
 const mapLink = `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#map=15/${loc.lat}/${loc.lng}`
@@ -74,7 +77,7 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#
         </div>
         <div>
           <div class="h-80 overflow-hidden border lg:h-[352px]">
-            <SiteMap :points="points" boundaries :focus="b.slug" :active="b.slug" :label="`Map of Barangay ${b.name}`">
+            <SiteMap :points="[...points, ...placePoints]" boundaries :focus="b.slug" :active="b.slug" :label="`Map of Barangay ${b.name}`">
               <iframe :src="mapSrc!" :title="`Street map of Barangay ${b.name}`" class="block size-full" loading="lazy" />
             </SiteMap>
           </div>
@@ -93,8 +96,30 @@ const mapLink = `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#
           Population figures are from the Philippine Statistics Authority (Census of Population). The boundary is from the
           <a :href="boundarySource.url" target="_blank" rel="noopener" class="font-medium text-primary hover:underline">{{ boundarySource.label }}</a>.
           {{ b.locationFrom === 'osm' ? 'The pin marks the village centre as mapped by © OpenStreetMap contributors.' : 'The pin is a point inside the official boundary.' }}
+          Schools and health facilities are from © OpenStreetMap contributors.
         </span>
       </p>
+    </section>
+
+    <section v-if="here.length" id="places" class="scroll-mt-24">
+      <SectionHeading
+        title="Schools and health facilities"
+        :description="`${here.length} in Barangay ${b.name}, as mapped on OpenStreetMap.`"
+        link-to="/facilities"
+        link-label="All facilities"
+      />
+      <!-- Borders drawn per cell, so an odd number of places leaves no grey gap. -->
+      <ul class="grid border-l border-t sm:grid-cols-2">
+        <li v-for="f in here" :key="f.osm" class="flex items-start gap-3 border-b border-r bg-background p-4">
+          <span class="grid size-9 shrink-0 place-items-center" :class="f.kind === 'health' ? 'bg-red-50 text-red-700' : 'bg-emerald-50 text-emerald-700'">
+            <component :is="f.kind === 'health' ? HeartPulse : GraduationCap" class="size-4" aria-hidden="true" />
+          </span>
+          <div class="min-w-0">
+            <p class="font-semibold leading-snug">{{ f.name }}</p>
+            <p class="text-sm text-muted-foreground">{{ f.detail }}<template v-if="f.district"> · {{ f.district }}</template></p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section v-if="brgy?.officials.length" id="officials" class="scroll-mt-24">

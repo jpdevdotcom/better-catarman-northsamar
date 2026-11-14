@@ -1,0 +1,2074 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-14T07:32:20Z",
+    "timestamp_areas_base": "2026-11-14T00:33:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2696770457,
+  "lat": 12.4992986,
+  "lon": 124.6397978,
+  "tags": {
+    "addr:postcode": "6710",
+    "addr:town": "Catarman",
+    "amenity": "college",
+    "name": "Lyceum of Visayas Maritime Academy Incorporated"
+  }
+},
+{
+  "type": "node",
+  "id": 3456859917,
+  "lat": 12.4970526,
+  "lon": 124.6396272,
+  "tags": {
+    "addr:street": "Emilio Jacinto Street",
+    "amenity": "pharmacy",
+    "brand": "Mercury Drug",
+    "brand:wikidata": "Q6818610",
+    "healthcare": "pharmacy",
+    "name": "Mercury Drug"
+  }
+},
+{
+  "type": "node",
+  "id": 4153670589,
+  "lat": 12.5057660,
+  "lon": 124.6412090,
+  "tags": {
+    "addr:street": "L. Ada Street",
+    "amenity": "kindergarten",
+    "name": "Baybay Preschool"
+  }
+},
+{
+  "type": "node",
+  "id": 4197115089,
+  "lat": 12.4970139,
+  "lon": 124.6399932,
+  "tags": {
+    "amenity": "pharmacy",
+    "brand": "Rose Pharmacy",
+    "brand:wikidata": "Q62663208",
+    "healthcare": "pharmacy",
+    "name": "Rose Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 4442505495,
+  "lat": 12.5057123,
+  "lon": 124.6281904,
+  "tags": {
+    "addr:barangay": "Dalakit",
+    "addr:city": "Catarman",
+    "addr:place": "Dalakit",
+    "addr:postcode": "6400",
+    "addr:province": "Northern Samar",
+    "amenity": "school",
+    "isced:level": "2-3",
+    "name": "Lt. Jacob O. Meimban Memorial Foundation Eastern Visayas College",
+    "opening_hours": "Mo-Fr 08:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4442906791,
+  "lat": 12.5047111,
+  "lon": 124.6417827,
+  "tags": {
+    "addr:postcode": "6400",
+    "amenity": "college",
+    "name": "East Pacific Computer College",
+    "name:en": "East Pacific Computer College"
+  }
+},
+{
+  "type": "node",
+  "id": 4443233590,
+  "lat": 12.4980030,
+  "lon": 124.6480282,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Catarman Doctors Hospital",
+    "name:en": "Catarman Doctors Hospital"
+  }
+},
+{
+  "type": "node",
+  "id": 4689637290,
+  "lat": 12.4993383,
+  "lon": 124.6356476,
+  "tags": {
+    "amenity": "school",
+    "name": "San Lorenzo",
+    "name:en": "San Lorenzo"
+  }
+},
+{
+  "type": "node",
+  "id": 4689637389,
+  "lat": 12.4994603,
+  "lon": 124.6357988,
+  "tags": {
+    "amenity": "school",
+    "name": "EVCC",
+    "name:en": "EVCC"
+  }
+},
+{
+  "type": "node",
+  "id": 4689879489,
+  "lat": 12.5056392,
+  "lon": 124.6409910,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Baybay Health Center"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477441,
+  "lat": 12.4998124,
+  "lon": 124.6358790,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Lyonaise Polyclinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477442,
+  "lat": 12.4998080,
+  "lon": 124.6357530,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Biogenerics"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477443,
+  "lat": 12.4992070,
+  "lon": 124.6362070,
+  "tags": {
+    "description": "Animal Bite Center",
+    "healthcare": "centre",
+    "name": "Catarman Animal Bite Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477444,
+  "lat": 12.4992050,
+  "lon": 124.6362450,
+  "tags": {
+    "healthcare": "laboratory",
+    "name": "Saint Clare Clinical and Drug Testing Laboratory"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477445,
+  "lat": 12.4985100,
+  "lon": 124.6347410,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "3A's Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477446,
+  "lat": 12.4978630,
+  "lon": 124.6361790,
+  "tags": {
+    "amenity": "dentist",
+    "healthcare": "dentist",
+    "name": "Acedilla-Dorado Dental Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819477447,
+  "lat": 12.4976730,
+  "lon": 124.6373540,
+  "tags": {
+    "description": "Dialysis Clinic",
+    "healthcare": "clinic",
+    "name": "Suremed Dialysis and Urgent Care Center"
+  }
+},
+{
+  "type": "node",
+  "id": 4819516928,
+  "lat": 12.4979310,
+  "lon": 124.6415390,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Suremed Diagnostic and Specialty Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819516929,
+  "lat": 12.4979300,
+  "lon": 124.6415120,
+  "tags": {
+    "healthcare": "laboratory",
+    "name": "Suremed Laboratory"
+  }
+},
+{
+  "type": "node",
+  "id": 4819516930,
+  "lat": 12.4977642,
+  "lon": 124.6415537,
+  "tags": {
+    "healthcare": "clinic",
+    "healthcare:speciality": "ophthalmology",
+    "name": "Vintage Vision International"
+  }
+},
+{
+  "type": "node",
+  "id": 4819528352,
+  "lat": 12.4999993,
+  "lon": 124.6414157,
+  "tags": {
+    "amenity": "clinic",
+    "name": "St Gerard Majella balay paanakan",
+    "type": "lying-in clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819536060,
+  "lat": 12.4994340,
+  "lon": 124.6377150,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "North Samar Pharmacy"
+  }
+},
+{
+  "type": "node",
+  "id": 4819547862,
+  "lat": 12.4980150,
+  "lon": 124.6403210,
+  "tags": {
+    "amenity": "dentist",
+    "healthcare": "dentist",
+    "name": "Dental Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819547864,
+  "lat": 12.4980980,
+  "lon": 124.6386390,
+  "tags": {
+    "amenity": "dentist",
+    "healthcare": "dentist",
+    "name": "Happy Teeth Dental Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819549335,
+  "lat": 12.4971240,
+  "lon": 124.6403350,
+  "tags": {
+    "amenity": "dentist",
+    "healthcare": "dentist",
+    "name": "Lyonaise Dental Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 4819549337,
+  "lat": 12.4967880,
+  "lon": 124.6396760,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "TGP"
+  }
+},
+{
+  "type": "node",
+  "id": 4819549338,
+  "lat": 12.4968620,
+  "lon": 124.6385300,
+  "tags": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Tradeways"
+  }
+},
+{
+  "type": "node",
+  "id": 4819549340,
+  "lat": 12.4975310,
+  "lon": 124.6402640,
+  "tags": {
+    "amenity": "dentist",
+    "healthcare": "dentist",
+    "name": "Pasag Dental Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 5491367121,
+  "lat": 12.4993917,
+  "lon": 124.6347835,
+  "tags": {
+    "amenity": "doctors",
+    "name": "Dr. Layon"
+  }
+},
+{
+  "type": "node",
+  "id": 5702495622,
+  "lat": 12.4872883,
+  "lon": 124.6371776,
+  "tags": {
+    "addr:street": "Catarman-Calbayog Road",
+    "amenity": "school",
+    "name": "Global School for Technological Studies"
+  }
+},
+{
+  "type": "node",
+  "id": 5713853721,
+  "lat": 12.4896605,
+  "lon": 124.6368530,
+  "tags": {
+    "addr:street": "Catarman-Calbayog Road",
+    "amenity": "school",
+    "name": "Annex (GSTS)"
+  }
+},
+{
+  "type": "node",
+  "id": 7375811985,
+  "lat": 12.5094517,
+  "lon": 124.6627176,
+  "tags": {
+    "amenity": "college",
+    "name": "UEP - Japan Coco Coir"
+  }
+},
+{
+  "type": "node",
+  "id": 7375844190,
+  "lat": 12.5127336,
+  "lon": 124.6597617,
+  "tags": {
+    "amenity": "college",
+    "name": "Department of Industrial Education building 2"
+  }
+},
+{
+  "type": "node",
+  "id": 7375845387,
+  "lat": 12.5095111,
+  "lon": 124.6641116,
+  "tags": {
+    "amenity": "school",
+    "name": "University of Eastern Philippines Laboratory High School"
+  }
+},
+{
+  "type": "node",
+  "id": 7375845388,
+  "lat": 12.5098283,
+  "lon": 124.6634389,
+  "tags": {
+    "amenity": "school",
+    "name": "University of Eastern Philippines Laboratory Elementary School"
+  }
+},
+{
+  "type": "node",
+  "id": 7375855485,
+  "lat": 12.5088435,
+  "lon": 124.6679841,
+  "tags": {
+    "amenity": "college",
+    "name": "UEP College of Veterinary Medicine"
+  }
+},
+{
+  "type": "node",
+  "id": 7375881085,
+  "lat": 12.5111790,
+  "lon": 124.6643881,
+  "tags": {
+    "amenity": "doctors",
+    "name": "UEP dental and Medical Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 7375881985,
+  "lat": 12.5089434,
+  "lon": 124.6699415,
+  "tags": {
+    "amenity": "college",
+    "name": "Department of Fisheries and Aquatic resources"
+  }
+},
+{
+  "type": "node",
+  "id": 7385377486,
+  "lat": 12.5060295,
+  "lon": 124.6623559,
+  "tags": {
+    "amenity": "college",
+    "name": "CA Department of Agronomy"
+  }
+},
+{
+  "type": "node",
+  "id": 7385377487,
+  "lat": 12.5071110,
+  "lon": 124.6655836,
+  "tags": {
+    "amenity": "college",
+    "name": "Forestry Department"
+  }
+},
+{
+  "type": "node",
+  "id": 7385377488,
+  "lat": 12.5063233,
+  "lon": 124.6632758,
+  "tags": {
+    "amenity": "college",
+    "name": "Crop Production Department"
+  }
+},
+{
+  "type": "node",
+  "id": 7385377493,
+  "lat": 12.5094774,
+  "lon": 124.6644246,
+  "tags": {
+    "amenity": "college",
+    "name": "UEP - Asian Development Foundation College"
+  }
+},
+{
+  "type": "node",
+  "id": 7385378986,
+  "lat": 12.5053749,
+  "lon": 124.6625857,
+  "tags": {
+    "amenity": "college",
+    "name": "CA Department of Crop Sciences"
+  }
+},
+{
+  "type": "node",
+  "id": 7417054686,
+  "lat": 12.4995654,
+  "lon": 124.6355732,
+  "tags": {
+    "amenity": "college",
+    "name": "Eastern Visayas Central Colleges Catarman Campus"
+  }
+},
+{
+  "type": "node",
+  "id": 12293444180,
+  "lat": 12.4984864,
+  "lon": 124.6422395,
+  "tags": {
+    "addr:housenumber": "100",
+    "addr:street": "Annunciation Street",
+    "amenity": "school",
+    "grades": "1-6",
+    "name": "Catarman Chamber Integrated School",
+    "operator:type": "private",
+    "ref": "404752",
+    "website": "ccis.edu.ph"
+  }
+},
+{
+  "type": "way",
+  "id": 309188571,
+  "center": {
+    "lat": 12.4986575,
+    "lon": 124.6364578
+  },
+  "tags": {
+    "addr:city": "Catarman",
+    "addr:postcode": "6400",
+    "amenity": "school",
+    "isced:level": "2-3",
+    "name": "Saint Michael Academy",
+    "operator:type": "religious",
+    "ref": "407552"
+  }
+},
+{
+  "type": "way",
+  "id": 316740131,
+  "center": {
+    "lat": 12.4242638,
+    "lon": 124.7019204
+  },
+  "tags": {
+    "addr:place": "Nazareno",
+    "addr:province": "Northern Samar",
+    "addr:quarter": "McKinley",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Nazareno Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "66",
+    "population:pupils:2015": "79",
+    "ref": "122872",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1966"
+  }
+},
+{
+  "type": "way",
+  "id": 318919133,
+  "center": {
+    "lat": 12.5046370,
+    "lon": 124.6323623
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Dalakit Barangay Health Station"
+  }
+},
+{
+  "type": "way",
+  "id": 319173552,
+  "center": {
+    "lat": 12.3522764,
+    "lon": 124.5839136
+  },
+  "tags": {
+    "addr:place": "Cag-aguingay",
+    "addr:province": "Northern Samar",
+    "addr:town": "Lope de Vega",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Cag-aguingay Elementary School",
+    "old_name": "Cag-aguingay Primary School",
+    "operator": "Lope De Vega District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "53",
+    "population:pupils:2015": "61",
+    "ref": "123082",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1970"
+  }
+},
+{
+  "type": "way",
+  "id": 319186115,
+  "center": {
+    "lat": 12.3540708,
+    "lon": 124.5556536
+  },
+  "tags": {
+    "addr:place": "Tranque",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Trangue Elementary School",
+    "old_name": "Trangue Primary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "150",
+    "population:pupils:2015": "165",
+    "ref": "122852",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1985"
+  }
+},
+{
+  "type": "way",
+  "id": 319188669,
+  "center": {
+    "lat": 12.3812900,
+    "lon": 124.5550475
+  },
+  "tags": {
+    "addr:place": "San Pascual",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "San Pascual Elementary School",
+    "old_name": "San Pascual Primary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "61",
+    "population:pupils:2015": "68",
+    "ref": "122862",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1990"
+  }
+},
+{
+  "type": "way",
+  "id": 319459415,
+  "center": {
+    "lat": 12.4991409,
+    "lon": 124.6383876
+  },
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Novaks Clinic"
+  }
+},
+{
+  "type": "way",
+  "id": 319459515,
+  "center": {
+    "lat": 12.4998258,
+    "lon": 124.6393230
+  },
+  "tags": {
+    "amenity": "doctors",
+    "healthcare": "doctor",
+    "healthcare:speciality": "gynaecology",
+    "name": "Dra. Joy Anacta OB Gyne Clinic"
+  }
+},
+{
+  "type": "way",
+  "id": 319459591,
+  "center": {
+    "lat": 12.4968040,
+    "lon": 124.6399417
+  },
+  "tags": {
+    "amenity": "pharmacy",
+    "building": "retail",
+    "healthcare": "pharmacy",
+    "name": "Southstar Drugs"
+  }
+},
+{
+  "type": "way",
+  "id": 319688484,
+  "center": {
+    "lat": 12.4971644,
+    "lon": 124.6403647
+  },
+  "tags": {
+    "amenity": "pharmacy",
+    "building": "yes",
+    "healthcare": "pharmacy",
+    "name": "Generika Drugstore"
+  }
+},
+{
+  "type": "way",
+  "id": 319688494,
+  "center": {
+    "lat": 12.4968078,
+    "lon": 124.6401013
+  },
+  "tags": {
+    "amenity": "pharmacy",
+    "building": "yes",
+    "healthcare": "pharmacy",
+    "name": "Citidrug",
+    "name:en": "Citidrug"
+  }
+},
+{
+  "type": "way",
+  "id": 319688499,
+  "center": {
+    "lat": 12.4977688,
+    "lon": 124.6403727
+  },
+  "tags": {
+    "amenity": "dentist",
+    "building": "yes",
+    "healthcare": "dentist",
+    "name": "Family Dentist Tree"
+  }
+},
+{
+  "type": "way",
+  "id": 319716186,
+  "center": {
+    "lat": 12.4987823,
+    "lon": 124.6404742
+  },
+  "tags": {
+    "addr:street": "Annunciation",
+    "amenity": "dentist",
+    "building": "yes",
+    "healthcare": "dentist",
+    "name": "Kara Joyce Dental Clinic"
+  }
+},
+{
+  "type": "way",
+  "id": 320103599,
+  "center": {
+    "lat": 12.5099479,
+    "lon": 124.6627692
+  },
+  "tags": {
+    "amenity": "college",
+    "building": "college",
+    "building:levels": "2",
+    "name": "CAC Criminology Department",
+    "operator": "College of Arts and Communication"
+  }
+},
+{
+  "type": "way",
+  "id": 320344100,
+  "center": {
+    "lat": 12.5030163,
+    "lon": 124.6414927
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Health Center"
+  }
+},
+{
+  "type": "way",
+  "id": 817977748,
+  "center": {
+    "lat": 12.5047429,
+    "lon": 124.6308879
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Frigillana Street",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Generoso R. Frigillana Memorial School",
+    "old_name": "Dalakit Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "1373",
+    "population:pupils:2015": "1528",
+    "ref": "122836",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1980"
+  }
+},
+{
+  "type": "way",
+  "id": 817978131,
+  "center": {
+    "lat": 12.4981431,
+    "lon": 124.6451168
+  },
+  "tags": {
+    "addr:place": "Bangkerohan",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Bangkerohan Elementary school",
+    "old_name": "Bangkerohan Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "316",
+    "population:pupils:2015": "359",
+    "ref": "122863",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1976"
+  }
+},
+{
+  "type": "way",
+  "id": 854256161,
+  "center": {
+    "lat": 12.4882955,
+    "lon": 124.6645291
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Galutan",
+    "amenity": "school",
+    "isced:level": "2-3",
+    "name": "Galutan National High School",
+    "old_name": "Catarman National High School – Galutan Annex",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "654",
+    "population:pupils:2015": "654",
+    "ref": "303543",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "2001"
+  }
+},
+{
+  "type": "way",
+  "id": 854270939,
+  "center": {
+    "lat": 12.4771712,
+    "lon": 124.6735075
+  },
+  "tags": {
+    "addr:place": "Purok 1",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Galutan",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Galutan Elementary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "342",
+    "population:pupils:2015": "381",
+    "ref": "122866",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1949"
+  }
+},
+{
+  "type": "way",
+  "id": 854270945,
+  "center": {
+    "lat": 12.4875617,
+    "lon": 124.6976964
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Imelda Elementary School",
+    "old_name": "Imelda Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "149",
+    "population:pupils:2015": "176",
+    "ref": "122870",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1977"
+  }
+},
+{
+  "type": "way",
+  "id": 854270967,
+  "center": {
+    "lat": 12.5082064,
+    "lon": 124.6662144
+  },
+  "tags": {
+    "amenity": "college",
+    "building": "college",
+    "building:levels": "3",
+    "name": "UEP College of Nursing"
+  }
+},
+{
+  "type": "way",
+  "id": 854404630,
+  "center": {
+    "lat": 12.5011083,
+    "lon": 124.6387832
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Apolinario Mabini Street",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Catarman I Central School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "2430",
+    "population:pupils:2015": "2651",
+    "ref": "122856",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1948"
+  }
+},
+{
+  "type": "way",
+  "id": 854404632,
+  "center": {
+    "lat": 12.5013163,
+    "lon": 124.6375286
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Apolinario Mabini Street",
+    "addr:town": "Catarman",
+    "addr:village": "Acacia",
+    "amenity": "school",
+    "education_program": "specialized_education",
+    "isced:level": "0-1",
+    "name": "Catarman Special Education Center",
+    "old_name": "Catarman I Sped Center",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "447",
+    "population:pupils:2015": "521",
+    "ref": "122857",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "specialized_education": "special_needs",
+    "start_date": "2001"
+  }
+},
+{
+  "type": "way",
+  "id": 854408236,
+  "center": {
+    "lat": 12.4002409,
+    "lon": 124.6303444
+  },
+  "tags": {
+    "addr:place": "Polangi",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Polangi Elementary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "644",
+    "population:pupils:2015": "744",
+    "ref": "122873",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1947"
+  }
+},
+{
+  "type": "way",
+  "id": 854408254,
+  "center": {
+    "lat": 12.3988596,
+    "lon": 124.6288646
+  },
+  "tags": {
+    "addr:place": "Polangi",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Polangi",
+    "amenity": "school",
+    "isced:level": "2-3",
+    "name": "Polangi National HIgh School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "716",
+    "population:pupils:2015": "716",
+    "ref": "303570",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1973"
+  }
+},
+{
+  "type": "way",
+  "id": 854408272,
+  "center": {
+    "lat": 12.3689652,
+    "lon": 124.6582738
+  },
+  "tags": {
+    "addr:place": "Cervantes",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Cervantes Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "591",
+    "population:pupils:2015": "640",
+    "ref": "122846",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1939"
+  }
+},
+{
+  "type": "way",
+  "id": 854409647,
+  "center": {
+    "lat": 12.5004918,
+    "lon": 124.6365523
+  },
+  "tags": {
+    "addr:city": "Catarman",
+    "addr:province": "Northern Samar",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Northern Samar Provincial Hospital",
+    "short_name": "NSPH"
+  }
+},
+{
+  "type": "way",
+  "id": 854426462,
+  "center": {
+    "lat": 12.5054219,
+    "lon": 124.6250104
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "J. P. Rizal Street",
+    "addr:town": "Catarman",
+    "addr:village": "Extension",
+    "amenity": "school",
+    "isced:level": "2-3",
+    "name": "Catarman National High School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "3112",
+    "population:pupils:2015": "3145",
+    "ref": "303541",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1983"
+  }
+},
+{
+  "type": "way",
+  "id": 864024635,
+  "center": {
+    "lat": 12.4318509,
+    "lon": 124.6378764
+  },
+  "tags": {
+    "addr:place": "Gilalan-agan",
+    "addr:province": "Northern Samar",
+    "addr:quarter": "Somoge",
+    "addr:town": "Catarman",
+    "addr:village": "Somog",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Gilalan-agan Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "150",
+    "population:pupils:2015": "172",
+    "ref": "122847",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1995"
+  }
+},
+{
+  "type": "way",
+  "id": 864024637,
+  "center": {
+    "lat": 12.4169110,
+    "lon": 124.6242580
+  },
+  "tags": {
+    "addr:place": "Somoge",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Somoge",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Somoge Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "91",
+    "population:pupils:2015": "109",
+    "ref": "122850",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1936"
+  }
+},
+{
+  "type": "way",
+  "id": 864025063,
+  "center": {
+    "lat": 12.4900194,
+    "lon": 124.6030544
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Libjo",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Binog Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "406",
+    "population:pupils:2015": "444",
+    "ref": "122831",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1955"
+  }
+},
+{
+  "type": "way",
+  "id": 864026220,
+  "center": {
+    "lat": 12.5088420,
+    "lon": 124.5917647
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Old Rizal",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Old Rizal Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "451",
+    "population:pupils:2015": "490",
+    "ref": "122842",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1951"
+  }
+},
+{
+  "type": "way",
+  "id": 864026420,
+  "center": {
+    "lat": 12.5063101,
+    "lon": 124.6144999
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Daganas Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "360",
+    "population:pupils:2015": "421",
+    "ref": "122835",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1956"
+  }
+},
+{
+  "type": "way",
+  "id": 864049647,
+  "center": {
+    "lat": 12.4054538,
+    "lon": 124.5978832
+  },
+  "tags": {
+    "addr:place": "Cularima",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Cularima Primary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "66",
+    "population:pupils:2015": "73",
+    "ref": "122834",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1980"
+  }
+},
+{
+  "type": "way",
+  "id": 864049648,
+  "center": {
+    "lat": 12.4088384,
+    "lon": 124.5616221
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "General Malvar",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "General Malvar Elementary School",
+    "old_name": "Gen. Malvar Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "166",
+    "population:pupils:2015": "192",
+    "ref": "122837",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1957"
+  }
+},
+{
+  "type": "way",
+  "id": 864049931,
+  "center": {
+    "lat": 12.3633236,
+    "lon": 124.5688741
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Barangay Hernandez Street",
+    "addr:town": "Catarman",
+    "addr:village": "Quezon",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Quezon Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "144",
+    "population:pupils:2015": "162",
+    "ref": "122849",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1945"
+  }
+},
+{
+  "type": "way",
+  "id": 864050598,
+  "center": {
+    "lat": 12.3874055,
+    "lon": 124.5799404
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Paticua Road",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Paticua Elementary School",
+    "old_name": "Paticua Primary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "181",
+    "population:pupils:2015": "208",
+    "ref": "122859",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1945"
+  }
+},
+{
+  "type": "way",
+  "id": 864051227,
+  "center": {
+    "lat": 12.4293235,
+    "lon": 124.5575181
+  },
+  "tags": {
+    "addr:place": "Guba",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Guba Primary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "79",
+    "population:pupils:2015": "85",
+    "ref": "122839",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1950"
+  }
+},
+{
+  "type": "way",
+  "id": 864051741,
+  "center": {
+    "lat": 12.4526843,
+    "lon": 124.5993815
+  },
+  "tags": {
+    "addr:place": "New Rizal",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "New Rizal Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "217",
+    "population:pupils:2015": "236",
+    "ref": "122841",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1927"
+  }
+},
+{
+  "type": "way",
+  "id": 864052440,
+  "center": {
+    "lat": 12.4146181,
+    "lon": 124.6115034
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Cag-abaca Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "369",
+    "population:pupils:2015": "405",
+    "ref": "122832",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1952"
+  }
+},
+{
+  "type": "way",
+  "id": 864053848,
+  "center": {
+    "lat": 12.4780592,
+    "lon": 124.6380782
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Catarman-Calbayog Road",
+    "addr:town": "Catarman",
+    "addr:village": "Macagtas",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Macagtas Elementary School",
+    "old_name": "Macagtas Primary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "363",
+    "population:pupils:2015": "414",
+    "ref": "122840",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1960"
+  }
+},
+{
+  "type": "way",
+  "id": 864520310,
+  "center": {
+    "lat": 12.3625613,
+    "lon": 124.6223827
+  },
+  "tags": {
+    "addr:place": "Liberty",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Liberty Elementary School",
+    "old_name": "Liberty Primary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "110",
+    "population:pupils:2015": "122",
+    "ref": "122858",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1958"
+  }
+},
+{
+  "type": "way",
+  "id": 864522374,
+  "center": {
+    "lat": 12.3682186,
+    "lon": 124.6576828
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Catarman-Calbayog Road",
+    "addr:town": "Catarman",
+    "alt_name": "Cervantes National High school",
+    "amenity": "school",
+    "isced:level": "2",
+    "name": "Rosario Lim Uy National High School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "503",
+    "population:pupils:2015": "503",
+    "ref": "303545",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1973"
+  }
+},
+{
+  "type": "way",
+  "id": 864541287,
+  "center": {
+    "lat": 12.3714629,
+    "lon": 124.5920897
+  },
+  "tags": {
+    "addr:place": "Gibulwangan",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Gibulwangan Elementary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "119",
+    "population:pupils:2015": "136",
+    "ref": "122838",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1970"
+  }
+},
+{
+  "type": "way",
+  "id": 864542899,
+  "center": {
+    "lat": 12.4836070,
+    "lon": 124.6631341
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Himbang Road",
+    "addr:town": "Catarman",
+    "addr:village": "Doña Pulqueria",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Himbang Elementary School",
+    "old_name": "Himbang Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "182",
+    "population:pupils:2015": "207",
+    "ref": "122868",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "2002"
+  }
+},
+{
+  "type": "way",
+  "id": 864543620,
+  "center": {
+    "lat": 12.4950725,
+    "lon": 124.6416052
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "Ferdinand E. Marcos Street",
+    "addr:town": "Catarman",
+    "addr:village": "Narra",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Catarman II Central School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "1072",
+    "population:pupils:2015": "1200",
+    "ref": "122845",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1964"
+  }
+},
+{
+  "type": "way",
+  "id": 864543906,
+  "center": {
+    "lat": 12.5060166,
+    "lon": 124.6412534
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:street": "L. Ada Street",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Baybay Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "916",
+    "population:pupils:2015": "1013",
+    "ref": "122844",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1970"
+  }
+},
+{
+  "type": "way",
+  "id": 864888285,
+  "center": {
+    "lat": 12.4709577,
+    "lon": 124.6800595
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Hinatad Elementary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "247",
+    "population:pupils:2015": "281",
+    "ref": "122869",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1960"
+  }
+},
+{
+  "type": "way",
+  "id": 864888293,
+  "center": {
+    "lat": 12.4557163,
+    "lon": 124.6827133
+  },
+  "tags": {
+    "addr:place": "McKinley",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "McKinley Elementary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "342",
+    "population:pupils:2015": "393",
+    "ref": "122871",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1920"
+  }
+},
+{
+  "type": "way",
+  "id": 875927760,
+  "center": {
+    "lat": 12.4974336,
+    "lon": 124.6413279
+  },
+  "tags": {
+    "addr:city": "Catarman",
+    "addr:street": "Gregorio H. del Pilar Street",
+    "amenity": "hospital",
+    "building": "hospital",
+    "name": "Leoncio Uy Memorial Hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 879506993,
+  "center": {
+    "lat": 12.4303685,
+    "lon": 124.5741886
+  },
+  "tags": {
+    "addr:place": "San Julian",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "San Julian Elementary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "60",
+    "population:pupils:2015": "67",
+    "ref": "122861",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1958"
+  }
+},
+{
+  "type": "way",
+  "id": 879506994,
+  "center": {
+    "lat": 12.4476025,
+    "lon": 124.5696235
+  },
+  "tags": {
+    "addr:place": "Salvacion",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Salvacion Elementary School",
+    "old_name": "Salvacion Primary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "55",
+    "population:pupils:2015": "64",
+    "ref": "122860",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1954"
+  }
+},
+{
+  "type": "way",
+  "id": 886845338,
+  "center": {
+    "lat": 12.4713588,
+    "lon": 124.5806907
+  },
+  "tags": {
+    "addr:place": "Cabayhan",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Cabayhan Elementary School",
+    "old_name": "Cabayhan Primary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "43",
+    "population:pupils:2015": "47",
+    "ref": "122855",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1945"
+  }
+},
+{
+  "type": "way",
+  "id": 886884661,
+  "center": {
+    "lat": 12.4481504,
+    "lon": 124.6158727
+  },
+  "tags": {
+    "addr:place": "Cal-igang",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Cal-igang Elementary School",
+    "old_name": "Cal-igang Primary School",
+    "operator": "Catarman III District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "171",
+    "population:pupils:2015": "187",
+    "ref": "122833",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1951"
+  }
+},
+{
+  "type": "way",
+  "id": 886884663,
+  "center": {
+    "lat": 12.4356853,
+    "lon": 124.6471351
+  },
+  "tags": {
+    "addr:place": "Aguinaldo",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Aguinaldo Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "84",
+    "population:pupils:2015": "97",
+    "ref": "122843",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1969"
+  }
+},
+{
+  "type": "way",
+  "id": 951367196,
+  "center": {
+    "lat": 12.4886804,
+    "lon": 124.5843653
+  },
+  "tags": {
+    "addr:place": "Somoroy",
+    "addr:province": "Northern Samar",
+    "addr:town": "Bobon",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Somoroy Elementary School",
+    "old_name": "Somoroy Primary School",
+    "operator": "Bobon District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "72",
+    "population:pupils:2015": "91",
+    "ref": "122817",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1996"
+  }
+},
+{
+  "type": "way",
+  "id": 951371808,
+  "center": {
+    "lat": 12.4393886,
+    "lon": 124.6604833
+  },
+  "tags": {
+    "addr:place": "Tinowaran",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Tinowaran Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "96",
+    "population:pupils:2015": "105",
+    "ref": "122851",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1984"
+  }
+},
+{
+  "type": "way",
+  "id": 951379294,
+  "center": {
+    "lat": 12.4458925,
+    "lon": 124.6967187
+  },
+  "tags": {
+    "addr:place": "Cabangahan",
+    "addr:province": "Northern Samar",
+    "addr:quarter": "McKinley",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Cabangahan Elementary School",
+    "old_name": "Cabangahan Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "91",
+    "population:pupils:2015": "107",
+    "ref": "122864",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1950"
+  }
+},
+{
+  "type": "way",
+  "id": 955965670,
+  "center": {
+    "lat": 12.3338570,
+    "lon": 124.5563382
+  },
+  "tags": {
+    "addr:place": "Mabini",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Mabini Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "286",
+    "population:pupils:2015": "317",
+    "ref": "122848",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1960"
+  }
+},
+{
+  "type": "way",
+  "id": 1234855264,
+  "center": {
+    "lat": 12.3772148,
+    "lon": 124.6432568
+  },
+  "tags": {
+    "addr:place": "Gemarobay",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "Gemarobay Primary School",
+    "operator:type": "public",
+    "ref": "193001"
+  }
+},
+{
+  "type": "way",
+  "id": 1234858678,
+  "center": {
+    "lat": 12.4859356,
+    "lon": 124.6285139
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "name": "Basud Elementary School",
+    "operator:type": "public",
+    "ref": "193007"
+  }
+},
+{
+  "type": "way",
+  "id": 1360783027,
+  "center": {
+    "lat": 12.4549591,
+    "lon": 124.6817990
+  },
+  "tags": {
+    "addr:place": "McKinley",
+    "amenity": "health_post",
+    "building": "civic",
+    "healthcare": "community_health_worker",
+    "name": "McKinley Barangay Health Station",
+    "operator:type": "public",
+    "ref": "DOH000000000012007"
+  }
+},
+{
+  "type": "way",
+  "id": 1396024827,
+  "center": {
+    "lat": 12.4989789,
+    "lon": 124.6384776
+  },
+  "tags": {
+    "addr:postcode": "6400",
+    "addr:street": "Annunciation Street",
+    "addr:street:corner": "Manuel Roxas Street",
+    "amenity": "college",
+    "name": "Northern Samar Colleges",
+    "name:en": "Northern Samar Colleges",
+    "opening_hours": "Mo-Fr 07:00-17:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1551964568,
+  "center": {
+    "lat": 12.3770023,
+    "lon": 124.6810028
+  },
+  "tags": {
+    "addr:place": "Gebalagnan",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Hibalagnan Elementary School",
+    "old_name": "Hibalagnan Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "71",
+    "population:pupils:2015": "80",
+    "ref": "122867",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "2000"
+  }
+},
+{
+  "type": "way",
+  "id": 1551966832,
+  "center": {
+    "lat": 12.4709571,
+    "lon": 124.6713249
+  },
+  "tags": {
+    "addr:place": "Basud",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Doña Pulqueria",
+    "amenity": "school",
+    "isced:level": "0-1",
+    "name": "San Isidro Primary School",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "43",
+    "population:pupils:2015": "52",
+    "ref": "122874",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1997"
+  }
+},
+{
+  "type": "way",
+  "id": 1551966851,
+  "center": {
+    "lat": 12.4553825,
+    "lon": 124.5653283
+  },
+  "tags": {
+    "addr:place": "Bocsol",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Bocsol Elementary School",
+    "old_name": "Bocsol Primary School",
+    "operator": "Catarman I District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "59",
+    "population:pupils:2015": "68",
+    "ref": "122854",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1955"
+  }
+},
+{
+  "type": "way",
+  "id": 1551966852,
+  "center": {
+    "lat": 12.4448950,
+    "lon": 124.6476981
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "fixme": "verify location",
+    "name": "Tarugan Primary School",
+    "operator:type": "public",
+    "ref": "193002"
+  }
+},
+{
+  "type": "relation",
+  "id": 15394118,
+  "center": {
+    "lat": 12.5125789,
+    "lon": 124.6588680
+  },
+  "tags": {
+    "addr:place": "Cawayan",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "0-2",
+    "name": "Cawayan Integrated School",
+    "old_ref": "122865;313606",
+    "operator": "Catarman IV District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "1158",
+    "population:pupils:2015": "1291",
+    "ref": "500236",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1950",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 15394119,
+  "center": {
+    "lat": 12.5084063,
+    "lon": 124.6661683
+  },
+  "tags": {
+    "amenity": "university",
+    "landuse": "education",
+    "name": "University of Eastern Philippines",
+    "operator": "University of Eastern Philippines",
+    "operator:type": "university",
+    "short_name": "UEP",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 16891236,
+  "center": {
+    "lat": 12.4597360,
+    "lon": 124.6432608
+  },
+  "tags": {
+    "addr:postcode": "6400",
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "amenity": "school",
+    "isced:level": "2",
+    "name": "Washington National High School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "518",
+    "population:pupils:2015": "518",
+    "ref": "303587",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1975",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 16891237,
+  "center": {
+    "lat": 12.4603893,
+    "lon": 124.6433818
+  },
+  "tags": {
+    "addr:province": "Northern Samar",
+    "addr:town": "Catarman",
+    "addr:village": "Washington",
+    "amenity": "school",
+    "isced:level": "1",
+    "name": "Washington Elementary School",
+    "operator": "Catarman II District of Northern Samar Schools Division, DepEd",
+    "operator:type": "public",
+    "population:pupils:2012": "352",
+    "population:pupils:2015": "396",
+    "ref": "122853",
+    "source": "Department of Education, Philippines",
+    "source:date": "2012",
+    "start_date": "1975",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
