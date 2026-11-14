@@ -11,6 +11,11 @@ export default defineNuxtConfig({
   routeRules: {
     // Old address of the About the Data page.
     '/sources': { redirect: '/about' },
+    // These pages read the address (?path=, ?page=, ?q=), which a static host never sees,
+    // so they are drawn in the browser rather than prerendered.
+    '/qr': { ssr: false },
+    '/report': { ssr: false },
+    '/search': { ssr: false },
   },
   runtimeConfig: {
     public: {
