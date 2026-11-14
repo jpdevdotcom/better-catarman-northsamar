@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Menu, Phone } from '@lucide/vue'
+import { Menu, Phone, Search } from '@lucide/vue'
 import { hotlines, nav } from '~/data/site'
 
 const { t } = useT()
@@ -47,6 +47,10 @@ watch(() => route.fullPath, () => (open.value = false))
         </NuxtLink>
       </nav>
 
+      <div class="flex items-center gap-2">
+      <Button as-child variant="outline" size="icon" class="shrink-0">
+        <NuxtLink to="/search" :aria-label="t('Search the site')"><Search class="size-5" /></NuxtLink>
+      </Button>
       <Sheet v-model:open="open">
         <SheetTrigger as-child>
           <Button variant="outline" size="icon" class="xl:hidden" aria-label="Open menu">
@@ -71,6 +75,7 @@ watch(() => route.fullPath, () => (open.value = false))
           </nav>
         </SheetContent>
       </Sheet>
+      </div>
     </div>
   </header>
 </template>

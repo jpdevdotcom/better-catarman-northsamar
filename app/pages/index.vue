@@ -39,7 +39,7 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
       </p>
 
       <div class="mt-8 max-w-2xl">
-        <ServiceSearch />
+        <ServiceSearch to="/search" placeholder="Search services, barangays, offices, or names" />
         <div class="mt-4 flex flex-wrap items-center gap-2 text-sm">
           <span class="text-muted-foreground">{{ t('Popular:') }}</span>
           <NuxtLink

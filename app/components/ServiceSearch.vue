@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { Search } from '@lucide/vue'
 
-const props = defineProps<{ initial?: string }>()
+const props = withDefaults(defineProps<{ initial?: string, to?: string, placeholder?: string }>(), { to: '/services', placeholder: 'What do you need? e.g. birth certificate' })
 const q = ref(props.initial ?? '')
 const { t } = useT()
 
 function submit() {
-  navigateTo({ path: '/services', query: q.value.trim() ? { q: q.value.trim() } : {} })
+  navigateTo({ path: props.to, query: q.value.trim() ? { q: q.value.trim() } : {} })
 }
 </script>
 
@@ -18,7 +18,7 @@ function submit() {
         v-model="q"
         type="search"
         :aria-label="t('Search services')"
-        :placeholder="t('What do you need? e.g. birth certificate')"
+        :placeholder="t(placeholder)"
         class="h-12 bg-background pl-11 text-base md:text-base"
       />
     </div>

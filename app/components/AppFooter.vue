@@ -32,6 +32,7 @@ const route = useRoute()
             <NuxtLink :to="item.to" class="text-muted-foreground hover:text-primary">{{ t(item.label) }}</NuxtLink>
           </li>
           <li><NuxtLink to="/facilities" class="text-muted-foreground hover:text-primary">{{ t('Schools and health facilities') }}</NuxtLink></li>
+          <li><NuxtLink to="/search" class="text-muted-foreground hover:text-primary">{{ t('Search') }}</NuxtLink></li>
         </ul>
       </div>
 
