@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ArrowLeft, ArrowRight, ExternalLink, Info, MapPinOff, Phone, UserRound } from '@lucide/vue'
+import { ArrowLeft, ArrowRight, ExternalLink, Info, Phone, UserRound } from '@lucide/vue'
 import { barangayOfficials, officialsRetrieved, officialsSource } from '~/data/barangayOfficials'
 import { barangays, totalPop2020 } from '~/data/barangays'
+import { boundarySource } from '~/data/boundaries'
 
 const route = useRoute()
 const index = barangays.findIndex(b => b.slug === route.params.slug)
@@ -27,6 +28,8 @@ const stats = [
   { label: 'Share of Catarman', note: `Ranked ${rank} of ${barangays.length} by population`, value: `${share.toFixed(1)}%` },
 ]
 
+
+
 const brgy = barangayOfficials[b.slug]
 const captain = brgy?.officials.find(o => o.position === 'Punong Barangay')
 const council = brgy?.officials.filter(o => o.position === 'Sangguniang Barangay Member') ?? []
@@ -34,12 +37,11 @@ const others = brgy?.officials.filter(o => o.position !== 'Punong Barangay' && o
 
 const loc = b.location
 const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
-const points = barangays
-  .filter(x => x.location)
-  .map(x => ({ slug: x.slug, name: x.name, lat: x.location!.lat, lng: x.location!.lng }))
+const points = barangays.map(x => ({ slug: x.slug, name: x.name, lat: x.location.lat, lng: x.location.lng }))
 const d = 0.012
-const mapSrc = loc && `https://www.openstreetmap.org/export/embed.html?bbox=${loc.lng - d},${loc.lat - d},${loc.lng + d},${loc.lat + d}&layer=mapnik&marker=${loc.lat},${loc.lng}`
-const mapLink = loc && `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#map=15/${loc.lat}/${loc.lng}`
+const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${loc.lng - d},${loc.lat - d},${loc.lng + d},${loc.lat + d}&layer=mapnik&marker=${loc.lat},${loc.lng}`
+const mapLink = `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${loc.lng}#map=15/${loc.lat}/${loc.lng}`
+
 </script>
 
 <template>
@@ -61,18 +63,18 @@ const mapLink = loc && `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${lo
     </dl>
 
     <section>
-      <SectionHeading title="Location" :description="loc ? 'Where the barangay sits within Catarman.' : undefined" />
+      <SectionHeading title="Location" description="Where the barangay sits within Catarman, and its official boundary." />
 
-      <div v-if="loc" class="grid gap-6 lg:grid-cols-[320px_1fr]">
+      <div class="grid gap-6 lg:grid-cols-[320px_1fr]">
         <div class="border" :class="hasLiveMap ? 'h-64 lg:h-[352px]' : 'p-3'">
           <!-- Overview: the whole municipality, with this barangay highlighted -->
-          <SiteMap :points="points" :active="b.slug" labels="active" :label="`Map of Catarman showing where ${b.name} is`">
+          <SiteMap :points="[]" boundaries :active="b.slug" :label="`Map of Catarman showing where ${b.name} is`">
             <BarangayMap :active="b.slug" />
           </SiteMap>
         </div>
         <div>
           <div class="h-80 overflow-hidden border lg:h-[352px]">
-            <SiteMap :points="points" :active="b.slug" :center="loc" :zoom="13" :label="`Map of Barangay ${b.name}`">
+            <SiteMap :points="points" boundaries :focus="b.slug" :active="b.slug" :label="`Map of Barangay ${b.name}`">
               <iframe :src="mapSrc!" :title="`Street map of Barangay ${b.name}`" class="block size-full" loading="lazy" />
             </SiteMap>
           </div>
@@ -85,19 +87,13 @@ const mapLink = loc && `https://www.openstreetmap.org/?mlat=${loc.lat}&mlon=${lo
         </div>
       </div>
 
-      <div v-else class="flex items-start gap-3 border border-dashed p-5">
-        <MapPinOff class="mt-0.5 size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
-        <div>
-          <p class="font-semibold">Location not yet mapped</p>
-          <p class="mt-1 text-sm text-muted-foreground">
-            We don’t have a reliable map point for Barangay {{ b.name }} yet, so we’re not showing a guess.
-          </p>
-        </div>
-      </div>
-
       <p class="mt-6 flex items-start gap-3 bg-muted p-4 text-sm text-muted-foreground">
         <Info class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-        Population figures are from the Philippine Statistics Authority (Census of Population). Map points are approximate and come from © OpenStreetMap contributors; they are not official boundaries.
+        <span>
+          Population figures are from the Philippine Statistics Authority (Census of Population). The boundary is from the
+          <a :href="boundarySource.url" target="_blank" rel="noopener" class="font-medium text-primary hover:underline">{{ boundarySource.label }}</a>.
+          {{ b.locationFrom === 'osm' ? 'The pin marks the village centre as mapped by © OpenStreetMap contributors.' : 'The pin is a point inside the official boundary.' }}
+        </span>
       </p>
     </section>
 

@@ -7,8 +7,10 @@ export interface Barangay {
   poblacion: boolean
   pop2020: number
   pop2015: number
-  /** Approximate centre from OpenStreetMap; null when not yet mapped. */
-  location: { lat: number, lng: number } | null
+  /** Where to put the barangay's pin on a map. */
+  location: { lat: number, lng: number }
+  /** "osm": the village centre as mapped on OpenStreetMap. "boundary": a point inside the official boundary. */
+  locationFrom: 'osm' | 'boundary'
 }
 
 export const barangays: Barangay[] = [
@@ -18,7 +20,11 @@ export const barangays: Barangay[] = [
     "poblacion": true,
     "pop2020": 223,
     "pop2015": 259,
-    "location": null
+    "location": {
+      "lat": 12.5,
+      "lng": 124.6375
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "aguinaldo",
@@ -29,7 +35,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4357,
       "lng": 124.6473
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "airport-village",
@@ -40,7 +47,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.503,
       "lng": 124.6379
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "bangkerohan",
@@ -51,7 +59,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4987,
       "lng": 124.6465
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "baybay",
@@ -62,7 +71,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5056,
       "lng": 124.6419
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "bocsol",
@@ -73,7 +83,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.454,
       "lng": 124.5649
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "cabayhan",
@@ -84,7 +95,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4709,
       "lng": 124.5806
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "cag-abaca",
@@ -95,7 +107,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4144,
       "lng": 124.6114
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "cal-igang",
@@ -106,7 +119,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4484,
       "lng": 124.6157
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "calachuchi",
@@ -117,7 +131,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4992,
       "lng": 124.6337
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "casoy",
@@ -125,7 +140,11 @@ export const barangays: Barangay[] = [
     "poblacion": true,
     "pop2020": 1437,
     "pop2015": 1074,
-    "location": null
+    "location": {
+      "lat": 12.49836,
+      "lng": 124.63509
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "cawayan",
@@ -136,7 +155,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5134,
       "lng": 124.6562
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "cervantes",
@@ -147,7 +167,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3693,
       "lng": 124.6596
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "cularima",
@@ -158,7 +179,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4049,
       "lng": 124.5978
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "daganas",
@@ -166,7 +188,11 @@ export const barangays: Barangay[] = [
     "poblacion": false,
     "pop2020": 2881,
     "pop2015": 2351,
-    "location": null
+    "location": {
+      "lat": 12.50613,
+      "lng": 124.61254
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "dalakit",
@@ -177,7 +203,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5047,
       "lng": 124.6325
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "dona-pulqueria",
@@ -188,7 +215,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.484,
       "lng": 124.6623
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "galutan",
@@ -199,7 +227,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4766,
       "lng": 124.6735
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "gebalagnan",
@@ -210,7 +239,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3773,
       "lng": 124.6814
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "gibulwangan",
@@ -221,7 +251,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3719,
       "lng": 124.593
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "guba",
@@ -232,7 +263,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4293,
       "lng": 124.5569
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "hinatad",
@@ -243,7 +275,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4711,
       "lng": 124.681
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "imelda",
@@ -254,7 +287,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4875,
       "lng": 124.698
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "ipil-ipil",
@@ -265,7 +299,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4949,
       "lng": 124.6425
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "jose-abad-santos",
@@ -274,9 +309,10 @@ export const barangays: Barangay[] = [
     "pop2020": 2241,
     "pop2015": 2221,
     "location": {
-      "lat": 12.5021,
-      "lng": 124.6409
-    }
+      "lat": 12.50164,
+      "lng": 124.64215
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "jose-p-rizal",
@@ -284,7 +320,11 @@ export const barangays: Barangay[] = [
     "poblacion": true,
     "pop2020": 493,
     "pop2015": 451,
-    "location": null
+    "location": {
+      "lat": 12.49936,
+      "lng": 124.6393
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "lapu-lapu",
@@ -295,7 +335,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4997,
       "lng": 124.6406
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "liberty",
@@ -306,7 +347,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3626,
       "lng": 124.6227
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "libjo",
@@ -317,7 +359,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.49,
       "lng": 124.6035
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "mabini",
@@ -328,7 +371,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3341,
       "lng": 124.5564
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "mabolo",
@@ -339,7 +383,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4981,
       "lng": 124.6416
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "macagtas",
@@ -350,7 +395,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4865,
       "lng": 124.6368
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "malvar",
@@ -361,7 +407,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4085,
       "lng": 124.5626
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "mckinley",
@@ -372,7 +419,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4551,
       "lng": 124.6826
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "molave",
@@ -383,7 +431,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4947,
       "lng": 124.6361
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "narra",
@@ -394,7 +443,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4958,
       "lng": 124.6406
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "new-rizal",
@@ -405,7 +455,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4522,
       "lng": 124.5993
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "old-rizal",
@@ -416,7 +467,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5096,
       "lng": 124.5921
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "paticua",
@@ -425,9 +477,10 @@ export const barangays: Barangay[] = [
     "pop2020": 1255,
     "pop2015": 1319,
     "location": {
-      "lat": 12.4,
-      "lng": 124.6167
-    }
+      "lat": 12.39024,
+      "lng": 124.58172
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "polangi",
@@ -438,7 +491,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3998,
       "lng": 124.6298
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "quezon",
@@ -449,7 +503,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3639,
       "lng": 124.5684
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "salvacion",
@@ -460,7 +515,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4472,
       "lng": 124.5696
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "sampaguita",
@@ -471,7 +527,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4997,
       "lng": 124.6417
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "san-julian",
@@ -482,7 +539,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4301,
       "lng": 124.574
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "san-pascual",
@@ -493,7 +551,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3811,
       "lng": 124.555
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "santol",
@@ -501,7 +560,11 @@ export const barangays: Barangay[] = [
     "poblacion": true,
     "pop2020": 377,
     "pop2015": 404,
-    "location": null
+    "location": {
+      "lat": 12.49818,
+      "lng": 124.63906
+    },
+    "locationFrom": "boundary"
   },
   {
     "slug": "somoge",
@@ -512,7 +575,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4163,
       "lng": 124.624
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "talisay",
@@ -523,7 +587,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5036,
       "lng": 124.6402
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "tinowaran",
@@ -534,7 +599,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4392,
       "lng": 124.6604
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "trangue",
@@ -545,7 +611,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.3544,
       "lng": 124.5556
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "uep-zone-i",
@@ -556,7 +623,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5096,
       "lng": 124.6675
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "uep-zone-ii",
@@ -567,7 +635,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5122,
       "lng": 124.6631
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "uep-zone-iii",
@@ -578,7 +647,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.5101,
       "lng": 124.6599
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "washington",
@@ -589,7 +659,8 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4621,
       "lng": 124.6435
-    }
+    },
+    "locationFrom": "osm"
   },
   {
     "slug": "yakal",
@@ -600,11 +671,9 @@ export const barangays: Barangay[] = [
     "location": {
       "lat": 12.4966,
       "lng": 124.638
-    }
+    },
+    "locationFrom": "osm"
   }
 ]
 
 export const totalPop2020 = 97879
-
-/** Land outline of Catarman as [lng, lat] pairs (OpenStreetMap). */
-export const outline: [number, number][] = [[124.4895, 12.3179], [124.5427, 12.2857], [124.5657, 12.3182], [124.5739, 12.3365], [124.5858, 12.3347], [124.5962, 12.3525], [124.6078, 12.3509], [124.6127, 12.356], [124.6472, 12.3496], [124.6541, 12.3502], [124.6701, 12.3532], [124.678, 12.3599], [124.6806, 12.3705], [124.6883, 12.3725], [124.6874, 12.3799], [124.6887, 12.3826], [124.6914, 12.3868], [124.6916, 12.3935], [124.6965, 12.394], [124.699, 12.3903], [124.7061, 12.3929], [124.7072, 12.3999], [124.7115, 12.4009], [124.7141, 12.3981], [124.7224, 12.4017], [124.7255, 12.4115], [124.7322, 12.4111], [124.7355, 12.4137], [124.7059, 12.4888], [124.7034, 12.4917], [124.699, 12.5013], [124.6843, 12.5066], [124.681, 12.5101], [124.652, 12.5185], [124.623, 12.5215], [124.5954, 12.5196], [124.5903, 12.5086], [124.5875, 12.5073], [124.585, 12.5067], [124.582, 12.5014], [124.5801, 12.4989], [124.5762, 12.4901], [124.5584, 12.4507], [124.5534, 12.4405], [124.5475, 12.4277], [124.5418, 12.4181], [124.5309, 12.409]]

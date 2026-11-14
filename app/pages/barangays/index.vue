@@ -19,9 +19,7 @@ const maxPop = Math.max(...barangays.map(b => b.pop2020))
 const fmt = (n: number) => n.toLocaleString('en-PH')
 const captainOf = (slug: string) => barangayOfficials[slug]?.officials.find(o => o.position === 'Punong Barangay')?.name
 
-const points = barangays
-  .filter(b => b.location)
-  .map(b => ({ slug: b.slug, name: b.name, lat: b.location!.lat, lng: b.location!.lng }))
+const points = barangays.map(b => ({ slug: b.slug, name: b.name, lat: b.location.lat, lng: b.location.lng }))
 const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
 </script>
 
@@ -76,19 +74,19 @@ const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)
     <aside class="lg:sticky lg:top-24 lg:self-start">
       <h2 class="mb-3 text-sm font-semibold">Map of Catarman</h2>
       <div class="border" :class="hasLiveMap ? 'h-[420px]' : 'p-3'">
-        <SiteMap :points="points" label="Map of Catarman showing its barangays">
+        <SiteMap :points="points" boundaries label="Map of Catarman showing its barangays">
           <BarangayMap />
         </SiteMap>
       </div>
       <p class="mt-3 text-sm text-muted-foreground">
-        Each dot is a barangay — select one to open its profile. The cluster on the north coast is the poblacion (town proper).
+        Each shape is a barangay’s official boundary — select one to open its profile. The small barangays on the north coast are the poblacion (town proper).
       </p>
     </aside>
   </div>
 
   <div class="container-page">
     <p class="text-sm text-muted-foreground">
-      Population: Philippine Statistics Authority, 2020 Census of Population. Locations are approximate, from © OpenStreetMap contributors.
+      Population: Philippine Statistics Authority, 2020 Census of Population. Boundaries: NAMRIA and PSA. Pins mark village centres, from © OpenStreetMap contributors.
     </p>
   </div>
 </template>
