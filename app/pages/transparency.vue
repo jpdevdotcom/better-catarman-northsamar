@@ -3,6 +3,7 @@ import { BadgeCheck, CircleDashed, ExternalLink, Info, Scale } from '@lucide/vue
 import { auditObservations, auditOverview, auditSource, auditTerms } from '~/data/audit'
 import { auditReplies } from '~/data/auditReplies'
 import { audit2025, coaReportsUrl, financeVia, financeYears } from '~/data/finances'
+import type { ChartSeries } from '~/components/FinanceChart.vue'
 import { budgetPortal, transparencyLinks } from '~/data/site'
 
 useHead({ title: 'Transparency' })
@@ -21,6 +22,20 @@ const oldest = financeYears[financeYears.length - 1]!
 const checked = financeYears.filter(y => y.source !== 'wikidata')
 const unchecked = financeYears.filter(y => y.source === 'wikidata').map(y => y.year).reverse()
 const noted = financeYears.filter(y => y.note)
+
+// Charts run oldest to newest; the table runs newest first.
+const chrono = [...financeYears].reverse()
+const chartYears = chrono.map(y => y.year)
+const BLUE = '#1d4ed8'
+const LIGHT_BLUE = '#60a5fa'
+const flowSeries = [
+  { label: 'Income', color: BLUE, values: chrono.map(y => y.income) },
+  { label: 'Expenses', color: LIGHT_BLUE, values: chrono.map(y => y.expenses) },
+] as [ChartSeries, ChartSeries]
+const stockSeries = [
+  { label: 'Assets', color: BLUE, values: chrono.map(y => y.assets) },
+  { label: 'Liabilities', color: LIGHT_BLUE, values: chrono.map(y => y.liabilities) },
+] as [ChartSeries, ChartSeries]
 const noteNumber = (year: number) => noted.findIndex(y => y.year === year) + 1
 
 const sourceLabel = {
@@ -82,6 +97,10 @@ const exact = (n: number) => `₱${n.toLocaleString('en-PH', { minimumFractionDi
         :title="`Year by year, ${oldest.year} to ${latest.year}`"
         :description="`${checked.length} of ${financeYears.length} years have been checked against the Commission on Audit’s own reports.`"
       />
+      <div class="mb-6 grid gap-4 xl:grid-cols-2">
+        <FinanceChart title="Income and expenses" :years="chartYears" :series="flowSeries" :unchecked="unchecked" />
+        <FinanceChart title="Assets and liabilities" :years="chartYears" :series="stockSeries" :unchecked="unchecked" />
+      </div>
       <div class="overflow-x-auto border">
         <table class="w-full min-w-[720px] text-sm">
           <thead class="bg-muted text-left">
