@@ -71,8 +71,12 @@ export const sources: Source[] = [
   { scope: 'national', name: 'Fire Code of the Philippines (RA 9514) and implementing rules', publisher: 'Bureau of Fire Protection', usedFor: 'Fire Safety Inspection Certificate.' },
   { scope: 'national', name: 'Code on Sanitation of the Philippines (PD 856)', publisher: 'Department of Health', usedFor: 'Health Certificate.' },
 
+  { scope: 'national', name: 'Tropical cyclone bulletins and wind signals', publisher: 'PAGASA', url: 'https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin', usedFor: 'The wind signal table and the links to official bulletins on the Advisories page.' },
+  { scope: 'national', name: 'Local Government Code (RA 7160), Section 167', publisher: 'Republic of the Philippines', usedFor: 'The business tax and permit renewal reminder on the Advisories page.' },
+
   // --- Open data
   { scope: 'open', name: 'OpenStreetMap', publisher: '© OpenStreetMap contributors (ODbL)', url: 'https://www.openstreetmap.org/copyright', usedFor: 'Catarman’s outline and the approximate location of each barangay. These are community-mapped points, not official boundaries.' },
+  { scope: 'open', name: 'Open-Meteo weather forecast', publisher: 'Open-Meteo.com (CC BY 4.0)', url: 'https://open-meteo.com/', usedFor: 'The weather forecast for Catarman on the home and Advisories pages. It is a forecast model, not an official PAGASA forecast or warning.' },
   { scope: 'open', name: 'Google Maps', publisher: 'Google', url: 'https://www.google.com/maps', usedFor: 'The background map shown on barangay and contact pages.' },
 ]
 
@@ -126,6 +130,8 @@ export const selectionRules = [
 
 /** Every place where the published source was adjusted by hand, and why. */
 export const handEdits = [
+  { what: 'Filipino and Waray versions', why: 'Translated for this site, not by the municipal government. Official requirements and quoted documents are left in English. The Waray text is a first draft that has not yet been reviewed by a native speaker.' },
+  { what: 'Notices and reminders', why: 'Written for this site from the laws and reports named beside each one. They are not official announcements.' },
   { what: 'Finance figures that differed from Wikidata', why: 'Checking against the COA reports changed three years. 2023: Wikidata had equity recorded as income and income recorded as expenses. 2021 and 2015: Wikidata used figures restated in the following year’s report; this site shows each year’s own report and notes the restatement.' },
   { what: 'COA audit observations for 2025', why: 'Each observation and each response is quoted word for word. The short headings were written for this site, the recommendations are shortened, and the responses are excerpts from a longer discussion in the report. No names of persons are shown.' },
   { what: 'Barangay officials’ contact details', why: 'The DILG directory also lists personal email addresses, which are not shown here. A barangay contact number is shown only when the directory holds a well-formed phone number; entries such as “0000” or “None” are dropped.' },
