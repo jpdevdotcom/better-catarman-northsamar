@@ -12,11 +12,11 @@ watch(() => route.fullPath, () => (open.value = false))
 <template>
   <!-- Hotline bar: one label, four numbers, tap to call. Scrolls sideways on narrow screens. -->
   <div class="bg-primary text-primary-foreground print:hidden">
-    <div class="container-page flex h-9 items-center gap-5 text-[13px]">
+    <div class="container-page flex h-9 items-center gap-3 text-[13px] sm:gap-5">
       <span class="flex shrink-0 items-center gap-2 font-semibold">
-        <Phone class="size-3.5" aria-hidden="true" /> {{ t('Hotlines') }}
+        <Phone class="size-3.5" aria-hidden="true" /> <span class="hidden sm:inline">{{ t('Hotlines') }}</span>
       </span>
-      <ul class="flex flex-1 items-center divide-x divide-white/25 overflow-x-auto whitespace-nowrap [scrollbar-width:none]" aria-label="Emergency hotlines">
+      <ul class="flex flex-1 items-center divide-x divide-white/25 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [mask-image:linear-gradient(to_right,black_80%,transparent)] lg:[mask-image:none]" aria-label="Emergency hotlines">
         <li v-for="h in barHotlines" :key="h.name" class="px-4 first:pl-0">
           <a :href="`tel:${h.numbers[0]!.replace(/[^\d+]/g, '')}`" class="group flex items-baseline gap-2" :aria-label="`Call ${h.name}: ${h.numbers[0]}`">
             <span class="text-primary-foreground/70">{{ t(h.short!) }}</span>

@@ -21,12 +21,13 @@ const choice = computed({
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger
-      class="flex shrink-0 items-center gap-1.5 px-2 py-1 text-[13px] font-semibold text-primary-foreground outline-none hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-primary-foreground/60 data-[state=open]:bg-white/15"
+      class="flex shrink-0 items-center gap-1 px-1.5 py-1 sm:gap-1.5 sm:px-2 text-[13px] font-semibold text-primary-foreground outline-none hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-primary-foreground/60 data-[state=open]:bg-white/15"
       :aria-label="`${t('Language')}: ${current.label}`"
     >
-      <Globe class="size-3.5" aria-hidden="true" />
-      <span :lang="current.htmlLang">{{ current.label }}</span>
-      <ChevronDown class="size-3.5 opacity-80" aria-hidden="true" />
+      <Globe class="hidden size-3.5 sm:block" aria-hidden="true" />
+      <span :lang="current.htmlLang" class="hidden sm:inline">{{ current.label }}</span>
+      <span :lang="current.htmlLang" class="sm:hidden">{{ current.short }}</span>
+      <ChevronDown class="size-3 opacity-80 sm:size-3.5" aria-hidden="true" />
     </DropdownMenuTrigger>
 
     <DropdownMenuContent align="end" :side-offset="6" class="min-w-44 border">
