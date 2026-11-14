@@ -75,7 +75,8 @@ export const sources: Source[] = [
   { scope: 'national', name: 'Local Government Code (RA 7160), Section 167', publisher: 'Republic of the Philippines', usedFor: 'The business tax and permit renewal reminder on the Advisories page.' },
 
   // --- Open data
-  { scope: 'open', name: 'OpenStreetMap', publisher: '© OpenStreetMap contributors (ODbL)', url: 'https://www.openstreetmap.org/copyright', usedFor: 'Catarman’s outline and the approximate location of each barangay. These are community-mapped points, not official boundaries.' },
+  { scope: 'catarman-official', name: 'Administrative boundaries of the Philippines (PSGC 3Q 2026)', publisher: 'NAMRIA and PSA, via OCHA COD-AB (CC BY-IGO)', url: 'https://data.humdata.org/dataset/cod-ab-phl', usedFor: 'The official boundary of Catarman and of each of its 55 barangays on the maps, each barangay’s area, and which barangay each school and health facility is in. Read through the faeldon/philippines-json-maps conversion.' },
+  { scope: 'open', name: 'OpenStreetMap', publisher: '© OpenStreetMap contributors (ODbL)', url: 'https://www.openstreetmap.org/copyright', usedFor: 'The pin for each barangay’s village centre, and the schools and health facilities directory. Places are community-mapped, so the directory is not complete.' },
   { scope: 'open', name: 'Open-Meteo weather forecast', publisher: 'Open-Meteo.com (CC BY 4.0)', url: 'https://open-meteo.com/', usedFor: 'The weather forecast for Catarman on the home and Advisories pages. It is a forecast model, not an official PAGASA forecast or warning.' },
   { scope: 'open', name: 'Google Maps', publisher: 'Google', url: 'https://www.google.com/maps', usedFor: 'The background map shown on barangay and contact pages.' },
 ]
@@ -88,7 +89,7 @@ export const gaps = [
   'Mobile numbers for the provincial hospital’s emergency room, and local Red Cross and Coast Guard numbers. Numbers circulating online could not be traced to an official post.',
   'A landline for the Catarman fire station. Two different numbers are in circulation.',
   'Committee assignments of Sangguniang Bayan members, and the Liga ng mga Barangay and SK Federation presidents.',
-  'Map locations of five barangays: Acacia, Casoy, Daganas, Jose P. Rizal, and Santol.',
+  'A complete list of schools and health facilities. OpenStreetMap is missing some, including the Rural Health Unit.',
   'Barangay population from the 2024 census. The 2020 figures are shown instead.',
   'Phone numbers for the Local Civil Registry, Accounting, and Nutrition Action offices.',
 ]
@@ -140,9 +141,10 @@ export const handEdits = [
   { what: 'Business permit renewal checklist', why: 'The official list names the Fire Safety Inspection Certificate twice. It is shown once.' },
   { what: 'Cedula checklist headings', why: 'The official headings read “Corporation… Sole Propriety”. They are shown as “Sole proprietorship”.' },
   { what: 'How-to-apply steps for most official services', why: 'A short four-step summary written for this site, based on how the municipal e-services site works. Transfer of Ownership uses the official steps.' },
-  { what: 'Catarman’s outline on the maps', why: 'The OpenStreetMap boundary includes municipal waters. The offshore part was removed so that only land is shown, and the north coastline was drawn in.' },
+  { what: 'Catarman’s outline in the logo', why: 'Drawn from the OpenStreetMap boundary, with the offshore municipal waters removed. The maps use the official NAMRIA and PSA boundary instead.' },
   { what: 'Barangay Cularima’s location', why: 'Matched to an OpenStreetMap point spelled “Colarema”.' },
-  { what: 'Barangay Paticua’s location', why: 'OpenStreetMap has two points with this name. The one matching the map’s own “Paticua” label is used.' },
+  { what: 'Barangay pins checked against the official boundaries', why: 'Seven barangays had no OpenStreetMap point, or one that fell outside their official boundary (Jose Abad Santos and Paticua). Their pins are placed inside the official boundary instead.' },
+  { what: 'Schools and health facilities', why: 'Parts of the UEP campus, a duplicate entry, and places with vague names were left out. Pharmacies, dental clinics, and private doctors’ clinics were left out on purpose. Two misspelled names were corrected.' },
   { what: 'Sangguniang Bayan ex officio seats', why: 'Hidden until the Liga ng mga Barangay and SK Federation presidents can be confirmed.' },
 ]
 
