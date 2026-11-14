@@ -279,4 +279,14 @@ export const war: Record<string, string> = {
   'Liabilities': 'Utang',
   'Not checked': 'Diri pa nasusi',
   'Use the arrow keys to read each year.': 'Gamita an mga arrow key para basahon an kada tuig.',
+
+  // Privacy and terms
+  'Privacy notice': 'Pahibaro mahitungod han privacy',
+  'Terms of use': 'Mga kondisyon ha paggamit',
+  'How we handle your report': 'Paonan-o namon gin-aatiman an imo report',
+  'What this site collects about you, what it publishes, and why.': 'Ano an ginkukuha hini nga site mahitungod ha imo, ano an ginpapublikar hini, ngan kay ano.',
+  'How you may use this site, and what it can and cannot promise.': 'Paonan-o mo magagamit ini nga site, ngan ano an masasaad ngan diri masasaad hini.',
+  'Last updated': 'Katapusan nga pag-update',
+  'This notice is in English, the language it is maintained in.': 'Aada ha Ingles ini nga pahibaro, an pinulongan nga gingagamit ha pag-update hini.',
+  'These terms are in English, the language they are maintained in.': 'Aada ha Ingles ini nga mga kondisyon, an pinulongan nga gingagamit ha pag-update hini.',
 }

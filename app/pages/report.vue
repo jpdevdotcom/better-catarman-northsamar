@@ -131,6 +131,7 @@ const field = 'w-full border border-input bg-background px-3.5 py-2.5 text-base 
         <span>
           {{ t('This is a community-run guide. Reports go to its volunteers, not to the municipal government.') }}
           {{ t('For urgent corrections to official requirements, contact the office concerned.') }}
+          <NuxtLink to="/privacy" class="mt-2 block font-semibold text-primary hover:underline">{{ t('How we handle your report') }}</NuxtLink>
         </span>
       </p>
     </aside>

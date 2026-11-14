@@ -57,6 +57,10 @@ const route = useRoute()
       <div class="container-page py-5 text-xs text-muted-foreground">
         © {{ new Date().getFullYear() }} BetterCatarman. {{ t('Information is provided for public reference; always confirm with the office concerned.') }}
         <NuxtLink to="/about" class="font-semibold text-primary hover:underline">{{ t('See where our information comes from') }}</NuxtLink>
+        <span class="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+          <NuxtLink to="/privacy" class="hover:text-primary hover:underline">{{ t('Privacy notice') }}</NuxtLink>
+          <NuxtLink to="/terms" class="hover:text-primary hover:underline">{{ t('Terms of use') }}</NuxtLink>
+        </span>
       </div>
     </div>
   </footer>

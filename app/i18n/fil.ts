@@ -276,4 +276,14 @@ export const fil: Record<string, string> = {
   'Liabilities': 'Pananagutan',
   'Not checked': 'Hindi pa nasuri',
   'Use the arrow keys to read each year.': 'Gamitin ang mga arrow key para basahin ang bawat taon.',
+
+  // Privacy and terms
+  'Privacy notice': 'Abiso sa privacy',
+  'Terms of use': 'Mga tuntunin sa paggamit',
+  'How we handle your report': 'Paano namin pinangangasiwaan ang iyong ulat',
+  'What this site collects about you, what it publishes, and why.': 'Ano ang kinukuha ng site na ito tungkol sa iyo, ano ang inilalathala nito, at bakit.',
+  'How you may use this site, and what it can and cannot promise.': 'Paano mo magagamit ang site na ito, at ano ang maipapangako at hindi nito maipapangako.',
+  'Last updated': 'Huling na-update',
+  'This notice is in English, the language it is maintained in.': 'Nasa Ingles ang abisong ito, ang wikang ginagamit sa pag-update nito.',
+  'These terms are in English, the language they are maintained in.': 'Nasa Ingles ang mga tuntuning ito, ang wikang ginagamit sa pag-update nito.',
 }
