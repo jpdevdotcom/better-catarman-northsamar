@@ -1,12 +1,34 @@
+<script setup lang="ts">
+import { Languages } from '@lucide/vue'
+import { locales } from '~/composables/useT'
+
+const { locale, t, restoreLocale } = useT()
+const route = useRoute()
+
+// The saved language is applied once the page is running in the browser.
+onMounted(restoreLocale)
+useHead({ htmlAttrs: { lang: () => locales.find(l => l.code === locale.value)!.htmlLang } })
+</script>
+
 <template>
   <div class="flex min-h-dvh flex-col">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
     >
-      Skip to main content
+      {{ t('Skip to main content') }}
     </a>
     <AppHeader />
+    <p v-if="locale !== 'en'" class="border-b bg-secondary text-secondary-foreground">
+      <span class="container-page flex items-start gap-2.5 py-2.5 text-sm">
+        <Languages class="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+        <span>
+          {{ t('This page is partly translated. Official requirements and quoted documents stay in English, as published.') }}
+          {{ t('Spot a wrong translation?') }}
+          <NuxtLink :to="{ path: '/report', query: { page: route.path } }" class="font-semibold underline underline-offset-4">{{ t('Tell us') }}</NuxtLink>
+        </span>
+      </span>
+    </p>
     <main id="main" class="flex-1">
       <NuxtPage />
     </main>

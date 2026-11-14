@@ -2,6 +2,8 @@
 import { ArrowRight, SearchX } from '@lucide/vue'
 import { allServices, categories, lifeEvents, requirementText } from '~/data/site'
 
+const { t } = useT()
+
 useHead({ title: 'Services' })
 useSeoMeta({ description: 'Browse all municipal services in Catarman, Northern Samar, with requirements and the office to visit.' })
 
@@ -75,7 +77,7 @@ const results = computed(() => {
           class="flex items-center gap-3 rounded-lg border p-4 text-sm font-medium transition-colors hover:border-primary hover:bg-accent"
         >
           <component :is="e.icon" class="size-5 shrink-0 text-primary" aria-hidden="true" />
-          {{ e.label }}
+          {{ t(e.label) }}
         </NuxtLink>
       </div>
     </section>

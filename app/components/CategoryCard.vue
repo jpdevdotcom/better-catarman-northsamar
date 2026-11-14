@@ -3,6 +3,7 @@ import { ArrowRight } from '@lucide/vue'
 import type { Category } from '~/data/site'
 
 defineProps<{ category: Category }>()
+const { t } = useT()
 </script>
 
 <template>
@@ -15,10 +16,10 @@ defineProps<{ category: Category }>()
     </span>
     <span class="min-w-0 flex-1">
       <span class="flex items-center justify-between gap-2 font-semibold">
-        {{ category.title }}
+        {{ t(category.title) }}
         <ArrowRight class="size-4 shrink-0 text-primary opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true" />
       </span>
-      <span class="mt-1 block text-sm text-muted-foreground">{{ category.description }}</span>
+      <span class="mt-1 block text-sm text-muted-foreground">{{ t(category.description) }}</span>
     </span>
   </NuxtLink>
 </template>

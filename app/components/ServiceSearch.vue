@@ -3,6 +3,7 @@ import { Search } from '@lucide/vue'
 
 const props = defineProps<{ initial?: string }>()
 const q = ref(props.initial ?? '')
+const { t } = useT()
 
 function submit() {
   navigateTo({ path: '/services', query: q.value.trim() ? { q: q.value.trim() } : {} })
@@ -16,11 +17,11 @@ function submit() {
       <Input
         v-model="q"
         type="search"
-        aria-label="Search services"
-        placeholder="What do you need? e.g. birth certificate"
+        :aria-label="t('Search services')"
+        :placeholder="t('What do you need? e.g. birth certificate')"
         class="h-12 bg-background pl-11 text-base md:text-base"
       />
     </div>
-    <Button type="submit" size="lg" class="h-12 px-6">Search</Button>
+    <Button type="submit" size="lg" class="h-12 px-6">{{ t('Search') }}</Button>
   </form>
 </template>

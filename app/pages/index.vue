@@ -8,6 +8,8 @@ useSeoMeta({
   description: 'Requirements, offices, barangays, and public records for Catarman, Northern Samar, gathered in one simple place.',
 })
 
+const { t } = useT()
+
 const explore = [
   { to: '/barangays', icon: MapPin, title: 'Barangays', text: `All ${glance.find(g => g.label === 'Barangays')!.value}, with officials and population` },
   { to: '/government', icon: Landmark, title: 'Government', text: 'Mayor, council, and municipal offices' },
@@ -27,16 +29,16 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
         <MapPin class="size-4" aria-hidden="true" /> {{ site.municipality }}, {{ site.province }}
       </p>
       <h1 class="max-w-3xl text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-        Welcome to <span class="text-primary">BetterCatarman.org</span>
+        {{ t('Welcome to') }} <span class="text-primary">BetterCatarman.org</span>
       </h1>
       <p class="mt-5 max-w-2xl text-lg text-muted-foreground">
-        Requirements, offices, barangays, and public records for every Catarmananon, gathered in one simple place.
+        {{ t('Requirements, offices, barangays, and public records for every Catarmananon, gathered in one simple place.') }}
       </p>
 
       <div class="mt-8 max-w-2xl">
         <ServiceSearch />
         <div class="mt-4 flex flex-wrap items-center gap-2 text-sm">
-          <span class="text-muted-foreground">Popular:</span>
+          <span class="text-muted-foreground">{{ t('Popular:') }}</span>
           <NuxtLink
             v-for="p in popularSearches"
             :key="p"
@@ -50,7 +52,7 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
       </div>
 
       <nav aria-labelledby="explore-heading" class="lg:col-span-5">
-        <h2 id="explore-heading" class="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">More than services</h2>
+        <h2 id="explore-heading" class="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">{{ t('More than services') }}</h2>
         <ul class="divide-y border">
           <li v-for="e in explore" :key="e.to">
             <NuxtLink :to="e.to" class="group flex items-center gap-3 px-4 py-2.5 transition-colors hover:bg-accent">
@@ -58,8 +60,8 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
                 <component :is="e.icon" class="size-4" aria-hidden="true" />
               </span>
               <span class="min-w-0 flex-1">
-                <span class="block text-sm font-semibold leading-snug">{{ e.title }}</span>
-                <span class="block text-sm leading-snug text-muted-foreground">{{ e.text }}</span>
+                <span class="block text-sm font-semibold leading-snug">{{ t(e.title) }}</span>
+                <span class="block text-sm leading-snug text-muted-foreground">{{ t(e.text) }}</span>
               </span>
               <ArrowRight class="size-4 shrink-0 text-primary transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </NuxtLink>
@@ -86,15 +88,15 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
   <section class="bg-primary text-primary-foreground">
     <div class="container-page py-14">
       <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
-        <h2 class="text-2xl font-bold">Catarman at a glance</h2>
+        <h2 class="text-2xl font-bold">{{ t('Catarman at a glance') }}</h2>
         <NuxtLink to="/statistics" class="inline-flex items-center gap-1 text-sm font-semibold underline-offset-4 hover:underline">
-          View statistics <ArrowRight class="size-4" aria-hidden="true" />
+          {{ t('View statistics') }} <ArrowRight class="size-4" aria-hidden="true" />
         </NuxtLink>
       </div>
       <dl class="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/25 bg-white/25 lg:grid-cols-4">
         <div v-for="g in glance" :key="g.label" class="flex flex-col-reverse gap-1 bg-primary p-6">
           <dt>
-            <span class="block font-medium">{{ g.label }}</span>
+            <span class="block font-medium">{{ t(g.label) }}</span>
             <span class="block text-sm text-primary-foreground/75">{{ g.note }}</span>
           </dt>
           <dd class="text-3xl font-bold tabular-nums sm:text-4xl">{{ g.value }}</dd>
@@ -129,7 +131,7 @@ const popular = popularSlugs.map(s => categories.find(c => c.slug === s)!)
         <p class="flex items-start gap-3"><MapPin class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" /> {{ site.address }}</p>
         <p class="flex items-start gap-3"><Clock class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" /> {{ site.officeHours }}</p>
         <a :href="site.officialWebsite" target="_blank" rel="noopener" class="flex items-start gap-3 font-medium text-primary hover:underline">
-          <ExternalLink class="mt-0.5 size-4 shrink-0" aria-hidden="true" /> Official LGU website
+          <ExternalLink class="mt-0.5 size-4 shrink-0" aria-hidden="true" /> {{ t('Official LGU website') }}
         </a>
       </div>
     </div>

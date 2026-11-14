@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Phone } from '@lucide/vue'
 import { hotlines, hotlineSource } from '~/data/site'
+
+const { t } = useT()
 </script>
 
 <template>
@@ -8,8 +10,8 @@ import { hotlines, hotlineSource } from '~/data/site'
   <ul class="divide-y border">
     <li v-for="h in hotlines" :key="h.name" class="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
       <div class="min-w-0">
-        <p class="font-medium">{{ h.name }}</p>
-        <p class="text-sm text-muted-foreground">{{ h.note }}</p>
+        <p class="font-medium">{{ t(h.name) }}</p>
+        <p class="text-sm text-muted-foreground">{{ t(h.note) }}</p>
       </div>
       <div v-if="h.numbers.length" class="flex shrink-0 flex-wrap gap-2">
         <a
