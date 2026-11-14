@@ -16,6 +16,10 @@ export default defineNuxtConfig({
     public: {
       // Set with NUXT_PUBLIC_GOOGLE_MAPS_KEY in .env (see .env.example).
       googleMapsKey: '',
+      // Where "Report a correction" sends reports. Set either or both in .env:
+      // NUXT_PUBLIC_REPORT_EMAIL (an email address) and NUXT_PUBLIC_REPORT_FORM_URL (e.g. a Google Form).
+      reportEmail: '',
+      reportFormUrl: '',
     },
   },
   shadcn: {
