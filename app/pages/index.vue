@@ -3,9 +3,9 @@ import { ArrowRight, ChartColumn, Clock, ExternalLink, Landmark, MapPin, Scale }
 import { financeYears } from '~/data/finances'
 import { categories, glance, history, officials, popularSearches, popularSlugs, site } from '~/data/site'
 
-useHead({ title: 'Government services for Catarman, Northern Samar', titleTemplate: '%s · BetterCatarman' })
+useHead({ title: 'Welcome to BetterCatarman.org', titleTemplate: '%s · Catarman, Northern Samar' })
 useSeoMeta({
-  description: 'Find government services, requirements, offices, and public information for Catarman, Northern Samar.',
+  description: 'Requirements, offices, barangays, and public records for Catarman, Northern Samar, gathered in one simple place.',
 })
 
 const explore = [
