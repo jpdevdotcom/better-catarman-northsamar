@@ -1,0 +1,50 @@
+name: Translation
+description: A Filipino or Waray translation is wrong, unclear or missing.
+title: "[Translation] "
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The Waray text is a first draft that hasn't been reviewed by a native speaker yet, so every correction helps. Official requirements and quoted documents stay in English on purpose.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Filipino
+        - Waray
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page where you saw the text.
+      placeholder: https://bettercatarman.org/barangays
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: The translation as it appears on the site. Include the English, if you know it.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested translation
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Optional. For example, why your wording is better, or a word that's used differently in Northern Samar.
+  - type: checkboxes
+    id: speaker
+    attributes:
+      label: About you
+      options:
+        - label: I'm a native speaker of this language.
