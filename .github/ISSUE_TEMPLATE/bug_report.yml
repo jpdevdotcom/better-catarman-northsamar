@@ -1,0 +1,63 @@
+name: Bug report
+description: Something on the site doesn't work, looks broken, or is hard to use.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For wrong information, use the **Correction** form instead. For a security problem, don't open an issue: see the [security policy](https://github.com/jpdevdotcom/better-catarman-northsamar/blob/main/SECURITY.md).
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page where it happened.
+      placeholder: https://bettercatarman.org/contact
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you see, and what did you expect to see?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen again
+      placeholder: |
+        1. Open the page
+        2. Tap "…"
+        3. …
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Android phone
+        - iPhone
+        - Tablet
+        - Computer
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: Optional. For example Chrome, Safari, Facebook's in-app browser.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Site language when it happened
+      options:
+        - English
+        - Filipino
+        - Waray
+        - Not sure
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Optional. Drag images here. Crop out anything personal.
