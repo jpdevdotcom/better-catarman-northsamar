@@ -3,7 +3,25 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fbettercatarman.org&label=bettercatarman.org&up_message=online&up_color=1d4ed8&down_message=offline)](https://bettercatarman.org)
 [![Latest release](https://img.shields.io/github/v/release/jpdevdotcom/better-catarman-northsamar?label=release&color=1d4ed8)](https://github.com/jpdevdotcom/better-catarman-northsamar/releases/latest)
 [![Deploy status](https://img.shields.io/github/check-runs/jpdevdotcom/better-catarman-northsamar/main?nameFilter=Cloudflare%20Pages&label=deploy)](https://github.com/jpdevdotcom/better-catarman-northsamar/commits/main)
+[![Last commit](https://img.shields.io/github/last-commit/jpdevdotcom/better-catarman-northsamar?color=1d4ed8)](https://github.com/jpdevdotcom/better-catarman-northsamar/commits/main)
 [![License: MIT](https://img.shields.io/github/license/jpdevdotcom/better-catarman-northsamar?color=1d4ed8)](LICENSE)
+
+[![Nuxt](https://img.shields.io/github/package-json/dependency-version/jpdevdotcom/better-catarman-northsamar/nuxt?logo=nuxt&logoColor=white&color=1d4ed8)](https://nuxt.com)
+[![Vue](https://img.shields.io/github/package-json/dependency-version/jpdevdotcom/better-catarman-northsamar/vue?logo=vuedotjs&logoColor=white&color=1d4ed8)](https://vuejs.org)
+[![TypeScript](https://img.shields.io/github/package-json/dependency-version/jpdevdotcom/better-catarman-northsamar/dev/typescript?logo=typescript&logoColor=white&color=1d4ed8)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/github/package-json/dependency-version/jpdevdotcom/better-catarman-northsamar/dev/tailwindcss?logo=tailwindcss&logoColor=white&color=1d4ed8)](https://tailwindcss.com)
+[![shadcn-vue](https://img.shields.io/badge/ui-shadcn--vue-1d4ed8?logo=shadcnui&logoColor=white)](https://www.shadcn-vue.com)
+[![Node.js 22+](https://img.shields.io/badge/node-%E2%89%A522-1d4ed8?logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![pnpm](https://img.shields.io/badge/package%20manager-pnpm-1d4ed8?logo=pnpm&logoColor=white)](https://pnpm.io)
+[![Hosted on Cloudflare Pages](https://img.shields.io/badge/hosted%20on-Cloudflare%20Pages-1d4ed8?logo=cloudflarepages&logoColor=white)](https://pages.cloudflare.com)
+
+[![A contribution to BetterGov.ph](https://img.shields.io/badge/contribution%20to-BetterGov.ph-1d4ed8)](https://bettergov.ph)
+[![Languages: English, Filipino, Waray](https://img.shields.io/badge/languages-English%20%7C%20Filipino%20%7C%20Waray-1d4ed8)](#whats-on-the-site)
+[![Open issues](https://img.shields.io/github/issues/jpdevdotcom/better-catarman-northsamar?color=1d4ed8)](https://github.com/jpdevdotcom/better-catarman-northsamar/issues)
+[![Open pull requests](https://img.shields.io/github/issues-pr/jpdevdotcom/better-catarman-northsamar?color=1d4ed8)](https://github.com/jpdevdotcom/better-catarman-northsamar/pulls)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-1d4ed8)](CONTRIBUTING.md)
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-read-1d4ed8)](CODE_OF_CONDUCT.md)
+[![Security policy](https://img.shields.io/badge/security-policy-1d4ed8)](SECURITY.md)
 
 **Catarman, Northern Samar's public information in one place, with sources cited.**
 
