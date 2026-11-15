@@ -4,6 +4,8 @@ Thank you for helping. BetterCatarman.org is run by volunteers as a contribution
 
 You don't need to know how to code to help. Corrections and translations are just as valuable as code.
 
+Everyone taking part is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Ways to help
 
 - **Report a mistake.** Use **Report a correction** at the bottom of any page, or [open an issue](https://github.com/jpdevdotcom/better-catarman-northsamar/issues). Say what is wrong, what it should say, and where you saw the correct information.
