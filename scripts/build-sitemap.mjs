@@ -1,11 +1,14 @@
 // Writes sitemap.xml from the pages `nuxt generate` actually produced, so it can never list a
 // page that doesn't exist or miss one that does. Runs after every `pnpm generate`.
 // Leaves out redirects, error pages, and pages marked noindex (QR posters, search, report).
-import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { join, relative } from 'node:path'
 
 const SITE = 'https://bettercatarman.org'
-const ROOT = '.output/public'
+// On Cloudflare Pages, Nuxt writes the site straight to dist/. Locally it writes .output/public/
+// (and dist/ is a link to it). Use whichever exists.
+const ROOT = ['dist', '.output/public'].find(d => existsSync(join(d, 'index.html')))
+if (!ROOT) throw new Error('No generated site found in dist/ or .output/public/. Run `nuxt generate` first.')
 
 const pages = []
 function walk(dir) {
