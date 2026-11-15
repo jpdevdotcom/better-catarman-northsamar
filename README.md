@@ -93,7 +93,7 @@ The site has no accounts and no ads. Google Analytics loads only after a visitor
 
 ## Contributing
 
-Corrections, translations (especially a native Waray speaker's review), and new sources are all welcome. Open an issue or a pull request, and include the source for any fact you add or change.
+Corrections, translations (especially a native Waray speaker's review), and new sources are all welcome. Open an issue or a pull request, and include the source for any fact you add or change. See [CONTRIBUTING.md](CONTRIBUTING.md) for the content rules and how to set up the code.
 
 ## Credits
 
