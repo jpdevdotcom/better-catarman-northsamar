@@ -4,8 +4,7 @@ import type { Scope } from '~/data/sources'
 import { gaps, glossary, handEdits, howToRead, lastChecked, notices, scopes, selectionRules, sources } from '~/data/sources'
 import { allServices } from '~/data/site'
 
-useHead({ title: 'About the Data' })
-useSeoMeta({ description: 'Where the information on BetterCatarman comes from, how to read it, and what was changed or left out.' })
+useSeo('About the Data', 'Where the information on BetterCatarman comes from, how to read it, and what was changed or left out.')
 
 const order: Scope[] = ['catarman-official', 'catarman-data', 'national', 'open']
 const grouped = order.map(scope => ({ scope, ...scopes[scope], items: sources.filter(s => s.scope === scope) }))

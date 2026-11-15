@@ -2,8 +2,7 @@
 import { barangays } from '~/data/barangays'
 import { census, glance, quickFacts } from '~/data/site'
 
-useHead({ title: 'Statistics' })
-useSeoMeta({ description: 'Population, land area, barangays, and key figures for Catarman, Northern Samar.' })
+useSeo('Catarman population and statistics', 'Population, census history, barangays, and key figures for Catarman, Northern Samar.')
 
 const max = Math.max(...census.map(c => c.population))
 const fmt = (n: number) => n.toLocaleString('en-PH')

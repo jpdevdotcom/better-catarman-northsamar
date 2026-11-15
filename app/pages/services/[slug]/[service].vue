@@ -11,8 +11,7 @@ if (!category || !service) {
   throw createError({ statusCode: 404, statusMessage: 'Service not found', fatal: true })
 }
 
-useHead({ title: service.name })
-useSeoMeta({ description: `${service.description} Requirements and how to apply in Catarman, Northern Samar.` })
+useSeo(`${service.name} requirements in Catarman`, `${service.description} Requirements and how to apply in Catarman, Northern Samar.`)
 
 const office = offices.find(o => o.short === service.officeShort)
 const siblings = category.services.filter(s => s.slug !== service.slug)

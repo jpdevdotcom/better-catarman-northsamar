@@ -5,8 +5,7 @@ import { hotlines } from '~/data/site'
 
 const { t } = useT()
 
-useHead({ title: 'Advisories' })
-useSeoMeta({ description: 'Weather forecast, typhoon information, and notices for Catarman, Northern Samar.' })
+useSeo('Weather and typhoon advisories for Catarman', 'Weather forecast, typhoon information, and notices for Catarman, Northern Samar.')
 
 const pagasa = officialChannels.filter(c => c.label.startsWith('PAGASA'))
 const callList = hotlines.filter(h => ['Catarman MDRRMO', 'National Emergency Hotline', 'Northern Samar PDRRMO'].includes(h.name))

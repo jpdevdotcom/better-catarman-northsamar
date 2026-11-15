@@ -9,8 +9,7 @@ if (!category) {
   throw createError({ statusCode: 404, statusMessage: 'Service category not found', fatal: true })
 }
 
-useHead({ title: category.title })
-useSeoMeta({ description: category.description })
+useSeo(`${category.title} in Catarman`, category.description)
 
 const others = categories.filter(c => c.slug !== category.slug)
 const count = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`

@@ -5,8 +5,38 @@ import { notices } from '~/data/notices'
 import { categories, glance, history, officials, popularSearches, popularSlugs, site } from '~/data/site'
 
 useHead({ title: 'BetterCatarman.org Northern Samar · Government services in Catarman', titleTemplate: '%s' })
+const homeDescription = 'Requirements, offices, barangays, hotlines, and public records for Catarman, Northern Samar, gathered in one simple place.'
 useSeoMeta({
-  description: 'Requirements, offices, barangays, and public records for Catarman, Northern Samar, gathered in one simple place.',
+  description: homeDescription,
+  ogTitle: 'BetterCatarman.org · Government services in Catarman, Northern Samar',
+  ogDescription: homeDescription,
+  twitterTitle: 'BetterCatarman.org · Government services in Catarman, Northern Samar',
+  twitterDescription: homeDescription,
+})
+// Tells search engines the site's name, so results show "BetterCatarman.org" rather than a bare address.
+useJsonLd({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      'url': `${SITE_URL}/`,
+      'name': SITE_NAME,
+      'alternateName': ['BetterCatarman', 'BetterCatarman Northern Samar'],
+      'description': homeDescription,
+      'inLanguage': ['en', 'fil', 'war'],
+      'publisher': { '@id': `${SITE_URL}/#organization` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      'name': SITE_NAME,
+      'url': `${SITE_URL}/`,
+      'logo': `${SITE_URL}/logo-mark.png`,
+      'description': 'A community-run guide to government services in Catarman, Northern Samar. Not affiliated with the Municipal Government of Catarman.',
+      'areaServed': { '@type': 'City', 'name': 'Catarman', 'containedInPlace': { '@type': 'AdministrativeArea', 'name': 'Northern Samar' } },
+    },
+  ],
 })
 
 const { t } = useT()

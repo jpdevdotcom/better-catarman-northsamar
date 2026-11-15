@@ -14,8 +14,7 @@ const b = barangays[index]!
 const prev = barangays[(index - 1 + barangays.length) % barangays.length]!
 const next = barangays[(index + 1) % barangays.length]!
 
-useHead({ title: `Barangay ${b.name}` })
-useSeoMeta({ description: `Population and location of Barangay ${b.name}, Catarman, Northern Samar.` })
+useSeo(`Barangay ${b.name}, Catarman: officials, population and map`, `Barangay officials, SK chairperson, population, map and schools of Barangay ${b.name}, Catarman, Northern Samar.`)
 
 const fmt = (n: number) => n.toLocaleString('en-PH')
 const rank = [...barangays].sort((x, y) => y.pop2020 - x.pop2020).findIndex(x => x.slug === b.slug) + 1

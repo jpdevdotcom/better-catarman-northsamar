@@ -2,8 +2,7 @@
 import { Clock, ExternalLink, Globe, Mail, MapPin, Phone } from '@lucide/vue'
 import { site } from '~/data/site'
 
-useHead({ title: 'Contact' })
-useSeoMeta({ description: 'Address, office hours, and emergency hotlines for Catarman, Northern Samar.' })
+useSeo('Contact and emergency hotlines in Catarman', 'Address, office hours, and emergency hotlines for Catarman, Northern Samar.')
 
 const { lat, lng } = site.coordinates
 const hallPoint = [{ name: 'Catarman town proper', lat, lng }]

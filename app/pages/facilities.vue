@@ -6,8 +6,7 @@ import { facilities, facilitiesRetrieved } from '~/data/facilities'
 
 const { t } = useT()
 
-useHead({ title: 'Schools and health facilities' })
-useSeoMeta({ description: 'Schools, colleges, hospitals, and health centers in Catarman, Northern Samar, on a map and by barangay.' })
+useSeo('Schools, hospitals and health centers in Catarman', 'Schools, colleges, hospitals, and health centers in Catarman, Northern Samar, on a map and by barangay.')
 
 const nameOf = Object.fromEntries(barangays.map(b => [b.slug, b.name]))
 const hasLiveMap = Boolean(useRuntimeConfig().public.googleMapsKey)

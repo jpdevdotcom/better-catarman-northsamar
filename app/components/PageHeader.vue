@@ -11,6 +11,19 @@ const props = defineProps<{
 
 const { t } = useT()
 const trail = computed<Crumb[]>(() => props.crumbs ?? [{ label: props.title }])
+
+// The same trail as structured data, so search results can show "Home › Barangays › Cawayan".
+const route = useRoute()
+useJsonLd(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [{ label: 'Home', to: '/' }, ...trail.value].map((c, i, all) => ({
+    '@type': 'ListItem',
+    'position': i + 1,
+    'name': c.label,
+    'item': `${SITE_URL}${c.to ?? (i === all.length - 1 ? route.path.replace(/\/$/, '') : '/')}`,
+  })),
+}))
 </script>
 
 <template>

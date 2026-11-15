@@ -3,8 +3,7 @@ import { ArrowRight, Search, SearchX } from '@lucide/vue'
 import { barangayOfficials } from '~/data/barangayOfficials'
 import { barangays, totalPop2020 } from '~/data/barangays'
 
-useHead({ title: 'Barangays' })
-useSeoMeta({ description: 'Profiles of all 55 barangays of Catarman, Northern Samar, with population and location.' })
+useSeo('The 55 barangays of Catarman', 'All 55 barangays of Catarman, Northern Samar, with barangay officials, population, and maps.')
 
 const q = ref('')
 const sort = ref<'name' | 'population'>('name')

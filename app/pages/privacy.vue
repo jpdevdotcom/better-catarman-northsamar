@@ -4,8 +4,7 @@ import { Info } from '@lucide/vue'
 const { t } = useT()
 const email = useRuntimeConfig().public.reportEmail
 
-useHead({ title: 'Privacy notice' })
-useSeoMeta({ description: 'What information BetterCatarman collects, what it publishes, and the services it relies on.' })
+useSeo('Privacy notice', 'What information BetterCatarman collects, what it publishes, and the services it relies on.')
 
 const UPDATED = '14 November 2026'
 </script>

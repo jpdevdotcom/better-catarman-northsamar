@@ -6,8 +6,7 @@ import { audit2025, coaReportsUrl, financeVia, financeYears } from '~/data/finan
 import type { ChartSeries } from '~/components/FinanceChart.vue'
 import { budgetPortal, transparencyLinks } from '~/data/site'
 
-useHead({ title: 'Transparency' })
-useSeoMeta({ description: 'Municipal finances from 2011 to 2025, audit observations, and open government resources for Catarman, Northern Samar.' })
+useSeo('Finances and audit reports of Catarman', 'Municipal finances from 2011 to 2025, audit observations, and open government resources for Catarman, Northern Samar.')
 
 type Field = 'income' | 'expenses' | 'liabilities' | 'assets'
 const fields: { key: Field, label: string }[] = [

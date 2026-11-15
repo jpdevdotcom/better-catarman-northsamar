@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { faqs } from '~/data/site'
 
-useHead({ title: 'FAQ' })
-useSeoMeta({ description: 'Answers to common questions about government services in Catarman, Northern Samar.' })
+useSeo('Frequently asked questions about Catarman services', 'Answers to common questions about government services in Catarman, Northern Samar.')
 </script>
 
 <template>

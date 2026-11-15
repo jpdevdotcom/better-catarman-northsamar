@@ -4,8 +4,7 @@ import { allServices, categories, lifeEvents, requirementText } from '~/data/sit
 
 const { t } = useT()
 
-useHead({ title: 'Services' })
-useSeoMeta({ description: 'Browse all municipal services in Catarman, Northern Samar, with requirements and the office to visit.' })
+useSeo('Municipal services and requirements in Catarman', 'Browse all municipal services in Catarman, Northern Samar, with requirements and the office to visit.')
 
 const route = useRoute()
 const query = computed(() => String(route.query.q ?? '').trim())

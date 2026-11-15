@@ -8,6 +8,23 @@ const route = useRoute()
 // The saved language is applied once the page is running in the browser.
 onMounted(restoreLocale)
 useHead({ htmlAttrs: { lang: () => locales.find(l => l.code === locale.value)!.htmlLang } })
+
+// One address per page for search engines (so the .pages.dev copy and www never compete),
+// and the shared parts of every link preview.
+const pageUrl = computed(() => `${SITE_URL}${route.path === '/' ? '/' : route.path.replace(/\/$/, '')}`)
+useHead({ link: [{ rel: 'canonical', href: pageUrl }] })
+useSeoMeta({
+  ogUrl: pageUrl,
+  ogSiteName: SITE_NAME,
+  ogType: 'website',
+  ogLocale: 'en_PH',
+  ogImage: `${SITE_URL}/og-image.png`,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: 'BetterCatarman.org, Northern Samar: Catarman’s public information, in one place',
+  twitterCard: 'summary_large_image',
+  twitterImage: `${SITE_URL}/og-image.png`,
+})
 </script>
 
 <template>

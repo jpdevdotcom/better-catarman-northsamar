@@ -5,8 +5,7 @@ const { t } = useT()
 const route = useRoute()
 const config = useRuntimeConfig().public
 
-useHead({ title: 'Report a correction' })
-useSeoMeta({ description: 'Tell BetterCatarman about wrong or outdated information so it can be checked and fixed.' })
+useSeo('Report a correction', 'Tell BetterCatarman about wrong or outdated information so it can be checked and fixed.', { noindex: true })
 
 const form = reactive({
   page: typeof route.query.page === 'string' ? route.query.page : '',

@@ -5,8 +5,7 @@ import type { Official } from '~/data/government'
 import { councilors, executive, exOfficio, offices, representative } from '~/data/government'
 import { site } from '~/data/site'
 
-useHead({ title: 'Government' })
-useSeoMeta({ description: 'Elected officials, Sangguniang Bayan members, and municipal offices of Catarman, Northern Samar.' })
+useSeo('Mayor, Sangguniang Bayan and offices of Catarman', 'Elected officials, Sangguniang Bayan members, and municipal offices of Catarman, Northern Samar.')
 
 const sections = [
   { id: 'executive', label: 'Executive' },

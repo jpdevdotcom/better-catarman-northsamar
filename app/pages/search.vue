@@ -6,8 +6,7 @@ import { search } from '~/utils/search'
 const { t } = useT()
 const route = useRoute()
 
-useHead({ title: 'Search' })
-useSeoMeta({ description: 'Search services, barangays, offices, officials, schools, and health facilities in Catarman, Northern Samar.' })
+useSeo('Search', 'Search services, barangays, offices, officials, schools, and health facilities in Catarman, Northern Samar.', { noindex: true })
 
 const q = ref(typeof route.query.q === 'string' ? route.query.q : '')
 watch(() => route.query.q, v => (q.value = typeof v === 'string' ? v : ''))

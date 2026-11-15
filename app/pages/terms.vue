@@ -3,8 +3,7 @@ import { Info } from '@lucide/vue'
 
 const { t } = useT()
 
-useHead({ title: 'Terms of use' })
-useSeoMeta({ description: 'How the information on BetterCatarman may be used, and its limits.' })
+useSeo('Terms of use', 'How the information on BetterCatarman may be used, and its limits.')
 
 const UPDATED = '14 November 2026'
 </script>
