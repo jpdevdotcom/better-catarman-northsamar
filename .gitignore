@@ -16,3 +16,6 @@ dist
 
 # Local Claude Code settings
 .claude/
+
+# Promo slides and images (kept locally)
+promo/
