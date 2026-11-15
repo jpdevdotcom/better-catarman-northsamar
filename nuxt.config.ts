@@ -27,6 +27,9 @@ export default defineNuxtConfig({
       // Public address of the site, used in share links and QR codes. Set NUXT_PUBLIC_SITE_URL in production.
       siteUrl: '',
       reportFormUrl: '',
+      // Google tag (Google Analytics), loaded only after a visitor accepts. NUXT_PUBLIC_GOOGLE_TAG_ID overrides it;
+      // set it to an empty value to switch analytics off completely.
+      googleTagId: 'GTM-PG8Z659Q',
     },
   },
   shadcn: {

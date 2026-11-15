@@ -6,7 +6,7 @@ const email = useRuntimeConfig().public.reportEmail
 
 useSeo('Privacy notice', 'What information BetterCatarman collects, what it publishes, and the services it relies on.')
 
-const UPDATED = '14 November 2026'
+const UPDATED = '15 November 2026'
 </script>
 
 <template>
@@ -19,8 +19,8 @@ const UPDATED = '14 November 2026'
       <h2 class="text-2xl font-bold">The short version</h2>
       <ul class="list-disc space-y-2 pl-5 marker:text-primary">
         <li>You do not need an account, and this site does not ask for your name or contact details to read it.</li>
-        <li>There are no advertising or tracking cookies, and no analytics.</li>
-        <li>Your language choice is saved only on your own device.</li>
+        <li>There are no advertising cookies. Google Analytics counts visits only if you tap “Accept”, and you can change your mind any time.</li>
+        <li>Your language and analytics choices are saved only on your own device.</li>
         <li>If you send a correction by email, we see what you choose to send, and use it only to check and fix the site.</li>
         <li>Maps and the weather forecast are loaded from outside services, which receive your device’s internet address when they load.</li>
       </ul>
@@ -50,8 +50,8 @@ const UPDATED = '14 November 2026'
     <section class="space-y-3">
       <h2 class="text-2xl font-bold">Information saved on your device</h2>
       <p>
-        If you choose a language, the choice is saved in your browser’s storage so the site remembers it next time.
-        It stays on your device and is never sent to us. Clearing your browser’s site data removes it.
+        If you choose a language, or answer the analytics question, the choice is saved in your browser’s storage so the site
+        remembers it next time. It stays on your device and is never sent to us. Clearing your browser’s site data removes it.
       </p>
     </section>
 
@@ -62,9 +62,27 @@ const UPDATED = '14 November 2026'
         <li><strong>Google Maps</strong>, for the maps on the Barangays, Contact, and Schools and health facilities pages. Google may set its own cookies.</li>
         <li><strong>OpenStreetMap</strong>, for the street map when Google Maps is not available.</li>
         <li><strong>Open-Meteo</strong>, for the weather forecast on the home and Advisories pages.</li>
+        <li><strong>Google Analytics</strong>, only if you accept it. See <a href="#analytics" class="font-semibold text-primary hover:underline">Visit counting</a> below.</li>
         <li>The company that hosts this website, which may keep standard server logs, such as the pages requested and the time.</li>
       </ul>
       <p>Links to other websites, such as government offices and social media pages, take you to sites with their own privacy policies.</p>
+    </section>
+
+    <section id="analytics" class="scroll-mt-24 space-y-3">
+      <h2 class="text-2xl font-bold">Visit counting (Google Analytics)</h2>
+      <p>
+        We would like to know which pages people use, so we can improve the ones that matter most. If, and only if, you tap
+        <strong>Accept</strong> on the notice at the bottom of the screen, the site loads Google Analytics. Until then, nothing from Google
+        Analytics is loaded, and saying no changes nothing else about the site.
+      </p>
+      <p>
+        If you accept, Google Analytics sets cookies on your device and records things like the pages you open, how you arrived
+        (for example, from a Google search or a Facebook link), your general area (city or province, not your exact location), and your
+        type of device and browser. We see only totals and trends, such as how many people opened the cedula page this week.
+        We cannot see who you are, and we do not use this for advertising. Google processes this information under its own
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="font-semibold text-primary hover:underline">privacy policy</a>.
+      </p>
+      <AnalyticsChoice />
     </section>
 
     <section class="space-y-3">

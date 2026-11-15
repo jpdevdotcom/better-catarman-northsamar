@@ -298,4 +298,18 @@ export const fil: Record<string, string> = {
   'Print': 'I-print',
   'There is no poster for this page.': 'Walang poster para sa pahinang ito.',
   'Print on A4 or Letter paper. The header, footer, and this bar are left out of the printout.': 'I-print sa A4 o Letter na papel. Hindi kasama sa print ang header, footer, at ang bar na ito.',
+
+  // Analytics consent
+  'Analytics choice': 'Pagpili sa analytics',
+  'May we count visits with Google Analytics? It shows us which pages people use, so we know what to improve. No ads, and you can change this any time.': 'Puwede ba naming bilangin ang mga pagbisita gamit ang Google Analytics? Ipinapakita nito kung aling mga pahina ang ginagamit ng mga tao, para malaman namin kung ano ang dapat pagbutihin. Walang ads, at puwede mo itong baguhin anumang oras.',
+  'Learn more': 'Alamin pa',
+  'No, thanks': 'Huwag na lang',
+  'Accept': 'Tanggapin',
+  'Your analytics choice': 'Ang iyong pagpili sa analytics',
+  'You allowed Google Analytics on this device.': 'Pinayagan mo ang Google Analytics sa device na ito.',
+  'You turned Google Analytics off on this device.': 'Pinatay mo ang Google Analytics sa device na ito.',
+  'You have not chosen yet. Nothing is counted until you accept.': 'Hindi ka pa pumipili. Walang binibilang hangga’t hindi ka pumapayag.',
+  'Turn off analytics': 'Patayin ang analytics',
+  'Allow analytics': 'Payagan ang analytics',
+  'Choose now': 'Pumili ngayon',
 }

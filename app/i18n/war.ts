@@ -301,4 +301,18 @@ export const war: Record<string, string> = {
   'Print': 'I-print',
   'There is no poster for this page.': 'Waray poster para hini nga pahina.',
   'Print on A4 or Letter paper. The header, footer, and this bar are left out of the printout.': 'I-print ha A4 o Letter nga papel. Diri upod ha print an header, footer, ngan ini nga bar.',
+
+  // Analytics consent
+  'Analytics choice': 'Pagpili ha analytics',
+  'May we count visits with Google Analytics? It shows us which pages people use, so we know what to improve. No ads, and you can change this any time.': 'Puydi ba namon ihap an mga pagbisita gamit an Google Analytics? Iginpapakita hini kon hain nga mga pahina an gingagamit han mga tawo, para maaram kami kon ano an sadang pauswagon. Waray ads, ngan puydi mo ini bag-uhon bisan san-o.',
+  'Learn more': 'Hibaroa pa',
+  'No, thanks': 'Ayaw na lugod',
+  'Accept': 'Uyon',
+  'Your analytics choice': 'An imo pagpili ha analytics',
+  'You allowed Google Analytics on this device.': 'Gintugotan mo an Google Analytics hini nga device.',
+  'You turned Google Analytics off on this device.': 'Ginpalong mo an Google Analytics hini nga device.',
+  'You have not chosen yet. Nothing is counted until you accept.': 'Waray ka pa pagpili. Waray iginhihap tubtob nga diri ka umuyon.',
+  'Turn off analytics': 'Palonga an analytics',
+  'Allow analytics': 'Tugoti an analytics',
+  'Choose now': 'Pagpili yana',
 }

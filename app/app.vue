@@ -5,8 +5,9 @@ import { locales } from '~/composables/useT'
 const { locale, t, restoreLocale } = useT()
 const route = useRoute()
 
-// The saved language is applied once the page is running in the browser.
-onMounted(restoreLocale)
+// The saved language and analytics choice are applied once the page is running in the browser.
+const { restore: restoreAnalytics } = useAnalytics()
+onMounted(() => { restoreLocale(); restoreAnalytics() })
 useHead({ htmlAttrs: { lang: () => locales.find(l => l.code === locale.value)!.htmlLang } })
 
 // One address per page for search engines (so the .pages.dev copy and www never compete),
@@ -50,5 +51,6 @@ useSeoMeta({
       <NuxtPage />
     </main>
     <AppFooter />
+    <ConsentNotice />
   </div>
 </template>
