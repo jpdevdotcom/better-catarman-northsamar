@@ -1,0 +1,35 @@
+name: Suggestion
+description: Suggest a new page, service, source or improvement.
+title: "[Suggestion] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. The site only publishes information it can link to a source, so suggestions that come with one are the easiest to add.
+  - type: textarea
+    id: need
+    attributes:
+      label: What do residents need?
+      description: The problem or question this would help with. For example, "People don't know which office handles burial assistance."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What you'd like the site to show or do.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Optional. Links to official pages or documents the information could come from.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help?
+      options:
+        - label: I can help gather the information or sources.
+        - label: I can help build it.
