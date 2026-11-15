@@ -4,6 +4,9 @@
 # When that check passes on main, the new commit is live, so this tags it and publishes
 # a release listing the commits since the last one.
 #
+# Deployments that only change documentation (README and other .md files in the root, LICENSE,
+# .github/) don't get a release; their commits appear in the next one.
+#
 # Releases are named by the date in the Philippines: v2026.11.16, then v2026.11.16.2 for a
 # second deployment the same day.
 
@@ -48,6 +51,18 @@ jobs:
             exit 0
           fi
 
+          prev=$(git describe --tags --abbrev=0 --match 'v*' "$SHA^" 2>/dev/null || true)
+          range="${prev:+$prev..}$SHA"
+
+          # Skip when nothing that affects the website changed: only the README and other
+          # repository documents, the license, or GitHub settings. Those commits are listed
+          # in the next release instead.
+          site_changes=$(git diff --name-only ${prev:+"$prev"} "$SHA" | grep -vE '^([^/]+\.md|LICENSE|\.github/.*)$' || true)
+          if [ -n "$prev" ] && [ -z "$site_changes" ]; then
+            echo "Only documentation changed since $prev, so no release this time."
+            exit 0
+          fi
+
           base="v$(date +%Y.%m.%d)"
           tag="$base"
           n=2
@@ -55,9 +70,6 @@ jobs:
             tag="$base.$n"
             n=$((n + 1))
           done
-
-          prev=$(git describe --tags --abbrev=0 --match 'v*' "$SHA^" 2>/dev/null || true)
-          range="${prev:+$prev..}$SHA"
 
           {
             echo "Deployed to https://bettercatarman.org on $(date '+%-d %B %Y at %-I:%M %p') (Philippine time)."
