@@ -1,5 +1,7 @@
 # BetterCatarman.org
 
+[![Latest release](https://img.shields.io/github/v/release/jpdevdotcom/better-catarman-northsamar?label=release&color=1d4ed8)](https://github.com/jpdevdotcom/better-catarman-northsamar/releases/latest)
+
 **Catarman, Northern Samar's public information in one place, with sources cited.**
 
 [bettercatarman.org](https://bettercatarman.org) is a volunteer contribution to the BetterGov.ph initiative for better governance. It collects what residents of Catarman most often need to know: what to bring to the municipal hall, who their barangay officials are, who to call in an emergency, and how the town's money is spent. Each fact is linked to where it came from.
