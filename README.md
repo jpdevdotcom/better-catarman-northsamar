@@ -98,3 +98,7 @@ Corrections, translations (especially a native Waray speaker's review), and new 
 ## Credits
 
 Data from the Municipality of Catarman, the Commission on Audit, the Philippine Statistics Authority, DILG, PAGASA, NAMRIA and PSA (via OCHA COD-AB, CC BY-IGO), © OpenStreetMap contributors (ODbL), and Open-Meteo (CC BY 4.0). See the About the Data page for the full list.
+
+## License
+
+The code is released under the [MIT License](LICENSE). The data keeps the licence of its source, listed above and on the About the Data page.
