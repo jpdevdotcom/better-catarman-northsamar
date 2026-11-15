@@ -1,0 +1,75 @@
+# Creates a GitHub release each time Cloudflare Pages finishes deploying main to production.
+#
+# Cloudflare Pages reports every build on GitHub as a check run named "Cloudflare Pages".
+# When that check passes on main, the new commit is live, so this tags it and publishes
+# a release listing the commits since the last one.
+#
+# Releases are named by the date in the Philippines: v2026.11.16, then v2026.11.16.2 for a
+# second deployment the same day.
+
+name: Release on deploy
+
+on:
+  check_run:
+    types: [completed]
+
+permissions:
+  contents: write
+
+# Two deployments finishing at once must not pick the same release name.
+concurrency:
+  group: release-on-deploy
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: >-
+      github.event.check_run.name == 'Cloudflare Pages' &&
+      github.event.check_run.conclusion == 'success' &&
+      github.event.check_run.check_suite.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.event.check_run.head_sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          export TZ=Asia/Manila
+
+          # A re-run of the same deployment shouldn't make a second release.
+          if git tag --points-at "$SHA" | grep -q '^v'; then
+            echo "This commit has already been released."
+            exit 0
+          fi
+
+          base="v$(date +%Y.%m.%d)"
+          tag="$base"
+          n=2
+          while git rev-parse -q --verify "refs/tags/$tag" >/dev/null; do
+            tag="$base.$n"
+            n=$((n + 1))
+          done
+
+          prev=$(git describe --tags --abbrev=0 --match 'v*' "$SHA^" 2>/dev/null || true)
+          range="${prev:+$prev..}$SHA"
+
+          {
+            echo "Deployed to https://bettercatarman.org on $(date '+%-d %B %Y at %-I:%M %p') (Philippine time)."
+            echo
+            echo "## Changes"
+            echo
+            git log --no-merges --format='- %s (%h)' "$range"
+            if [ -n "$prev" ]; then
+              echo
+              echo "**Compare:** https://github.com/$REPO/compare/$prev...$tag"
+            fi
+          } > notes.md
+
+          cat notes.md
+          gh release create "$tag" --target "$SHA" --title "$tag" --notes-file notes.md --latest
