@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a correction without a GitHub account
+    url: https://bettercatarman.org/report
+    about: Use the form on the site. No account needed.
+  - name: Report a security problem
+    url: https://github.com/jpdevdotcom/better-catarman-northsamar/blob/main/SECURITY.md
+    about: Please report it privately, not in a public issue.
+  - name: Official municipal services
+    url: https://catarman.gov.ph
+    about: BetterCatarman isn't the municipal government. For official transactions, contact the Municipality of Catarman.
