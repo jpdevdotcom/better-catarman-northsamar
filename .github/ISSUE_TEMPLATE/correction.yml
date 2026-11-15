@@ -1,0 +1,51 @@
+name: Correction
+description: Something on the site is wrong or out of date, such as a requirement, fee, name or phone number.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep the site accurate. You can write in English, Filipino or Waray.
+
+        Please don't include anyone's private details, such as a home address or personal phone number.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page, or its name.
+      placeholder: https://bettercatarman.org/services/business/business-permit
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What the site says
+      description: Copy the text that's wrong, or describe it.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Where you saw the correct information
+      description: |
+        A link to an official page or document is best. If you saw it in person, such as on a notice at the municipal hall, say where and when.
+    validations:
+      required: true
+  - type: dropdown
+    id: source-type
+    attributes:
+      label: Is your source official?
+      options:
+        - Yes, from the municipal, provincial or national government
+        - No, but it's a reliable source (news, a public directory)
+        - I saw or was told it in person
+        - Not sure
+    validations:
+      required: true
