@@ -88,6 +88,7 @@ Then:
 
 - Check your change in the browser on both a phone-sized and a desktop-sized window.
 - Keep each pull request to one change, and describe what changed and why.
+- For a notable change, add a line under **Unreleased** in [CHANGELOG.md](CHANGELOG.md).
 - For any content change, link the source.
 - Never commit `.env`, API keys, or the downloaded COA PDFs and zips. `.gitignore` already leaves these out.
 
