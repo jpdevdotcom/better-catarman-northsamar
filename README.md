@@ -1,6 +1,7 @@
 # BetterCatarman.org
 
 [![Latest release](https://img.shields.io/github/v/release/jpdevdotcom/better-catarman-northsamar?label=release&color=1d4ed8)](https://github.com/jpdevdotcom/better-catarman-northsamar/releases/latest)
+[![Deploy status](https://img.shields.io/github/check-runs/jpdevdotcom/better-catarman-northsamar/main?nameFilter=Cloudflare%20Pages&label=deploy)](https://github.com/jpdevdotcom/better-catarman-northsamar/commits/main)
 [![License: MIT](https://img.shields.io/github/license/jpdevdotcom/better-catarman-northsamar?color=1d4ed8)](LICENSE)
 
 **Catarman, Northern Samar's public information in one place, with sources cited.**
