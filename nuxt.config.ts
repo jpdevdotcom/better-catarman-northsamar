@@ -45,8 +45,14 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#1d4ed8' },
       ],
       link: [
+        // Icons for browsers, Google Search, phones' home screens and installed web apps.
+        // Google Search needs a square icon that is a multiple of 48px: the 96px PNG and the ICO
+        // (48px and 32px) both qualify. favicon.svg is the vector mark from scripts/build-logo.py.
+        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'apple-touch-icon', href: '/logo-mark.png' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
       ],
     },
   },
