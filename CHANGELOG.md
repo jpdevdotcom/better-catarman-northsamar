@@ -6,7 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## Unreleased
 
-Nothing yet.
+### Added
+
+- A full set of site icons: PNG and ICO favicons that Google Search can show in results, a home-screen icon for iPhone, and a web app manifest so the site can be added to a phone's home screen with its own name and icon.
 
 ## 16 November 2026
 
