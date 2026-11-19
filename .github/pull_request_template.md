@@ -1,3 +1,5 @@
+<!-- First pull request? See docs/FIRST-PULL-REQUEST.md: https://github.com/jpdevdotcom/better-catarman-northsamar/blob/main/docs/FIRST-PULL-REQUEST.md -->
+
 ## What this changes
 
 <!-- One or two sentences. Link the issue if there is one, e.g. "Fixes #12". -->
