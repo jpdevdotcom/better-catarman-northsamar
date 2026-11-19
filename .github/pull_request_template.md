@@ -1,4 +1,4 @@
-<!-- First pull request? See docs/FIRST-PULL-REQUEST.md: https://github.com/jpdevdotcom/better-catarman-northsamar/blob/main/docs/FIRST-PULL-REQUEST.md -->
+<!-- First pull request? See https://github.com/jpdevdotcom/better-catarman-northsamar/blob/main/FIRST-PULL-REQUEST.md -->
 
 ## What this changes
 

@@ -116,7 +116,7 @@ The site has no accounts and no ads. Google Analytics loads only after a visitor
 
 ## Contributing
 
-Corrections, translations (especially a native Waray speaker's review), and new sources are all welcome. Open an issue or a pull request, and include the source for any fact you add or change. See [CONTRIBUTING.md](CONTRIBUTING.md) for the content rules and how to set up the code. New to pull requests? [Your first pull request](docs/FIRST-PULL-REQUEST.md) walks you through forking the project and sending a change, step by step.
+Corrections, translations (especially a native Waray speaker's review), and new sources are all welcome. Open an issue or a pull request, and include the source for any fact you add or change. See [CONTRIBUTING.md](CONTRIBUTING.md) for the content rules and how to set up the code. New to pull requests? [Your first pull request](FIRST-PULL-REQUEST.md) shows how to clone the project and send a change.
 
 ## Credits
 

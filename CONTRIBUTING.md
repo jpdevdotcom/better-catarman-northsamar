@@ -4,7 +4,7 @@ Thank you for helping. BetterCatarman.org is run by volunteers as a contribution
 
 You don't need to know how to code to help. Corrections and translations are just as valuable as code.
 
-**New to GitHub or pull requests?** Follow [Your first pull request](docs/FIRST-PULL-REQUEST.md). It explains, step by step, how to fork the project, make your change and send it for review, either in your browser or on your computer.
+**New to pull requests?** [Your first pull request](FIRST-PULL-REQUEST.md) shows how to clone the project, make your change and send it for review.
 
 Everyone taking part is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
@@ -43,7 +43,7 @@ Please say in your pull request whether you are a native speaker. Once a native 
 
 ### Setup
 
-Fork the repository and clone your fork. Pull requests go from a branch in your fork to `main` here. [Your first pull request](docs/FIRST-PULL-REQUEST.md#way-2-work-on-your-computer) has every step.
+Clone the repository and make a branch for your change. Pull requests go to `main`. [Your first pull request](FIRST-PULL-REQUEST.md) has the steps.
 
 You need Node.js 22 or later and [pnpm](https://pnpm.io). See the [README](README.md#running-it-locally) for the `.env` settings. The site works without them; maps and the report email just won't be set up.
 
