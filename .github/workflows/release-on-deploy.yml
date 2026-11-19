@@ -57,7 +57,7 @@ jobs:
           # Skip when nothing that affects the website changed: only the README and other
           # repository documents, the license, or GitHub settings. Those commits are listed
           # in the next release instead.
-          site_changes=$(git diff --name-only ${prev:+"$prev"} "$SHA" | grep -vE '^([^/]+\.md|LICENSE|\.github/.*)$' || true)
+          site_changes=$(git diff --name-only ${prev:+"$prev"} "$SHA" | grep -vE '^([^/]+\.md|LICENSE|\.github/.*|docs/.*)$' || true)
           if [ -n "$prev" ] && [ -z "$site_changes" ]; then
             echo "Only documentation changed since $prev, so no release this time."
             exit 0
