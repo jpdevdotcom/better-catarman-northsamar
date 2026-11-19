@@ -32,6 +32,25 @@ export const nav = [
   { label: 'Contact', to: '/contact' },
 ]
 
+/**
+ * The header shows the sections residents use most, and groups the rest under "More",
+ * so the bar isn't crowded. The footer and the phone menu still list everything.
+ */
+export const mainNav = [
+  { label: 'Services', to: '/services' },
+  { label: 'Barangays', to: '/barangays' },
+  { label: 'Statistics', to: '/statistics' },
+  { label: 'Government', to: '/government' },
+  { label: 'Transparency', to: '/transparency' },
+  { label: 'About the Data', to: '/about' },
+]
+export const moreNav = [
+  { label: 'Advisories', to: '/advisories' },
+  { label: 'Schools and health facilities', to: '/facilities' },
+  { label: 'FAQ', to: '/faq' },
+  { label: 'Contact', to: '/contact' },
+]
+
 export * from './services'
 
 export const popularSlugs = ['certificates', 'business', 'tax-payments', 'social-services', 'health', 'public-safety']
