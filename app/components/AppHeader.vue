@@ -1,12 +1,50 @@
 <script setup lang="ts">
-import { Menu, Phone, Search } from '@lucide/vue'
-import { hotlines, nav } from '~/data/site'
+import { ChevronDown, Menu, Phone, Search } from '@lucide/vue'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '~/components/ui/dropdown-menu'
+import { hotlines, mainNav, moreNav } from '~/data/site'
 
 const { t } = useT()
 const open = ref(false)
 const barHotlines = hotlines.filter(h => h.short && h.numbers.length)
 const route = useRoute()
-watch(() => route.fullPath, () => (open.value = false))
+watch(() => route.fullPath, () => {
+  open.value = false
+  // The menu disappears from under the mouse, so no "leave" event comes: reset by hand.
+  moreOpen.value = false
+  hovering = false
+  onTrigger = false
+})
+
+// "More" opens when the mouse rests on it, and closes shortly after the mouse leaves both
+// the button and the menu (the delay lets the mouse cross the gap between them).
+// Touch and keyboard users still open it with a tap, Enter or Space, and close it with Escape.
+const moreOpen = ref(false)
+let hovering = false
+let onTrigger = false
+let closeTimer: ReturnType<typeof setTimeout> | undefined
+function hoverIn(e: PointerEvent, trigger = false) {
+  if (e.pointerType !== 'mouse') return
+  hovering = true
+  onTrigger = trigger
+  clearTimeout(closeTimer)
+  moreOpen.value = true
+}
+function hoverOut(e: PointerEvent) {
+  if (e.pointerType !== 'mouse') return
+  hovering = false
+  onTrigger = false
+  clearTimeout(closeTimer)
+  closeTimer = setTimeout(() => { if (!hovering) moreOpen.value = false }, 200)
+}
+// A click on "More" while the mouse is on it would otherwise close the menu the hover just opened.
+function setMoreOpen(value: boolean) {
+  if (!value && onTrigger) return
+  moreOpen.value = value
+}
+
+// Underline "More" when the current page is one of the links inside it.
+const inMore = computed(() => moreNav.some(i => route.path === i.to || route.path.startsWith(`${i.to}/`)))
+const link = '-mb-px flex items-center whitespace-nowrap border-b-2 border-transparent px-3 text-sm font-medium text-muted-foreground transition-colors hover:border-border hover:text-foreground'
 </script>
 
 <template>
@@ -35,16 +73,36 @@ watch(() => route.fullPath, () => (open.value = false))
     <div class="container-page flex h-16 items-center justify-between gap-4">
       <AppLogo />
 
-      <nav class="hidden items-stretch self-stretch xl:flex" aria-label="Main">
+      <nav class="hidden items-stretch self-stretch lg:flex" aria-label="Main">
         <NuxtLink
-          v-for="item in nav"
+          v-for="item in mainNav"
           :key="item.to"
           :to="item.to"
-          class="-mb-px flex items-center whitespace-nowrap border-b-2 border-transparent px-2 text-sm font-medium 2xl:px-3 text-muted-foreground transition-colors hover:border-border hover:text-foreground"
+          :class="link"
           active-class="!border-primary !text-primary"
         >
           {{ t(item.label) }}
         </NuxtLink>
+        <DropdownMenu :open="moreOpen" :modal="false" @update:open="setMoreOpen">
+          <DropdownMenuTrigger
+            :class="[link, 'gap-1 outline-none focus-visible:ring-2 focus-visible:ring-ring data-[state=open]:text-foreground', inMore && '!border-primary !text-primary']"
+            @pointerenter="hoverIn($event, true)"
+            @pointerleave="hoverOut"
+          >
+            {{ t('More') }} <ChevronDown class="size-3.5 transition-transform" :class="moreOpen && 'rotate-180'" aria-hidden="true" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="end"
+            :side-offset="0"
+            class="min-w-60 border p-1"
+            @pointerenter="hoverIn"
+            @pointerleave="hoverOut"
+          >
+            <DropdownMenuItem v-for="item in moreNav" :key="item.to" as-child class="cursor-pointer px-3 py-2.5 text-sm">
+              <NuxtLink :to="item.to" active-class="text-primary font-semibold">{{ t(item.label) }}</NuxtLink>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </nav>
 
       <div class="flex items-center gap-2">
@@ -53,7 +111,7 @@ watch(() => route.fullPath, () => (open.value = false))
       </Button>
       <Sheet v-model:open="open">
         <SheetTrigger as-child>
-          <Button variant="outline" size="icon" class="xl:hidden" aria-label="Open menu">
+          <Button variant="outline" size="icon" class="lg:hidden" aria-label="Open menu">
             <Menu class="size-5" />
           </Button>
         </SheetTrigger>
@@ -64,10 +122,20 @@ watch(() => route.fullPath, () => (open.value = false))
           </SheetHeader>
           <nav class="flex flex-col gap-1 px-4" aria-label="Mobile">
             <NuxtLink
-              v-for="item in [{ label: 'Home', to: '/' }, ...nav]"
+              v-for="item in [{ label: 'Home', to: '/' }, ...mainNav]"
               :key="item.to"
               :to="item.to"
-              class="rounded-md px-3 py-3 text-base font-medium hover:bg-accent"
+              class="px-3 py-3 text-base font-medium hover:bg-accent"
+              exact-active-class="bg-accent text-primary"
+            >
+              {{ t(item.label) }}
+            </NuxtLink>
+            <p class="mt-3 border-t px-3 pb-1 pt-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{{ t('More') }}</p>
+            <NuxtLink
+              v-for="item in moreNav"
+              :key="item.to"
+              :to="item.to"
+              class="px-3 py-2.5 text-[15px] hover:bg-accent"
               exact-active-class="bg-accent text-primary"
             >
               {{ t(item.label) }}
