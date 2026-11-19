@@ -43,6 +43,8 @@ Don't work on `main`. Make a branch for each change:
 git switch -c fix-mdrrmo-hotline
 ```
 
+`fix-mdrrmo-hotline` is only an example. Name the branch whatever you like, ideally a few words about your change joined by dashes, such as `translate-faq-waray` or `fix-menu-on-phones`.
+
 ## 4. Make your change and check it
 
 See [Where things are](CONTRIBUTING.md#where-things-are) to find the right file. Check your change in a phone-sized and a desktop-sized window, then make sure both of these pass:

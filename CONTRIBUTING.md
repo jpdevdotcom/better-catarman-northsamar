@@ -77,6 +77,8 @@ Make a branch for your change. Don't work on `main`:
 git switch -c fix-mdrrmo-hotline
 ```
 
+`fix-mdrrmo-hotline` is only an example. Name the branch whatever you like, ideally a few words about your change joined by dashes, such as `translate-faq-waray` or `fix-menu-on-phones`.
+
 ### Where things are
 
 | Folder | What's in it |
