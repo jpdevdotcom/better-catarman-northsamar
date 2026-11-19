@@ -47,7 +47,6 @@ export const representative = { role: 'Representative, 1st District of Northern 
 export interface Councilor {
   name: string | null
   role: string
-  /** Committee chairmanships, once confirmed. */
   committees: string | null
 }
 
@@ -63,7 +62,6 @@ export const councilors: Councilor[] = [
   'Hon. Ramon C. Tiberio',
 ].map(name => ({ name, role: 'SB Member', committees: null }))
 
-/** Seats held by virtue of another office. Names not yet confirmed. */
 export const exOfficio: Councilor[] = [
   { name: null, role: 'Liga ng mga Barangay President', committees: null },
   { name: null, role: 'SK Federation President', committees: null },
@@ -77,7 +75,6 @@ export interface Office {
   head: string | null
   phones: string[]
   email: string | null
-  /** Slug of the related service category, if any. */
   services?: string
 }
 

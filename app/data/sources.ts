@@ -29,7 +29,6 @@ export interface Source {
   publisher: string
   url?: string
   scope: Scope
-  /** What on this site relies on it. */
   usedFor: string
 }
 

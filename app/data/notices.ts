@@ -6,16 +6,12 @@
  * basis you can point to; put the newest first. Remove reminders once their date passes.
  */
 export interface Notice {
-  /** Date posted, YYYY-MM-DD. */
   date: string
   kind: 'reminder' | 'site'
   title: string
   body: string
-  /** Deadline, if it is a reminder about one. Shown as written. */
   due?: string
-  /** Page on this site with the details. */
   to?: string
-  /** What the notice is based on. */
   basis?: string
 }
 

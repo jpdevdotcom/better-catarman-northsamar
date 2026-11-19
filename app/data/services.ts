@@ -9,23 +9,17 @@ import {
  * Services with an `official` block are taken from the municipal government's own
  * e-services site, https://catarman.gov.ph (retrieved Nov 2026): requirement checklists,
  * fees, and the links to apply online and download the official checklist.
- *
- * Services without it are general guidance based on usual national requirements and
- * are labelled that way on the site. Confirm them with the office concerned.
  */
 
 const GOV = 'https://catarman.gov.ph'
 
 export interface Requirement {
   text: string
-  /** Where the document is obtained, when the official checklist says so. */
   where?: string
-  /** Sub-items, e.g. the accepted kinds of ID. */
   sub?: string[]
 }
 
 export interface RequirementGroup {
-  /** Who or what case the group applies to. Omitted when there is only one list. */
   title?: string
   items: Requirement[]
 }
@@ -35,18 +29,14 @@ export interface Service {
   name: string
   description: string
   office: string
-  /** Matches `short` in data/government.ts, to show the office's contact details. */
   officeShort?: string
   groups: RequirementGroup[]
-  /** Label for the requirement list; defaults to "Requirements checklist". */
   listLabel?: string
   fee?: { amount: string, basis: string }
   notes?: string[]
   steps?: string[]
-  /** For services without an official Catarman checklist: the national rules the details come from. */
   sources?: { label: string, url?: string }[]
   official?: {
-    /** Page on catarman.gov.ph where the application is filed online. */
     page: string
     checklists: { label: string, url: string }[]
   }
@@ -61,9 +51,7 @@ export interface Category {
   services: Service[]
 }
 
-/** Shorthand for a requirement. */
 const r = (text: string, where?: string, sub?: string[]): Requirement => ({ text, where, sub })
-/** Shorthand for plain requirements. */
 const list = (...items: string[]): RequirementGroup[] => [{ items: items.map(t => r(t)) }]
 const pdf = (path: string) => encodeURI(`${GOV}/files/requirements/${path}.pdf`)
 

@@ -1,12 +1,5 @@
-// Generated from COA's full "Catarman Annual Audit Report 2025" (Part II, Observations and
-// Recommendations), read on 11 November 2026. Every string below is COA's wording, copied
-// word for word. These are excerpts: the report has more discussion under each observation.
-// Do not edit the text. Order matches `auditObservations` in ./audit.ts.
-
 export interface AuditReply {
-  /** The municipal government's response, as recorded by COA in its report. */
   response: string[]
-  /** What the audit team said in return, where the report records it. */
   auditorReply: string[]
 }
 

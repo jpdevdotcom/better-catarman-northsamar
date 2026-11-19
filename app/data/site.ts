@@ -1,11 +1,6 @@
 import type { Component } from 'vue'
 import { Accessibility, Baby, Briefcase, Building2, HandHeart, Heart, Home, Users } from '@lucide/vue'
 
-/**
- * General site content. Services live in ./services, officials and offices in
- * ./government, and barangays in ./barangays.
- */
-
 export const site = {
   name: 'BetterCatarman',
   municipality: 'Catarman',
@@ -32,10 +27,6 @@ export const nav = [
   { label: 'Contact', to: '/contact' },
 ]
 
-/**
- * The header shows the sections residents use most, and groups the rest under "More",
- * so the bar isn't crowded. The footer and the phone menu still list everything.
- */
 export const mainNav = [
   { label: 'Services', to: '/services' },
   { label: 'Barangays', to: '/barangays' },
@@ -142,14 +133,7 @@ export const officials = [
 
 /**
  * Emergency hotlines.
- *
- * Catarman MDRRMO, police, and fire numbers are from the Catarman MDRRMO's own
- * "Catarman Emergency Hotline Numbers" poster (Facebook, 15 Nov 2024). The second
- * MDRRMO number is from catarman.gov.ph. Provincial numbers are from the Province of
- * Northern Samar's website and public directories. Re-check these regularly: a wrong
- * emergency number is worse than none.
  */
-/** Entries with a `short` label also appear in the blue bar at the top of every page (first number only). */
 export const hotlines: { name: string; short?: string; numbers: string[]; note: string }[] = [
   { name: 'National Emergency Hotline', short: 'National', numbers: ['911'], note: 'Police, fire, and medical emergencies' },
   { name: 'Catarman MDRRMO', short: 'MDRRMO', numbers: ['0949-151-3810', '0906-357-0985'], note: 'Disaster and rescue, 24 hours · Radio 147.740' },
@@ -165,7 +149,6 @@ export const hotlineSource = {
   url: 'https://www.facebook.com/catarman.mdrrmo.9/posts/1801811050625139/',
 }
 
-/** Sister site by the same maintainer. Covers the whole province, not only Catarman. */
 export const budgetPortal = {
   label: 'Northern Samar 2027 budget projects',
   url: 'https://northsamar-transparency-portal.pages.dev/',

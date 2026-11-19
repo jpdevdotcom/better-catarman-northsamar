@@ -5,9 +5,7 @@ type Ring = [number, number][]
 
 export interface BarangayShape {
   psgc: number
-  /** A point inside the official boundary. */
   center: { lat: number, lng: number }
-  /** [lng, lat] rings: polygons, each an outer ring then any holes. */
   polygons: Ring[][]
 }
 

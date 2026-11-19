@@ -5,13 +5,6 @@
  * Source: "Catarman Executive Summary 2025", Commission on Audit, read in full on
  * 11 November 2026 from the copy published on coa.gov.ph.
  *
- * Rules followed here, so that nothing is misstated:
- *  - `observation` is COA's own wording, copied word for word. Do not edit or shorten it.
- *  - `title` is a neutral label written for this site. It only names the subject.
- *  - `recommendations` are shortened from COA's text. They keep COA's meaning and add nothing.
- *  - No person is named. COA addresses offices and positions, and so does this file.
- *  - COA's wording sometimes says a practice was "contrary to" a law or circular. That is an
- *    audit assessment, not a ruling on anyone's liability, and the page says so.
  */
 
 export const auditSource = {
@@ -23,7 +16,6 @@ export const auditSource = {
   year: 2025,
 }
 
-/** Overall results stated in the summary, shown before the observations for balance. */
 export const auditOverview = [
   {
     label: 'Audit opinion',
@@ -44,11 +36,8 @@ export const auditOverview = [
 
 export interface AuditObservation {
   title: string
-  /** COA's wording, verbatim. */
   observation: string
-  /** Who COA addressed its recommendation to. */
   addressedTo: string
-  /** COA's recommendations, shortened. */
   recommendations: string[]
 }
 

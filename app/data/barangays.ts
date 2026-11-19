@@ -3,12 +3,11 @@
 export interface Barangay {
   slug: string
   name: string
-  /** Part of the poblacion (town proper). */
   poblacion: boolean
   pop2020: number
   pop2015: number
-  /** Where to put the barangay's pin on a map. */
   location: { lat: number, lng: number }
+  
   /** "osm": the village centre as mapped on OpenStreetMap. "boundary": a point inside the official boundary. */
   locationFrom: 'osm' | 'boundary'
 }
