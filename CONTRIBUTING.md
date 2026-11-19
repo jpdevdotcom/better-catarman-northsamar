@@ -43,16 +43,38 @@ Please say in your pull request whether you are a native speaker. Once a native 
 
 ### Setup
 
-Clone the repository and make a branch for your change. Pull requests go to `main`. [Your first pull request](FIRST-PULL-REQUEST.md) has the steps.
+You need Node.js 22 or later, [pnpm](https://pnpm.io) and Git. New to pull requests? [Your first pull request](FIRST-PULL-REQUEST.md) explains each step in more detail.
 
-You need Node.js 22 or later and [pnpm](https://pnpm.io). See the [README](README.md#running-it-locally) for the `.env` settings. The site works without them; maps and the report email just won't be set up.
+Clone the repository and go into its folder:
+
+```bash
+git clone https://github.com/jpdevdotcom/better-catarman-northsamar.git
+```
+
+```bash
+cd better-catarman-northsamar
+```
+
+Install the packages and make your own settings file. The values in `.env` can stay empty; maps and the report email just won't be set up (see the [README](README.md#running-it-locally)):
 
 ```bash
 pnpm install
 ```
 
 ```bash
+cp .env.example .env
+```
+
+Start the site at [http://localhost:3000](http://localhost:3000):
+
+```bash
 pnpm dev
+```
+
+Make a branch for your change. Don't work on `main`:
+
+```bash
+git switch -c fix-mdrrmo-hotline
 ```
 
 ### Where things are
@@ -95,6 +117,38 @@ Then:
 - For a notable change, add a line under **Unreleased** in [CHANGELOG.md](CHANGELOG.md).
 - For any content change, link the source.
 - Never commit `.env`, API keys, or the downloaded COA PDFs and zips. `.gitignore` already leaves these out.
+
+### Sending your pull request
+
+Commit your change with a short sentence saying what it does:
+
+```bash
+git add path/to/changed/file
+```
+
+```bash
+git commit -m "Correct the MDRRMO hotline number"
+```
+
+Only the maintainer can push to this repository, so your branch goes to your own fork. The [GitHub CLI](https://cli.github.com) does this for you. Sign in once with `gh auth login`, then run:
+
+```bash
+gh pr create --base main
+```
+
+When it asks where to push, choose to create a fork. It pushes your branch to the fork and opens a pull request to `main`. Without the GitHub CLI, see [Push and open a pull request](FIRST-PULL-REQUEST.md#6-push-and-open-a-pull-request).
+
+Fill in the pull request template and leave **Allow edits by maintainers** ticked. The maintainer reviews every pull request before it's merged. If you're asked for changes, commit them on the same branch and run `git push`; the pull request updates by itself.
+
+Before your next change, update `main` and make a new branch:
+
+```bash
+git switch main
+```
+
+```bash
+git pull origin main
+```
 
 ## License
 
