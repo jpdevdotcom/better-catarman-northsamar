@@ -8,6 +8,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Schools and health facilities in the header menu.
+
+### Changed
+
+- A less crowded header: Services, Barangays, Statistics, Government, Transparency and About the Data stay in the bar, and Advisories, Schools and health facilities, FAQ and Contact move under **More**, which opens when the mouse rests on it. The full menu now fits on screens 1024px wide.
+
+## 17 November 2026
+
+### Added
+
 - A full set of site icons: PNG and ICO favicons that Google Search can show in results, a home-screen icon for iPhone, and a web app manifest so the site can be added to a phone's home screen with its own name and icon.
 
 ## 16 November 2026
