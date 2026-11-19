@@ -14,6 +14,7 @@ export const war: Record<string, string> = {
   'About the Data': 'Mahitungod san Datos',
   'FAQ': 'Mga Pakiana',
   'Contact': 'Kontak',
+  'More': 'Iba pa',
   'Advisories': 'Mga Pahibaro',
   'Hotlines': 'Mga Hotline',
   'National': 'Nasyonal',

@@ -11,6 +11,7 @@ export const fil: Record<string, string> = {
   'About the Data': 'Tungkol sa Datos',
   'FAQ': 'Mga Tanong',
   'Contact': 'Kontak',
+  'More': 'Iba pa',
   'Advisories': 'Mga Abiso',
   'Hotlines': 'Mga Hotline',
   'National': 'Pambansa',
