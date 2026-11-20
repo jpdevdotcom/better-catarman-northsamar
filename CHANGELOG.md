@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 
 - A less crowded header: Services, Barangays, Statistics, Government, Transparency and About the Data stay in the bar, and Advisories, Schools and health facilities, FAQ and Contact move under **More**, which opens when the mouse rests on it. The full menu now fits on screens 1024px wide.
+- Buttons, tabs, dropdowns and checklist items show the hand cursor when the mouse is over them.
 
 ## 17 November 2026
 
