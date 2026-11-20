@@ -55,6 +55,8 @@ export const sources: Source[] = [
 
   { scope: 'catarman-official', name: 'Catarman Executive Summaries, 2014 to 2025, and Annual Audit Reports for 2018 and 2025', publisher: 'Commission on Audit', url: 'https://www.coa.gov.ph/reports/annual-audit-reports/aar-local-government-units/', usedFor: 'Income, expenses, assets, and liabilities for 2013 to 2025; the 2025 audit opinion and appropriations; and the 2025 audit observations, recommendations, and the municipal government’s responses. Read directly from the reports; observations and responses are quoted word for word.' },
   { scope: 'catarman-data', name: 'Annual Audit Reports for 2011 and 2012, as recorded on Wikidata', publisher: 'Commission on Audit, via Wikidata', url: 'https://www.wikidata.org/wiki/Q174886', usedFor: 'Finance figures for 2011 and 2012 only. Not checked against the reports themselves.' },
+  { scope: 'catarman-data', name: 'DPWH Transparency Portal: 2027 proposed projects, Northern Samar 1st District Engineering Office', publisher: 'Department of Public Works and Highways', url: 'https://transparency.dpwh.gov.ph/nep', usedFor: 'The DPWH proposal code of each 2027 project on the National projects page, and a check that DPWH lists each one at the same amount as the NEP.' },
+  { scope: 'catarman-data', name: 'PH Budget Data API: General Appropriations Acts 2020 to 2026, and the FY2027 House bill against the National Expenditure Program', publisher: 'BetterGov.PH (CC BY 4.0)', url: 'https://budget.bettergov.ph/docs', usedFor: 'The National projects page: those in each enacted budget from 2020 to 2026, and those proposed for 2027 with their amounts in the NEP and in House Bill 10858. Found by the word “Catarman” in project titles; projects in Catarman, Camiguin and Barangay Catarman, Cebu were left out.' },
 
   // --- National rules
   { scope: 'national', name: 'Crisis assistance requirements', publisher: 'DSWD Field Office VIII (Eastern Visayas)', url: 'https://fo8.dswd.gov.ph/cis-assistance-requirements/', usedFor: 'Assistance to Individuals in Crisis.' },
@@ -90,6 +92,7 @@ export const gaps = [
   'Committee assignments of Sangguniang Bayan members, and the Liga ng mga Barangay and SK Federation presidents.',
   'A complete list of schools and health facilities. OpenStreetMap is missing some, including the Rural Health Unit.',
   'Barangay population from the 2024 census. The 2020 figures are shown instead.',
+  'National projects in Catarman whose budget titles do not name the town, such as some bridges along the Catarman–Laoang and Catarman–Calbayog roads.',
   'Phone numbers for the Local Civil Registry, Accounting, and Nutrition Action offices.',
 ]
 
@@ -141,6 +144,7 @@ export const handEdits = [
   { what: 'Cedula checklist headings', why: 'The official headings read “Corporation… Sole Propriety”. They are shown as “Sole proprietorship”.' },
   { what: 'How-to-apply steps for most official services', why: 'A short four-step summary written for this site, based on how the municipal e-services site works. Transfer of Ownership uses the official steps.' },
   { what: 'Catarman’s outline in the logo', why: 'Drawn from the OpenStreetMap boundary, with the offshore municipal waters removed. The maps use the official NAMRIA and PSA boundary instead.' },
+  { what: 'National projects in Catarman', why: 'Projects whose titles place them in Catarman, Northern Samar are counted. In the enacted budgets, a line listed with no money in a year is not counted for that year. Sections and bridges of national roads named after Catarman are listed separately and not counted, because the budget does not say which town they are in. The DPWH Northern Samar 1st DEO building is tagged NCR in the data because it is budgeted under the DPWH Central Office; it is included because its title and coordinates place it in Catarman.' },
   { what: 'Barangay Cularima’s location', why: 'Matched to an OpenStreetMap point spelled “Colarema”.' },
   { what: 'Barangay pins checked against the official boundaries', why: 'Seven barangays had no OpenStreetMap point, or one that fell outside their official boundary (Jose Abad Santos and Paticua). Their pins are placed inside the official boundary instead.' },
   { what: 'Schools and health facilities', why: 'Parts of the UEP campus, a duplicate entry, and places with vague names were left out. Pharmacies, dental clinics, and private doctors’ clinics were left out on purpose. Two misspelled names were corrected.' },
