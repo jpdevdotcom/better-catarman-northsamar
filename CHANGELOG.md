@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 
 - Schools and health facilities in the header menu.
+- A **National projects** page (/projects), under **More**, with the projects in Catarman named in the national budget: those in each enacted national budget from 2020 to 2026, and those proposed for 2027 with their amounts in the President’s proposal (NEP) and in the House bill. Data from the BetterGov.PH budget data API.
+- Tabs on the National projects page, one for the proposed 2027 budget and one for the enacted budgets, so each is shorter to read. A link ending in #enacted opens the second tab.
+- Search, a barangay filter and pages of 10 on the National projects tables. Barangays are found even where the budget spells them differently, such as “Tranque” for Trangue.
+- Each 2027 DPWH project shows its official DPWH proposal code, checked against the DPWH Transparency Portal.
+- The Transparency page shows the headline figures and links to it.
+- A contents list on the Transparency and National projects pages. On large screens it stays beside the page and shows which section you are reading.
 
 ### Changed
 
