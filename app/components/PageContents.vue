@@ -57,7 +57,7 @@ const open = ref(false)
     </CollapsibleContent>
   </Collapsible>
 
-  <nav :aria-label="t('Contents')" class="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto border bg-background p-5 lg:block">
+  <nav :aria-label="t('Contents')" class="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto lg:block">
     <p class="mb-3 font-semibold">{{ t('Contents') }}</p>
     <ul class="space-y-0.5 text-sm">
       <li v-for="item in items" :key="item.id">
