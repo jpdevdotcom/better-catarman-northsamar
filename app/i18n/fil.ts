@@ -5,6 +5,7 @@
 export const fil: Record<string, string> = {
   // Navigation and shell
   'Services': 'Mga Serbisyo',
+  'Contents': 'Nilalaman',
   'Barangays': 'Mga Barangay',
   'Government': 'Pamahalaan',
   'Statistics': 'Estadistika',

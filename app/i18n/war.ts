@@ -7,6 +7,7 @@
  */
 export const war: Record<string, string> = {
   // Navigation and shell
+  'Contents': 'Sulod',
   'Services': 'Mga Serbisyo',
   'Barangays': 'Mga Barangay',
   'Government': 'Gobyerno',
