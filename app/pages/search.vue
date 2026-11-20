@@ -57,9 +57,9 @@ const examples = ['cedula', 'Cawayan', 'business permit', 'MDRRMO', 'hospital', 
     <div v-if="!q.trim()">
       <p class="mb-3 text-sm text-muted-foreground">{{ t('Try one of these:') }}</p>
       <div class="flex flex-wrap gap-2">
-        <button v-for="e in examples" :key="e" type="button" class="border px-3 py-1.5 text-sm font-medium text-secondary-foreground hover:border-primary hover:bg-accent" @click="q = e">
+        <Button v-for="e in examples" :key="e" variant="outline" class="h-auto bg-transparent px-3 py-1.5 text-secondary-foreground shadow-none hover:border-primary hover:bg-accent" @click="q = e">
           {{ e }}
-        </button>
+        </Button>
       </div>
     </div>
 
@@ -84,14 +84,14 @@ const examples = ['cedula', 'Cawayan', 'business permit', 'MDRRMO', 'hospital', 
             </NuxtLink>
           </li>
         </ul>
-        <button
+        <Button
           v-if="g.items.length > PER_GROUP && !expanded[g.type]"
-          type="button"
-          class="mt-2 text-sm font-semibold text-primary hover:underline"
+          variant="link"
+          class="mt-2 h-auto p-0 font-semibold"
           @click="expanded[g.type] = true"
         >
           {{ t('Show all') }} {{ g.items.length }}
-        </button>
+        </Button>
       </section>
     </div>
   </div>

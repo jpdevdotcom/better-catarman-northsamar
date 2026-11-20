@@ -48,31 +48,31 @@ function downloadQr() {
   URL.revokeObjectURL(a.href)
 }
 
-const btn = 'inline-flex h-9 items-center gap-2 border px-3 text-sm font-medium hover:border-primary hover:bg-accent'
+const btn = 'gap-2 bg-transparent px-3 shadow-none hover:border-primary hover:bg-accent hover:text-foreground has-[>svg]:px-3'
 </script>
 
 <template>
   <div class="print:hidden">
     <div class="flex flex-wrap items-center gap-2" role="group" :aria-label="t('Share this page')">
       <span class="mr-1 text-sm font-semibold text-muted-foreground">{{ t('Share') }}:</span>
-      <button v-if="canNativeShare" type="button" :class="btn" @click="nativeShare">
+      <Button v-if="canNativeShare" variant="outline" :class="btn" @click="nativeShare">
         <Share2 class="size-4 text-primary" aria-hidden="true" /> {{ t('Share') }}
-      </button>
-      <button type="button" :class="btn" @click="facebook">
+      </Button>
+      <Button variant="outline" :class="btn" @click="facebook">
         <svg class="size-4 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.5V21h3Z" /></svg>
         Facebook
-      </button>
-      <button type="button" :class="btn" @click="viber">
+      </Button>
+      <Button variant="outline" :class="btn" @click="viber">
         <svg class="size-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4h-4l-4 3v-3H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" /></svg>
         Viber
-      </button>
-      <button type="button" :class="btn" @click="copyLink">
+      </Button>
+      <Button variant="outline" :class="btn" @click="copyLink">
         <component :is="copied ? Check : Link2" class="size-4 text-primary" aria-hidden="true" />
         <span aria-live="polite">{{ t(copied ? 'Link copied' : 'Copy link') }}</span>
-      </button>
-      <button type="button" :class="btn" :aria-expanded="showQr" @click="toggleQr">
+      </Button>
+      <Button variant="outline" :class="btn" :aria-expanded="showQr" @click="toggleQr">
         <QrCode class="size-4 text-primary" aria-hidden="true" /> {{ t('QR code') }}
-      </button>
+      </Button>
     </div>
 
     <div v-if="showQr" class="mt-3 flex flex-wrap items-center gap-5 border p-4">
@@ -81,12 +81,14 @@ const btn = 'inline-flex h-9 items-center gap-2 border px-3 text-sm font-medium 
       <div class="space-y-3 text-sm">
         <p class="max-w-xs text-muted-foreground">{{ t('Scan with a phone camera to open this page. Print it for a notice board or barangay hall.') }}</p>
         <div class="flex flex-wrap gap-2">
-          <NuxtLink :to="{ path: '/qr', query: { path } }" :class="btn">
-            <Printer class="size-4 text-primary" aria-hidden="true" /> {{ t('Print poster') }}
-          </NuxtLink>
-          <button type="button" :class="btn" @click="downloadQr">
+          <Button as-child variant="outline" :class="btn">
+            <NuxtLink :to="{ path: '/qr', query: { path } }">
+              <Printer class="size-4 text-primary" aria-hidden="true" /> {{ t('Print poster') }}
+            </NuxtLink>
+          </Button>
+          <Button variant="outline" :class="btn" @click="downloadQr">
             <Download class="size-4 text-primary" aria-hidden="true" /> {{ t('Download') }}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

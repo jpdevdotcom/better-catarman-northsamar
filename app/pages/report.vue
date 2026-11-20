@@ -54,7 +54,7 @@ async function copy() {
   catch { /* clipboard blocked: the preview below can still be selected by hand */ }
 }
 
-const field = 'w-full border border-input bg-background px-3.5 py-2.5 text-base outline-none focus-visible:border-primary'
+const field = 'h-auto bg-background px-3.5 py-2.5 text-base shadow-none field-sizing-fixed focus-visible:border-primary focus-visible:ring-0 md:text-base'
 </script>
 
 <template>
@@ -63,30 +63,30 @@ const field = 'w-full border border-input bg-background px-3.5 py-2.5 text-base 
   <div class="container-page grid gap-12 py-12 lg:grid-cols-[1fr_320px]">
     <form class="space-y-6" novalidate @submit.prevent>
       <div>
-        <label for="r-page" class="mb-1.5 block font-semibold">{{ t('Which page?') }}</label>
-        <input id="r-page" v-model="form.page" type="text" :class="field" placeholder="/services/tax-payments/cedula">
+        <Label for="r-page" class="mb-1.5 block text-base font-semibold">{{ t('Which page?') }}</Label>
+        <Input id="r-page" v-model="form.page" type="text" :class="field" placeholder="/services/tax-payments/cedula" />
       </div>
 
       <div>
-        <label for="r-wrong" class="mb-1.5 block font-semibold">{{ t('What is wrong or out of date?') }} <span class="text-destructive" aria-hidden="true">*</span></label>
-        <textarea id="r-wrong" v-model="form.wrong" rows="4" required :class="field" :aria-invalid="tried && !ready" aria-describedby="r-wrong-error" />
+        <Label for="r-wrong" class="mb-1.5 block text-base font-semibold">{{ t('What is wrong or out of date?') }} <span class="text-destructive" aria-hidden="true">*</span></Label>
+        <Textarea id="r-wrong" v-model="form.wrong" rows="4" required :class="field" :aria-invalid="tried && !ready" aria-describedby="r-wrong-error" />
         <p v-if="tried && !ready" id="r-wrong-error" class="mt-1.5 text-sm font-medium text-destructive">{{ t('Please describe what is wrong.') }}</p>
       </div>
 
       <div>
-        <label for="r-correct" class="mb-1.5 block font-semibold">{{ t('What is the correct information?') }}</label>
-        <textarea id="r-correct" v-model="form.correct" rows="3" :class="field" />
+        <Label for="r-correct" class="mb-1.5 block text-base font-semibold">{{ t('What is the correct information?') }}</Label>
+        <Textarea id="r-correct" v-model="form.correct" rows="3" :class="field" />
       </div>
 
       <div>
-        <label for="r-source" class="mb-1.5 block font-semibold">{{ t('Where can we check it?') }}</label>
-        <input id="r-source" v-model="form.source" type="text" :class="field" aria-describedby="r-source-help">
+        <Label for="r-source" class="mb-1.5 block text-base font-semibold">{{ t('Where can we check it?') }}</Label>
+        <Input id="r-source" v-model="form.source" type="text" :class="field" aria-describedby="r-source-help" />
         <p id="r-source-help" class="mt-1.5 text-sm text-muted-foreground">{{ t('A link, a document, or the office that told you. This helps us confirm it.') }}</p>
       </div>
 
       <div>
-        <label for="r-contact" class="mb-1.5 block font-semibold">{{ t('Your name or contact (optional)') }}</label>
-        <input id="r-contact" v-model="form.contact" type="text" autocomplete="off" :class="field" aria-describedby="r-contact-help">
+        <Label for="r-contact" class="mb-1.5 block text-base font-semibold">{{ t('Your name or contact (optional)') }}</Label>
+        <Input id="r-contact" v-model="form.contact" type="text" autocomplete="off" :class="field" aria-describedby="r-contact-help" />
         <p id="r-contact-help" class="mt-1.5 text-sm text-muted-foreground">{{ t('Only if you want a reply. It will not be published.') }}</p>
       </div>
 

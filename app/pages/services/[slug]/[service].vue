@@ -70,7 +70,7 @@ const key = (g: number, i: number) => `${g}-${i}`
             <ul class="divide-y">
               <li v-for="(item, ii) in g.items" :key="ii">
                 <label class="flex cursor-pointer items-start gap-3.5 px-5 py-4 hover:bg-accent">
-                  <input v-model="checked[key(gi, ii)]" type="checkbox" class="mt-0.5 size-5 shrink-0 accent-primary">
+                  <Checkbox v-model="checked[key(gi, ii)]" class="mt-0.5 size-5 shadow-none" />
                   <span class="min-w-0 flex-1">
                     <span class="font-medium" :class="checked[key(gi, ii)] && 'text-muted-foreground line-through'">{{ item.text }}</span>
                     <span v-if="item.where" class="mt-1 block text-sm text-secondary-foreground">
