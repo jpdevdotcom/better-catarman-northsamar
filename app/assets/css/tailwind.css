@@ -96,6 +96,20 @@
     outline: 2px solid var(--ring);
     outline-offset: 2px;
   }
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  [role='tab'],
+  [role='option'],
+  [role='menuitem'],
+  [role='checkbox'],
+  [role='combobox'],
+  select,
+  summary,
+  label:has(input[type='checkbox'], input[type='radio'], [role='checkbox']),
+  input[type='checkbox'],
+  input[type='radio'] {
+    cursor: pointer;
+  }
 }
 
 @utility container-page {
