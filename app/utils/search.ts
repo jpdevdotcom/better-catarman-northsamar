@@ -33,6 +33,7 @@ const PAGES: [string, string, string][] = [
   ['Government', '/government', 'mayor vice mayor council sangguniang bayan offices department heads'],
   ['Statistics', '/statistics', 'population census households area'],
   ['Transparency', '/transparency', 'budget finances income expenses audit coa'],
+  ['National projects', '/projects', 'dpwh projects roads bridges budget nep gaa infrastructure proyekto'],
   ['About the Data', '/about', 'sources where information comes from'],
   ['FAQ', '/faq', 'questions'],
   ['Contact', '/contact', 'address office hours map hotline'],

@@ -46,7 +46,7 @@ const explore = [
   { to: '/facilities', icon: GraduationCap, title: 'Schools and health facilities', text: 'Hospitals, health centers, and schools on a map' },
   { to: '/government', icon: Landmark, title: 'Government', text: 'Mayor, council, and municipal offices' },
   { to: '/statistics', icon: ChartColumn, title: 'Statistics', text: 'Population, census history, land area' },
-  { to: '/transparency', icon: Scale, title: 'Transparency', text: `Audited finances, ${financeYears[financeYears.length - 1]!.year} to ${financeYears[0]!.year}` },
+  { to: '/transparency', icon: Scale, title: 'Transparency', text: `Audited finances since ${financeYears[financeYears.length - 1]!.year}, and national projects in Catarman` },
 ]
 
 const latestNotices = notices.filter(n => n.kind === 'reminder').concat(notices.filter(n => n.kind === 'site')).slice(0, 3)

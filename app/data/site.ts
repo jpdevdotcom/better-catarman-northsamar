@@ -22,6 +22,7 @@ export const nav = [
   { label: 'Government', to: '/government' },
   { label: 'Statistics', to: '/statistics' },
   { label: 'Transparency', to: '/transparency' },
+  { label: 'National projects', to: '/projects' },
   { label: 'About the Data', to: '/about' },
   { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' },
@@ -38,6 +39,7 @@ export const mainNav = [
 export const moreNav = [
   { label: 'Advisories', to: '/advisories' },
   { label: 'Schools and health facilities', to: '/facilities' },
+  { label: 'National projects', to: '/projects' },
   { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' },
 ]
